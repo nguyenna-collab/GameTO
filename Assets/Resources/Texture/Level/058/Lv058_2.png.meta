@@ -1,0 +1,1224 @@
+fileFormatVersion: 2
+guid: 84155ab7c548e5447b0261d26101a5bd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 51
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 1F_Closet_door_1
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 948
+        width: 256
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853e9fc1fb9b4a640bb359ed1a7fb67a
+      internalID: 424673294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1F_Closet_door_2
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 1537
+        width: 257
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00fbd5a47cd0ab4cb6af723bb529b92
+      internalID: 269241520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1F_eye_1
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1054
+        width: 136
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca93b0a84dcdbe419e8dfddaefefe9c
+      internalID: -450256645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1F_eye_2
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1021
+        width: 88
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028c50f634dfe0347bc905eb701ff304
+      internalID: 1696393719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1F_Girl_VFX_1
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 436
+        width: 212
+        height: 783
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67ea1801a87b7c44a5e6b475032fe4a
+      internalID: -97716679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1F_Girl_VFX_2
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 1267
+        width: 212
+        height: 780
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edad3c9db0a23fa4dbcf8773144fe61c
+      internalID: -88382587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Boy_hair_1
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1033
+        width: 120
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f2eab7c6be9ca4ebe49451fe00a8ed
+      internalID: 599715715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Boy_hair_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 971
+        width: 93
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed14dec455cfe4244a063e149e928d57
+      internalID: 1886128350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Boy_VFX_1
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1174
+        width: 320
+        height: 873
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ede7e16f99f72749bfe5013a35a177e
+      internalID: -1377996796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Boy_VFX_2
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 113
+        width: 321
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9254f4af6119b40bd74f2edacb4d3c
+      internalID: 1939567041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Dog_1
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 504
+        width: 204
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612a2531126881c4a9412493947b3869
+      internalID: 1463242204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Dog_2
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 752
+        width: 196
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231e156144c92b948abf8c2b1778b404
+      internalID: -1345638089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Dog_Hair_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 12
+        width: 44
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce4006aef1890c40b0f80c512eb26da
+      internalID: 1051128136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Dog_Hair_2
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 9
+        width: 41
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9982d6eac05f4cd48baca279731cb291
+      internalID: -161474402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Dog_Hair_3
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1025
+        width: 114
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3977d167acc7c97459dfbf4489d6c0f8
+      internalID: -1082020348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Jacket_hair
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 985
+        width: 50
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b11324fe061b142a73e89f40f41ad4
+      internalID: -1660167503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Scissors_1
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 990
+        width: 88
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd95b8c4ff6fab04cb28597b6266286b
+      internalID: -1212612948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2F_Scissors_2
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 26
+        width: 87
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b90e83e39d2e9646a47dbf07e352c74
+      internalID: 1390991306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_Closet_door_1
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 811
+        width: 239
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727f0c83eae47d746986c861328db981
+      internalID: 1849477048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_Closet_door_2
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 1801
+        width: 350
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec722fa6cf7c33438189dc0d89b583e
+      internalID: -665387013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_girl
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 28
+        width: 230
+        height: 930
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c3c79e4d62ac14d83820aadef11725
+      internalID: 1344324784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_girl_hand_L
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 563
+        width: 99
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d9aa01f60522340ba85b4742a15c45
+      internalID: -1371977022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_girl_hand_R
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 563
+        width: 99
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9faca9f0101d24ebf462e6d747d372
+      internalID: 109609048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_Girl_VFX_1
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 210
+        width: 217
+        height: 827
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd9a4b1bf3a72b408b00bec0bfd072d
+      internalID: 1121722282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_Girl_VFX_2
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1221
+        width: 218
+        height: 826
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb3815e087477949a5578e8405bc0f9
+      internalID: -1465520785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_Glue
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 2
+        width: 44
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91af73cd8f6c63246a33737f70753aed
+      internalID: -1666606156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_glue_2
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 462
+        width: 98
+        height: 548
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500eab1f198e9524fba4d32fd2df60a1
+      internalID: 772767054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_hair_1
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 1029
+        width: 78
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83ba6287a8447d43a56706e4e654af7
+      internalID: 1233220030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_hair_2
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 116
+        width: 107
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1604c2bfa046fe408bf4720decdbb6e
+      internalID: -336347023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_Zipper_long_1
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 714
+        width: 65
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1df923c96394ba43aed6b459ad1c0f3
+      internalID: -1411836464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_Zipper_short_1
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1018
+        width: 15
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2120b61797fb0745b7dcd854f2a4526
+      internalID: -441668928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_Zipper_short_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 991
+        width: 71
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f320890cc548ae4ab3ff8052376dc8a
+      internalID: 1164602326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4F_Boy
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1077
+        width: 291
+        height: 970
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af711fbf5ece80c42ac80f4f7c56f3b6
+      internalID: -673314574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4F_boy_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1070
+        width: 294
+        height: 977
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49be1fcd16c5307419348da60d538258
+      internalID: 640535840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4F_Boy_Octupus_1
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 1012
+        width: 279
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b917ee905de0f3341ab4de1310abdc5f
+      internalID: 1221517510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4F_Boy_Octupus_2
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 63
+        width: 541
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b65743dc449f2b4599eda5e44a023a2
+      internalID: 204899737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4F_Boy_Octupus_head
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 36
+        width: 246
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d129a6a25cbc784478f5c1184b50bc67
+      internalID: 1198295355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4F_Boy_vest
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 1175
+        width: 284
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14762126668309645b87173c4d9b9b3b
+      internalID: 2043937542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4F_Octupus
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 993
+        width: 92
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5156a9df3099a2a408625895f1ce746f
+      internalID: 983456509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4F_Window
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 1794
+        width: 224
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822148ab962b3c543acc4349f2aa5a59
+      internalID: 546060633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4FChemical_substances
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 1039
+        width: 75
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1fd9e4e0531764385d618b23663c32
+      internalID: 1970700913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 960
+        width: 109
+        height: 1087
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916d9fbedf68e874abb04ae5957a620d
+      internalID: -1541705309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghost_fake
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 1236
+        width: 302
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b6f26b4d061354782b1ec559a4beb9
+      internalID: 1345009981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scroll
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 990
+        width: 61
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31263b4b2964af34e875bfc0f9026e50
+      internalID: 1339087612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tablecloth
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 1584
+        width: 325
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d2f0ca70fcacf478e1d49c8598e3d9
+      internalID: 131186718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3F_Zipper_long_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 5
+        width: 154
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538fc1ed5ce012047ac688b8079aedcc
+      internalID: 1179877655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4F_alien
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 6
+        width: 291
+        height: 977
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e903637d262b9ba41a5b23e5b974f899
+      internalID: -717363158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      1F_Closet_door_1: 424673294
+      1F_Closet_door_2: 269241520
+      1F_Girl_VFX_1: -97716679
+      1F_Girl_VFX_2: -88382587
+      1F_eye_1: -450256645
+      1F_eye_2: 1696393719
+      2F_Boy_VFX_1: -1377996796
+      2F_Boy_VFX_2: 1939567041
+      2F_Boy_hair_1: 599715715
+      2F_Boy_hair_2: 1886128350
+      2F_Dog_1: 1463242204
+      2F_Dog_2: -1345638089
+      2F_Dog_Hair_1: 1051128136
+      2F_Dog_Hair_2: -161474402
+      2F_Dog_Hair_3: -1082020348
+      2F_Jacket_hair: -1660167503
+      2F_Scissors_1: -1212612948
+      2F_Scissors_2: 1390991306
+      3F_Closet_door_1: 1849477048
+      3F_Closet_door_2: -665387013
+      3F_Girl_VFX_1: 1121722282
+      3F_Girl_VFX_2: -1465520785
+      3F_Glue: -1666606156
+      3F_Zipper_long_1: -1411836464
+      3F_Zipper_long_2: 1179877655
+      3F_Zipper_short_1: -441668928
+      3F_Zipper_short_2: 1164602326
+      3F_girl: 1344324784
+      3F_girl_hand_L: -1371977022
+      3F_girl_hand_R: 109609048
+      3F_glue_2: 772767054
+      3F_hair_1: 1233220030
+      3F_hair_2: -336347023
+      4FChemical_substances: 1970700913
+      4F_Boy: -673314574
+      4F_Boy_Octupus_1: 1221517510
+      4F_Boy_Octupus_2: 204899737
+      4F_Boy_Octupus_head: 1198295355
+      4F_Boy_vest: 2043937542
+      4F_Octupus: 983456509
+      4F_Window: 546060633
+      4F_alien: -717363158
+      4F_boy_2: 640535840
+      Door: -1541705309
+      Tablecloth: 131186718
+      ghost_fake: 1345009981
+      scroll: 1339087612
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

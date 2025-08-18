@@ -1,0 +1,2496 @@
+fileFormatVersion: 2
+guid: 3aa212993136f7f49a1cdb99ed862bca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1484258651507841344
+    second: SmokePuffParticleSheet_0
+  - first:
+      213: -2384551967847635621
+    second: SmokePuffParticleSheet_1
+  - first:
+      213: 4230820436300936806
+    second: SmokePuffParticleSheet_2
+  - first:
+      213: 4825115126385854941
+    second: SmokePuffParticleSheet_3
+  - first:
+      213: 6461277989109884497
+    second: SmokePuffParticleSheet_4
+  - first:
+      213: -7849851596432926717
+    second: SmokePuffParticleSheet_5
+  - first:
+      213: 8807967239084727396
+    second: SmokePuffParticleSheet_6
+  - first:
+      213: -6228824954022100110
+    second: SmokePuffParticleSheet_7
+  - first:
+      213: -2731897503410915622
+    second: SmokePuffParticleSheet_8
+  - first:
+      213: -1340987051349730156
+    second: SmokePuffParticleSheet_9
+  - first:
+      213: 4293290170613201776
+    second: SmokePuffParticleSheet_10
+  - first:
+      213: 349740169476103738
+    second: SmokePuffParticleSheet_11
+  - first:
+      213: 701665850409134864
+    second: SmokePuffParticleSheet_12
+  - first:
+      213: -5140620690115601769
+    second: SmokePuffParticleSheet_13
+  - first:
+      213: 3745647490016762374
+    second: SmokePuffParticleSheet_14
+  - first:
+      213: -7887787461516571433
+    second: SmokePuffParticleSheet_15
+  - first:
+      213: 5853847825122857451
+    second: SmokePuffParticleSheet_16
+  - first:
+      213: -5113411999672619086
+    second: SmokePuffParticleSheet_17
+  - first:
+      213: -8849055226552647000
+    second: SmokePuffParticleSheet_18
+  - first:
+      213: 6606446588341677583
+    second: SmokePuffParticleSheet_19
+  - first:
+      213: -1657847202762172616
+    second: SmokePuffParticleSheet_20
+  - first:
+      213: -253824830845680127
+    second: SmokePuffParticleSheet_21
+  - first:
+      213: -6601997748821226751
+    second: SmokePuffParticleSheet_22
+  - first:
+      213: 66498016950313628
+    second: SmokePuffParticleSheet_23
+  - first:
+      213: 7167176682340563974
+    second: SmokePuffParticleSheet_24
+  - first:
+      213: -6050352052174761268
+    second: SmokePuffParticleSheet_25
+  - first:
+      213: -2487068813851249839
+    second: SmokePuffParticleSheet_26
+  - first:
+      213: 5340399235533709896
+    second: SmokePuffParticleSheet_27
+  - first:
+      213: 6313319264111004489
+    second: SmokePuffParticleSheet_28
+  - first:
+      213: 5608320279594014540
+    second: SmokePuffParticleSheet_29
+  - first:
+      213: 2946267416454887398
+    second: SmokePuffParticleSheet_30
+  - first:
+      213: -8905981826862051395
+    second: SmokePuffParticleSheet_31
+  - first:
+      213: 8507691513714363292
+    second: SmokePuffParticleSheet_32
+  - first:
+      213: 4980670154468170031
+    second: SmokePuffParticleSheet_33
+  - first:
+      213: -4434135194986142655
+    second: SmokePuffParticleSheet_34
+  - first:
+      213: -7405995914811170653
+    second: SmokePuffParticleSheet_35
+  - first:
+      213: 5061547664857518773
+    second: SmokePuffParticleSheet_36
+  - first:
+      213: 6917899932318495228
+    second: SmokePuffParticleSheet_37
+  - first:
+      213: -7255690776929206927
+    second: SmokePuffParticleSheet_38
+  - first:
+      213: 7491381112705317930
+    second: SmokePuffParticleSheet_39
+  - first:
+      213: -5307735832817504326
+    second: SmokePuffParticleSheet_40
+  - first:
+      213: -1862271763257606483
+    second: SmokePuffParticleSheet_41
+  - first:
+      213: -2531298144862185674
+    second: SmokePuffParticleSheet_42
+  - first:
+      213: 3211370940712562975
+    second: SmokePuffParticleSheet_43
+  - first:
+      213: 4730974022372818744
+    second: SmokePuffParticleSheet_44
+  - first:
+      213: 4531587631092968864
+    second: SmokePuffParticleSheet_45
+  - first:
+      213: 8174969711368925929
+    second: SmokePuffParticleSheet_46
+  - first:
+      213: -3860027644373337341
+    second: SmokePuffParticleSheet_47
+  - first:
+      213: 149081870615550559
+    second: SmokePuffParticleSheet_48
+  - first:
+      213: 6049586560341356902
+    second: SmokePuffParticleSheet_49
+  - first:
+      213: -6527168481894151354
+    second: SmokePuffParticleSheet_50
+  - first:
+      213: -7579997243344816900
+    second: SmokePuffParticleSheet_51
+  - first:
+      213: 5232309987480208688
+    second: SmokePuffParticleSheet_52
+  - first:
+      213: 5230602901994540735
+    second: SmokePuffParticleSheet_53
+  - first:
+      213: 369464624497849693
+    second: SmokePuffParticleSheet_54
+  - first:
+      213: -6554419064895351416
+    second: SmokePuffParticleSheet_55
+  - first:
+      213: -5625571830864210401
+    second: SmokePuffParticleSheet_56
+  - first:
+      213: 3255247136153520400
+    second: SmokePuffParticleSheet_57
+  - first:
+      213: 554414736054110791
+    second: SmokePuffParticleSheet_58
+  - first:
+      213: 1877936325986108677
+    second: SmokePuffParticleSheet_59
+  - first:
+      213: -5681549974476631314
+    second: SmokePuffParticleSheet_60
+  - first:
+      213: -6604187618270343592
+    second: SmokePuffParticleSheet_61
+  - first:
+      213: 5573668487479359965
+    second: SmokePuffParticleSheet_62
+  - first:
+      213: 5461101711769774658
+    second: SmokePuffParticleSheet_63
+  - first:
+      213: -2059962951350997617
+    second: SmokePuffParticleSheet_64
+  - first:
+      213: -3432616033467245852
+    second: SmokePuffParticleSheet_65
+  - first:
+      213: -7595307380561065090
+    second: SmokePuffParticleSheet_66
+  - first:
+      213: -448959291723707437
+    second: SmokePuffParticleSheet_67
+  - first:
+      213: -5138753031977386114
+    second: SmokePuffParticleSheet_68
+  - first:
+      213: 8661989383250664802
+    second: SmokePuffParticleSheet_69
+  - first:
+      213: -1547783883188728460
+    second: SmokePuffParticleSheet_70
+  - first:
+      213: -3431263389942206860
+    second: SmokePuffParticleSheet_71
+  - first:
+      213: 6358732743048976190
+    second: SmokePuffParticleSheet_72
+  - first:
+      213: 7199551021686568843
+    second: SmokePuffParticleSheet_73
+  - first:
+      213: -5258861754966176736
+    second: SmokePuffParticleSheet_74
+  - first:
+      213: 1713777487674260797
+    second: SmokePuffParticleSheet_75
+  - first:
+      213: -4167904677120067027
+    second: SmokePuffParticleSheet_76
+  - first:
+      213: 3738350618668732368
+    second: SmokePuffParticleSheet_77
+  - first:
+      213: -5318083518696128981
+    second: SmokePuffParticleSheet_78
+  - first:
+      213: -2330219114260457752
+    second: SmokePuffParticleSheet_79
+  - first:
+      213: 5718341024485347662
+    second: SmokePuffParticleSheet_80
+  - first:
+      213: 5062214244246458549
+    second: SmokePuffParticleSheet_81
+  - first:
+      213: 6168278284402319832
+    second: SmokePuffParticleSheet_82
+  - first:
+      213: -271958204528592281
+    second: SmokePuffParticleSheet_83
+  - first:
+      213: -451903276201220083
+    second: SmokePuffParticleSheet_84
+  - first:
+      213: 3303757112209113515
+    second: SmokePuffParticleSheet_85
+  - first:
+      213: 2115270111817800752
+    second: SmokePuffParticleSheet_86
+  - first:
+      213: 6076341832800184640
+    second: SmokePuffParticleSheet_87
+  - first:
+      213: 7026506518647372598
+    second: SmokePuffParticleSheet_88
+  - first:
+      213: 8277295895542134167
+    second: SmokePuffParticleSheet_89
+  - first:
+      213: 8454135534001698339
+    second: SmokePuffParticleSheet_90
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_0
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2184
+        width: 243
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049dced2165299410800000000000000
+      internalID: 1484258651507841344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_1
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 2175
+        width: 268
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55abff7e9e58eed0800000000000000
+      internalID: -2384551967847635621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 2169
+        width: 282
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6663e2e55c4e6ba30800000000000000
+      internalID: 4230820436300936806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 2161
+        width: 293
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd9c79494a046f240800000000000000
+      internalID: 4825115126385854941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 2272
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156e1f709121ba950800000000000000
+      internalID: 6461277989109884497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2163
+        y: 2155
+        width: 302
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30815173099bf0390800000000000000
+      internalID: -7849851596432926717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1612
+        width: 357
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c5cee898f2c3a70800000000000000
+      internalID: 8807967239084727396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1959
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2738c6fb4b4ce89a0800000000000000
+      internalID: -6228824954022100110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 1604
+        width: 371
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad67a62e1b9561ad0800000000000000
+      internalID: -2731897503410915622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_9
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 1597
+        width: 386
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c96e3b16bd36de0800000000000000
+      internalID: -1340987051349730156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_10
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1638
+        width: 322
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b7311d9a4d49b30800000000000000
+      internalID: 4293290170613201776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_11
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1931
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ede45c4d68ad400800000000000000
+      internalID: 349740169476103738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_12
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1628
+        width: 329
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ba8a49f51dcb900800000000000000
+      internalID: 701665850409134864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_13
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1808
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79ad2a0f7b8d8a8b0800000000000000
+      internalID: -5140620690115601769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_14
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1758
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a58400c863bf330800000000000000
+      internalID: 3745647490016762374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 1753
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dc46845813f88290800000000000000
+      internalID: -7887787461516571433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1723
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be114a9f49b0d3150800000000000000
+      internalID: 5853847825122857451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_17
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1643
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf2b49d0e28909b0800000000000000
+      internalID: -5113411999672619086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1615
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2048fd727d13580800000000000000
+      internalID: -8849055226552647000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_19
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1079
+        width: 397
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e62bd6b20deab50800000000000000
+      internalID: 6606446588341677583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_20
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1072
+        width: 407
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8375c73b0c42ef8e0800000000000000
+      internalID: -1657847202762172616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 1070
+        width: 419
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106054249ab3a7cf0800000000000000
+      internalID: -253824830845680127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 1230
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b059db60ef064a0800000000000000
+      internalID: -6601997748821226751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 1066
+        width: 432
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c926796189f3ce000800000000000000
+      internalID: 66498016950313628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_24
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 1060
+        width: 438
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c3f51283de67360800000000000000
+      internalID: 7167176682340563974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_25
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1216
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2511c5dd4d80ca0800000000000000
+      internalID: -6050352052174761268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_26
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 1173
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153b17247182c7dd0800000000000000
+      internalID: -2487068813851249839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_27
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1084
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84221c06fc8ec1a40800000000000000
+      internalID: 5340399235533709896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_28
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1084
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b87fadb6a6d9750800000000000000
+      internalID: 6313319264111004489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_29
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 1077
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4712d38491c4dd40800000000000000
+      internalID: 5608320279594014540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_30
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 544
+        width: 447
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7f913fa9e33e820800000000000000
+      internalID: 2946267416454887398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_31
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 541
+        width: 454
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf8dc1e6b8976480800000000000000
+      internalID: -8905981826862051395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_32
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 979
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9bcc852b54611670800000000000000
+      internalID: 8507691513714363292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_33
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 980
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f291774ed15ee1540800000000000000
+      internalID: 4980670154468170031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_34
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 982
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1442bc08889c672c0800000000000000
+      internalID: -4434135194986142655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_35
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 984
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0afa144fd983990800000000000000
+      internalID: -7405995914811170653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_36
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 983
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b25a81b8ca3e3640800000000000000
+      internalID: 5061547664857518773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_37
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 536
+        width: 460
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1fa89f551510060800000000000000
+      internalID: 6917899932318495228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_38
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 983
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d7e014eab9e4b90800000000000000
+      internalID: -7255690776929206927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_39
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 528
+        width: 471
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2cfed35e6bb6f760800000000000000
+      internalID: 7491381112705317930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_40
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 982
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abfec43b1622756b0800000000000000
+      internalID: -5307735832817504326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_41
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 983
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae3ac3b2b1e726e0800000000000000
+      internalID: -1862271763257606483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_42
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 990
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63752e6afb50fdcd0800000000000000
+      internalID: -2531298144862185674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_43
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 525
+        width: 489
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f113f232bd4119c20800000000000000
+      internalID: 3211370940712562975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_44
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 984
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ff12dbecbc7a140800000000000000
+      internalID: 4730974022372818744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_45
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 983
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ada9dbe0fe63ee30800000000000000
+      internalID: 4531587631092968864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 866
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e2f8bfb3a3537170800000000000000
+      internalID: 8174969711368925929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_47
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 863
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b70f90f4d6e6ac0800000000000000
+      internalID: -3860027644373337341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_48
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 811
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a9d74eb25a11200800000000000000
+      internalID: 149081870615550559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_49
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 788
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661bf1face274f350800000000000000
+      internalID: 6049586560341356902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_50
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 782
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64bc29f19d6da65a0800000000000000
+      internalID: -6527168481894151354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_51
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 679
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf4fdffeaa07ec690800000000000000
+      internalID: -7579997243344816900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_52
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 550
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0358c7e2636ec9840800000000000000
+      internalID: 5232309987480208688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_53
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 554
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe038e50a5d69840800000000000000
+      internalID: 5230602901994540735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_54
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 548
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5574445e1a902500800000000000000
+      internalID: 369464624497849693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_55
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 7
+        width: 505
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8855dd756960a05a0800000000000000
+      internalID: -6554419064895351416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_56
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4
+        width: 499
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1615e2b934fde1b0800000000000000
+      internalID: -5625571830864210401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_57
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 0
+        width: 535
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019c986f506fc2d20800000000000000
+      internalID: 3255247136153520400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_58
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 487
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a4fb8d34da1b700800000000000000
+      internalID: 554414736054110791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_59
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 0
+        width: 587
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50544358325cf0a10800000000000000
+      internalID: 1877936325986108677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_60
+      rect:
+        serializedVersion: 2
+        x: 2261
+        y: 494
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2d0bd76641721b0800000000000000
+      internalID: -5681549974476631314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_61
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 488
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e86f60a563954a0800000000000000
+      internalID: -6604187618270343592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_62
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 488
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd9fef375f5a95d40800000000000000
+      internalID: 5573668487479359965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_63
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 11
+        width: 495
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24aa05c921bb9cb40800000000000000
+      internalID: 5461101711769774658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_64
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 474
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d22422c9a8963e0800000000000000
+      internalID: -2059962951350997617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_65
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 473
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eadfd287e5ec50d0800000000000000
+      internalID: -3432616033467245852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_66
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 472
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b41c5dd2c089690800000000000000
+      internalID: -7595307380561065090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_67
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 475
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db823227e9f4c9f0800000000000000
+      internalID: -448959291723707437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_68
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 475
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fb68cf75b7fa8b0800000000000000
+      internalID: -5138753031977386114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_69
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 478
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d5cdc6371953870800000000000000
+      internalID: 8661989383250664802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_70
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 476
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d067d32ca258ae0800000000000000
+      internalID: -1547783883188728460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_71
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 479
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e21bf5024b160d0800000000000000
+      internalID: -3431263389942206860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_72
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 469
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3754136db1ce3850800000000000000
+      internalID: 6358732743048976190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_73
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 320
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b87bde56281f9e360800000000000000
+      internalID: 7199551021686568843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_74
+      rect:
+        serializedVersion: 2
+        x: 2501
+        y: 292
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c8a54b815c407b0800000000000000
+      internalID: -5258861754966176736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_75
+      rect:
+        serializedVersion: 2
+        x: 2510
+        y: 289
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3db2e88b8f88c710800000000000000
+      internalID: 1713777487674260797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_76
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 278
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2ab19657c0a826c0800000000000000
+      internalID: -4167904677120067027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_77
+      rect:
+        serializedVersion: 2
+        x: 2510
+        y: 269
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df8c9fb41a41e330800000000000000
+      internalID: 3738350618668732368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_78
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 264
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ef146573f5236b0800000000000000
+      internalID: -5318083518696128981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_79
+      rect:
+        serializedVersion: 2
+        x: 2507
+        y: 255
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e61ea5cf0669afd0800000000000000
+      internalID: -2330219114260457752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_80
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 239
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e411efc5dd0ab5f40800000000000000
+      internalID: 5718341024485347662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_81
+      rect:
+        serializedVersion: 2
+        x: 2507
+        y: 233
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b09b3dc809904640800000000000000
+      internalID: 5062214244246458549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_82
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 56
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d16e813b602a9550800000000000000
+      internalID: 6168278284402319832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_83
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 14
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76af151347fc93cf0800000000000000
+      internalID: -271958204528592281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_84
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 15
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08e0355d548ab9f0800000000000000
+      internalID: -451903276201220083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_85
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 15
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba10569e69d49dd20800000000000000
+      internalID: 3303757112209113515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_86
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 13
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03c96e2a5f2fa5d10800000000000000
+      internalID: 2115270111817800752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_87
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 7
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049a6edf3b0835450800000000000000
+      internalID: 6076341832800184640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_88
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 10
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b71ff537a238160800000000000000
+      internalID: 7026506518647372598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_89
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 10
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795769213ccded270800000000000000
+      internalID: 8277295895542134167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokePuffParticleSheet_90
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 2
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 326bd2be97f135570800000000000000
+      internalID: 8454135534001698339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SmokePuffParticleSheet_0: 1484258651507841344
+      SmokePuffParticleSheet_1: -2384551967847635621
+      SmokePuffParticleSheet_10: 4293290170613201776
+      SmokePuffParticleSheet_11: 349740169476103738
+      SmokePuffParticleSheet_12: 701665850409134864
+      SmokePuffParticleSheet_13: -5140620690115601769
+      SmokePuffParticleSheet_14: 3745647490016762374
+      SmokePuffParticleSheet_15: -7887787461516571433
+      SmokePuffParticleSheet_16: 5853847825122857451
+      SmokePuffParticleSheet_17: -5113411999672619086
+      SmokePuffParticleSheet_18: -8849055226552647000
+      SmokePuffParticleSheet_19: 6606446588341677583
+      SmokePuffParticleSheet_2: 4230820436300936806
+      SmokePuffParticleSheet_20: -1657847202762172616
+      SmokePuffParticleSheet_21: -253824830845680127
+      SmokePuffParticleSheet_22: -6601997748821226751
+      SmokePuffParticleSheet_23: 66498016950313628
+      SmokePuffParticleSheet_24: 7167176682340563974
+      SmokePuffParticleSheet_25: -6050352052174761268
+      SmokePuffParticleSheet_26: -2487068813851249839
+      SmokePuffParticleSheet_27: 5340399235533709896
+      SmokePuffParticleSheet_28: 6313319264111004489
+      SmokePuffParticleSheet_29: 5608320279594014540
+      SmokePuffParticleSheet_3: 4825115126385854941
+      SmokePuffParticleSheet_30: 2946267416454887398
+      SmokePuffParticleSheet_31: -8905981826862051395
+      SmokePuffParticleSheet_32: 8507691513714363292
+      SmokePuffParticleSheet_33: 4980670154468170031
+      SmokePuffParticleSheet_34: -4434135194986142655
+      SmokePuffParticleSheet_35: -7405995914811170653
+      SmokePuffParticleSheet_36: 5061547664857518773
+      SmokePuffParticleSheet_37: 6917899932318495228
+      SmokePuffParticleSheet_38: -7255690776929206927
+      SmokePuffParticleSheet_39: 7491381112705317930
+      SmokePuffParticleSheet_4: 6461277989109884497
+      SmokePuffParticleSheet_40: -5307735832817504326
+      SmokePuffParticleSheet_41: -1862271763257606483
+      SmokePuffParticleSheet_42: -2531298144862185674
+      SmokePuffParticleSheet_43: 3211370940712562975
+      SmokePuffParticleSheet_44: 4730974022372818744
+      SmokePuffParticleSheet_45: 4531587631092968864
+      SmokePuffParticleSheet_46: 8174969711368925929
+      SmokePuffParticleSheet_47: -3860027644373337341
+      SmokePuffParticleSheet_48: 149081870615550559
+      SmokePuffParticleSheet_49: 6049586560341356902
+      SmokePuffParticleSheet_5: -7849851596432926717
+      SmokePuffParticleSheet_50: -6527168481894151354
+      SmokePuffParticleSheet_51: -7579997243344816900
+      SmokePuffParticleSheet_52: 5232309987480208688
+      SmokePuffParticleSheet_53: 5230602901994540735
+      SmokePuffParticleSheet_54: 369464624497849693
+      SmokePuffParticleSheet_55: -6554419064895351416
+      SmokePuffParticleSheet_56: -5625571830864210401
+      SmokePuffParticleSheet_57: 3255247136153520400
+      SmokePuffParticleSheet_58: 554414736054110791
+      SmokePuffParticleSheet_59: 1877936325986108677
+      SmokePuffParticleSheet_6: 8807967239084727396
+      SmokePuffParticleSheet_60: -5681549974476631314
+      SmokePuffParticleSheet_61: -6604187618270343592
+      SmokePuffParticleSheet_62: 5573668487479359965
+      SmokePuffParticleSheet_63: 5461101711769774658
+      SmokePuffParticleSheet_64: -2059962951350997617
+      SmokePuffParticleSheet_65: -3432616033467245852
+      SmokePuffParticleSheet_66: -7595307380561065090
+      SmokePuffParticleSheet_67: -448959291723707437
+      SmokePuffParticleSheet_68: -5138753031977386114
+      SmokePuffParticleSheet_69: 8661989383250664802
+      SmokePuffParticleSheet_7: -6228824954022100110
+      SmokePuffParticleSheet_70: -1547783883188728460
+      SmokePuffParticleSheet_71: -3431263389942206860
+      SmokePuffParticleSheet_72: 6358732743048976190
+      SmokePuffParticleSheet_73: 7199551021686568843
+      SmokePuffParticleSheet_74: -5258861754966176736
+      SmokePuffParticleSheet_75: 1713777487674260797
+      SmokePuffParticleSheet_76: -4167904677120067027
+      SmokePuffParticleSheet_77: 3738350618668732368
+      SmokePuffParticleSheet_78: -5318083518696128981
+      SmokePuffParticleSheet_79: -2330219114260457752
+      SmokePuffParticleSheet_8: -2731897503410915622
+      SmokePuffParticleSheet_80: 5718341024485347662
+      SmokePuffParticleSheet_81: 5062214244246458549
+      SmokePuffParticleSheet_82: 6168278284402319832
+      SmokePuffParticleSheet_83: -271958204528592281
+      SmokePuffParticleSheet_84: -451903276201220083
+      SmokePuffParticleSheet_85: 3303757112209113515
+      SmokePuffParticleSheet_86: 2115270111817800752
+      SmokePuffParticleSheet_87: 6076341832800184640
+      SmokePuffParticleSheet_88: 7026506518647372598
+      SmokePuffParticleSheet_89: 8277295895542134167
+      SmokePuffParticleSheet_9: -1340987051349730156
+      SmokePuffParticleSheet_90: 8454135534001698339
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1043 @@
+version: 2
+tpsheetFileNames:
+- Assets/_Project/Textures/_Level/001/Lv001.tpsheet
+- Assets/_Project/Textures/_Level/004/Lv004-0.tpsheet
+- Assets/_Project/Textures/_Level/006/Level006.tpsheet
+- Assets/_Project/Textures/_UI/Popup.tpsheet
+- Assets/_Project/Textures/_UI/Popup_1.tpsheet
+- Assets/_Project/Textures/_UI/UI.tpsheet
+- Assets/_Project/Textures/Level/001/Lv001.tpsheet
+- Assets/_Project/Textures/Level/004/Lv004-0.tpsheet
+- Assets/_Project/Textures/Level/005/Lv005.tpsheet
+- Assets/_Project/Textures/Level/006/Level006.tpsheet
+- Assets/_Project/Textures/Level/007/Lv007.tpsheet
+- Assets/_Project/Textures/Level/009/Lv009.tpsheet
+- Assets/_Project/Textures/Level/010/lv010-0.tpsheet
+- Assets/_Project/Textures/Level/010/lv010-1.tpsheet
+- Assets/_Project/Textures/Level/011/Lv011.tpsheet
+- Assets/_Project/Textures/Level/012/Lv012.tpsheet
+- Assets/_Project/Textures/Level/013/Lv013.tpsheet
+- Assets/_Project/Textures/Level/015/Lv015_1.tpsheet
+- Assets/_Project/Textures/Level/015/Lv015_2.tpsheet
+- Assets/_Project/Textures/Level/016/Lv016.tpsheet
+- Assets/_Project/Textures/Level/018/Lv018.tpsheet
+- Assets/_Project/Textures/Level/019/Lv019_1.tpsheet
+- Assets/_Project/Textures/Level/019/Lv019_2.tpsheet
+- Assets/_Project/Textures/Level/021/Lv021.tpsheet
+- Assets/_Project/Textures/Level/023/Lv023.tpsheet
+- Assets/_Project/Textures/Level/024/Lv024.tpsheet
+- Assets/_Project/Textures/Level/026/Lv026.tpsheet
+- Assets/_Project/Textures/Level/028/Lv028.tpsheet
+- Assets/_Project/Textures/Level/030/Lv030.tpsheet
+- Assets/_Project/Textures/Level/031/Lv031.tpsheet
+- Assets/_Project/Textures/Level/033/Lv033_1.tpsheet
+- Assets/_Project/Textures/Level/033/Lv033_2.tpsheet
+- Assets/_Project/Textures/Level/034/Lv034.tpsheet
+- Assets/_Project/Textures/Level/035/Lv035.tpsheet
+- Assets/_Project/Textures/Level/036/Lv036.tpsheet
+- Assets/_Project/Textures/Level/037/Lv037.tpsheet
+- Assets/_Project/Textures/Level/039/Lv039.tpsheet
+- Assets/_Project/Textures/Level/041/Lv041.tpsheet
+- Assets/_Project/Textures/Level/041/Lv041_2.tpsheet
+- Assets/_Project/Textures/Level/045/Lv45_1.tpsheet
+- Assets/_Project/Textures/Level/045/Lv45_2.tpsheet
+- Assets/_Project/Textures/Level/049/Lv049.tpsheet
+- Assets/_Project/Textures/Level/052/Lv51_1.tpsheet
+- Assets/_Project/Textures/Level/052/Lv51_2.tpsheet
+- Assets/_Project/Textures/Level/053/Lv053.tpsheet
+- Assets/_Project/Textures/Level/053/Lv053_2.tpsheet
+- Assets/_Project/Textures/Level/053/Lv053_brainrot.tpsheet
+- Assets/_Project/Textures/Level/054/Lv054.tpsheet
+- Assets/_Project/Textures/Level/055/Lv055_1.tpsheet
+- Assets/_Project/Textures/Level/055/Lv055_2.tpsheet
+- Assets/_Project/Textures/Level/056/Lv056.tpsheet
+- Assets/_Project/Textures/Level/057/Lv057.tpsheet
+- Assets/_Project/Textures/Level/058/Lv058_1.tpsheet
+- Assets/_Project/Textures/Level/058/Lv058_2.tpsheet
+- Assets/_Project/Textures/Level/059/Lv059.tpsheet
+- Assets/_Project/Textures/Level/060/Level060_1.tpsheet
+- Assets/_Project/Textures/Level/060/Level060_2.tpsheet
+- Assets/_Project/Textures/Level/061/Lv061.tpsheet
+- Assets/_Project/Textures/Level/062/Lv062.tpsheet
+- Assets/_Project/Textures/Level/068/Lv068.tpsheet
+- Assets/_Project/Textures/Level/070/Lv070.tpsheet
+- Assets/_Project/Textures/Level/071/Level71.tpsheet
+- Assets/_Project/Textures/Level/072/Level72_1.tpsheet
+- Assets/_Project/Textures/Level/072/Level72_2.tpsheet
+- Assets/_Project/Textures/Level/072/Level72_3.tpsheet
+- Assets/_Project/Textures/Level/074/Lv074.tpsheet
+- Assets/_Project/Textures/Level/075/Lv075.tpsheet
+- Assets/_Project/Textures/Level/076/Lv076.tpsheet
+- Assets/_Project/Textures/Level/077/Lv077_1.tpsheet
+- Assets/_Project/Textures/Level/077/Lv077_2.tpsheet
+- Assets/_Project/Textures/Level/078/Lv078_1.tpsheet
+- Assets/_Project/Textures/Level/078/Lv078_2.tpsheet
+- Assets/_Project/Textures/Level/079/Level079.tpsheet
+- Assets/_Project/Textures/Level/082/Level082.tpsheet
+- Assets/_Project/Textures/Level/091/Lv091_1.tpsheet
+- Assets/_Project/Textures/Level/091/Lv091_2.tpsheet
+- Assets/_Project/Textures/Level/092/Lv092.tpsheet
+- Assets/_Project/Textures/Level/093/Level093.tpsheet
+- Assets/_Project/Textures/Level/093/Level093_1.tpsheet
+- Assets/_Project/Textures/Level/094/Lv094_1.tpsheet
+- Assets/_Project/Textures/Level/094/Lv094_2.tpsheet
+- Assets/_Project/Textures/Level/095/Lv095_1.tpsheet
+- Assets/_Project/Textures/Level/095/Lv095_2.tpsheet
+- Assets/_Project/Textures/Level/097/Level097.tpsheet
+- Assets/_Project/Textures/Level/098/Lv098.tpsheet
+- Assets/_Project/Textures/Level/102/Lv102_1.tpsheet
+- Assets/_Project/Textures/Level/102/Lv102_2.tpsheet
+- Assets/_Project/Textures/Level/103/Lv103.tpsheet
+- Assets/_Project/Textures/Level/103/Lv103_wall.tpsheet
+- Assets/_Project/Textures/Level/104/level104.tpsheet
+- Assets/_Project/Textures/Level/107/Lv107.tpsheet
+- Assets/_Project/Textures/Level/108/Lv108.tpsheet
+- Assets/_Project/Textures/Level/109/Lv109.tpsheet
+- Assets/_Project/Textures/UI Funny/RemoveAd.tpsheet
+- Assets/_Project/Textures/UI Funny/UI.tpsheet
+- Assets/_Project/Textures/UI/UI.tpsheet
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/Project/Textures/Level/Daily/ArtistRoom/artistRoom-0.tpsheet
+- Assets/Project/Textures/Level/Daily/ArtistRoom/artistRoom-1.tpsheet
+- Assets/Project/Textures/Level/Daily/ArtistRoom/artistRoom-2.tpsheet
+- Assets/Project/Textures/Level/Daily/Bakery/bakery-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Bakery/bakery-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Bakery/bakery-2.tpsheet
+- Assets/Project/Textures/Level/Daily/Beach/beach-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Beach/beach-1.tpsheet
+- Assets/Project/Textures/Level/Daily/BusStation/busstation-0.tpsheet
+- Assets/Project/Textures/Level/Daily/BusStation/busstation-1.tpsheet
+- Assets/Project/Textures/Level/Daily/BusStation/busstation-2.tpsheet
+- Assets/Project/Textures/Level/Daily/Camping/camping-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Camping/camping-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Camping/camping-2.tpsheet
+- Assets/Project/Textures/Level/Daily/CatDoodle/catdoodle-0.tpsheet
+- Assets/Project/Textures/Level/Daily/CatDoodle/catdoodle-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Circus/circus-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Circus/circus-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Class/class-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Class/class-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Court/court-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Court/court-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Court/court-2.tpsheet
+- Assets/Project/Textures/Level/Daily/Farm/farm-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Farm/farm-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Fishmonger/fishmonger-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Fishmonger/fishmonger-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Forest/forest-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Forest/forest-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Forest/forest-2.tpsheet
+- Assets/Project/Textures/Level/Daily/Gym/gym-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Gym/gym-1.tpsheet
+- Assets/Project/Textures/Level/Daily/HairSalon/hairsalon-0.tpsheet
+- Assets/Project/Textures/Level/Daily/HairSalon/hairsalon-1.tpsheet
+- Assets/Project/Textures/Level/Daily/HotSpring/hotspring-0.tpsheet
+- Assets/Project/Textures/Level/Daily/HotSpring/hotspring-1.tpsheet
+- Assets/Project/Textures/Level/Daily/IceCreamTruck/icecreamtruck-0.tpsheet
+- Assets/Project/Textures/Level/Daily/IceCreamTruck/icecreamtruck-1.tpsheet
+- Assets/Project/Textures/Level/Daily/IceCreamTruck/icecreamtruck-2.tpsheet
+- Assets/Project/Textures/Level/Daily/KitchenCorner/kitchencorner-0.tpsheet
+- Assets/Project/Textures/Level/Daily/KitchenCorner/kitchencorner-1.tpsheet
+- Assets/Project/Textures/Level/Daily/KitchenCorner/kitchencorner-2.tpsheet
+- Assets/Project/Textures/Level/Daily/Library/library-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Library/library-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Ocean/ocean-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Ocean/ocean-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Ocean/ocean-2.tpsheet
+- Assets/Project/Textures/Level/Daily/Park/park-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Park/park-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Party/party-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Party/party-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Playground/playground-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Playground/playground-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Porch/porch-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Porch/porch-1.tpsheet
+- Assets/Project/Textures/Level/Daily/PostOffice/postoffice-0.tpsheet
+- Assets/Project/Textures/Level/Daily/PostOffice/postoffice-1.tpsheet
+- Assets/Project/Textures/Level/Daily/Skiing/skiing-0.tpsheet
+- Assets/Project/Textures/Level/Daily/Skiing/skiing-1.tpsheet
+- Assets/Project/Textures/Level/Daily/SpaShop/spashop-0.tpsheet
+- Assets/Project/Textures/Level/Daily/SpaShop/spashop-1.tpsheet
+- Assets/Project/Textures/Level/Daily/SpaShop/spashop-2.tpsheet
+- Assets/Project/Textures/Level/Epic/Cake/cake-0.tpsheet
+- Assets/Project/Textures/Level/Epic/Cake/cake-1.tpsheet
+- Assets/Project/Textures/Level/Epic/Cake/cake-2.tpsheet
+- Assets/Project/Textures/Level/Epic/Cake/cake-3.tpsheet
+- Assets/Project/Textures/Level/Epic/Cake/cake-4.tpsheet
+- Assets/Project/Textures/Level/Epic/Cake/cake-5.tpsheet
+- Assets/Project/Textures/Level/Epic/Cake/cake-6.tpsheet
+- Assets/Project/Textures/Level/Epic/Cake/cake-7.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-0.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-1.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-10.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-11.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-12.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-2.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-3.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-4.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-5.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-6.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-7.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-8.tpsheet
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-9.tpsheet
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-0.tpsheet
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-1.tpsheet
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-2.tpsheet
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-3.tpsheet
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-4.tpsheet
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-5.tpsheet
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-6.tpsheet
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-7.tpsheet
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-0.tpsheet
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-1.tpsheet
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-2.tpsheet
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-3.tpsheet
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-4.tpsheet
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-5.tpsheet
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-6.tpsheet
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-7.tpsheet
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-8.tpsheet
+- Assets/Project/Textures/Level/Epic/Sea/sea-0.tpsheet
+- Assets/Project/Textures/Level/Epic/Sea/sea-1.tpsheet
+- Assets/Project/Textures/Level/Epic/Sea/sea-2.tpsheet
+- Assets/Project/Textures/Level/Epic/Sea/sea-3.tpsheet
+- Assets/Project/Textures/Level/Epic/Sea/sea-4.tpsheet
+- Assets/Project/Textures/Level/Epic/Sea/sea-5.tpsheet
+- Assets/Project/Textures/Level/Epic/Sea/sea-6.tpsheet
+- Assets/Project/Textures/Level/Normal/A1_FastFood/fastfood-0.tpsheet
+- Assets/Project/Textures/Level/Normal/A1_FastFood/fastfood-1.tpsheet
+- Assets/Project/Textures/Level/Normal/A1_FastFood/fastfood-2.tpsheet
+- Assets/Project/Textures/Level/Normal/A2_Trend/trend-0.tpsheet
+- Assets/Project/Textures/Level/Normal/A2_Trend/trend-1.tpsheet
+- Assets/Project/Textures/Level/Normal/A2_Trend/trend-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Beach/beach-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Beach/beach-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Beach/beach-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Beach/beach-3.tpsheet
+- Assets/Project/Textures/Level/Normal/Birthday/birthday-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Birthday/birthday-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Birthday/birthday-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Birthday/birthday-3.tpsheet
+- Assets/Project/Textures/Level/Normal/Birthday/birthday-4.tpsheet
+- Assets/Project/Textures/Level/Normal/Christmas/christmas-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Christmas/christmas-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Christmas/christmas-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Concert/concert-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Concert/concert-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Concert/concert-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Concert/concert-3.tpsheet
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-0.tpsheet
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-1.tpsheet
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-2.tpsheet
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-3.tpsheet
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-4.tpsheet
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-5.tpsheet
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-6.tpsheet
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-0.tpsheet
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-1.tpsheet
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-2.tpsheet
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-3.tpsheet
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-4.tpsheet
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-5.tpsheet
+- Assets/Project/Textures/Level/Normal/Farm/farm-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Farm/farm-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Farm/farm-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Farm/farm-3.tpsheet
+- Assets/Project/Textures/Level/Normal/Farm/farm-4.tpsheet
+- Assets/Project/Textures/Level/Normal/Farm/farm-5.tpsheet
+- Assets/Project/Textures/Level/Normal/Food/food-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Food/food-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Food/food-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Food/food-3.tpsheet
+- Assets/Project/Textures/Level/Normal/Museum/museum-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Museum/museum-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Museum/museum-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Museum/museum-3.tpsheet
+- Assets/Project/Textures/Level/Normal/Museum/museum-4.tpsheet
+- Assets/Project/Textures/Level/Normal/Museum/museum-5.tpsheet
+- Assets/Project/Textures/Level/Normal/Museum/museum-6.tpsheet
+- Assets/Project/Textures/Level/Normal/NewYear/newyear-0.tpsheet
+- Assets/Project/Textures/Level/Normal/NewYear/newyear-1.tpsheet
+- Assets/Project/Textures/Level/Normal/NewYear/newyear-2.tpsheet
+- Assets/Project/Textures/Level/Normal/NewYear/newyear-3.tpsheet
+- Assets/Project/Textures/Level/Normal/P_Hotel/hotel-0.tpsheet
+- Assets/Project/Textures/Level/Normal/P_Hotel/hotel-1.tpsheet
+- Assets/Project/Textures/Level/Normal/P_Hotel/hotel-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Picnic/picnic-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Picnic/picnic-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Picnic/picnic-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Picnic/picnic-3.tpsheet
+- Assets/Project/Textures/Level/Normal/Picnic/picnic-4.tpsheet
+- Assets/Project/Textures/Level/Normal/R_America_2/america-0.tpsheet
+- Assets/Project/Textures/Level/Normal/R_America_2/america-1.tpsheet
+- Assets/Project/Textures/Level/Normal/R_America_2/america-2.tpsheet
+- Assets/Project/Textures/Level/Normal/R_America_2/america-3.tpsheet
+- Assets/Project/Textures/Level/Normal/R_America_2/america-4.tpsheet
+- Assets/Project/Textures/Level/Normal/R_America_2/america-5.tpsheet
+- Assets/Project/Textures/Level/Normal/S_France_2/france-0.tpsheet
+- Assets/Project/Textures/Level/Normal/S_France_2/france-1.tpsheet
+- Assets/Project/Textures/Level/Normal/S_France_2/france-2.tpsheet
+- Assets/Project/Textures/Level/Normal/S_France_2/france-3.tpsheet
+- Assets/Project/Textures/Level/Normal/S_France_2/france-4.tpsheet
+- Assets/Project/Textures/Level/Normal/S_France_2/france-5.tpsheet
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-3.tpsheet
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-4.tpsheet
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-5.tpsheet
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-6.tpsheet
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-0.tpsheet
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-1.tpsheet
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-2.tpsheet
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-3.tpsheet
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-4.tpsheet
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-5.tpsheet
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-0.tpsheet
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-1.tpsheet
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-2.tpsheet
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-3.tpsheet
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-4.tpsheet
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-5.tpsheet
+- Assets/Project/Textures/Level/Normal/V_Japan_2/japan-0.tpsheet
+- Assets/Project/Textures/Level/Normal/V_Japan_2/japan-1.tpsheet
+- Assets/Project/Textures/Level/Normal/V_Japan_2/japan-2.tpsheet
+- Assets/Project/Textures/Level/Normal/V_Japan_2/japan-3.tpsheet
+- Assets/Project/Textures/Level/Normal/V_Japan_2/japan-4.tpsheet
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-0.tpsheet
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-1.tpsheet
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-2.tpsheet
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-3.tpsheet
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-4.tpsheet
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-5.tpsheet
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-0.tpsheet
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-1.tpsheet
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-2.tpsheet
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-3.tpsheet
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-4.tpsheet
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-5.tpsheet
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-3.tpsheet
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-4.tpsheet
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-5.tpsheet
+- Assets/Project/Textures/Level/Normal/X_Russia_2/russia-0.tpsheet
+- Assets/Project/Textures/Level/Normal/X_Russia_2/russia-1.tpsheet
+- Assets/Project/Textures/Level/Normal/X_Russia_2/russia-2.tpsheet
+- Assets/Project/Textures/Level/Normal/X_Russia_2/russia-3.tpsheet
+- Assets/Project/Textures/Level/Normal/X_Russia_2/russia-4.tpsheet
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-0.tpsheet
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-1.tpsheet
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-2.tpsheet
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-3.tpsheet
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-4.tpsheet
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-5.tpsheet
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-6.tpsheet
+- Assets/Project/Textures/UI/Big.tpsheet
+- Assets/Project/Textures/UI/halloween.tpsheet
+- Assets/Project/Textures/UI/loading_3.tpsheet
+- Assets/Project/Textures/UI/UI.tpsheet
+- Assets/Project/Textures/UI/UI_1.tpsheet
+- Assets/Projects/Textures/UI/Avatar.tpsheet
+- Assets/Projects/Textures/UI/newUI.tpsheet
+- Assets/Projects/Textures/UI/UIQuitBoard.tpsheet
+- Assets/Resources/Texture/Level/058/Lv058_1.tpsheet
+- Assets/Resources/Texture/Level/058/Lv058_2.tpsheet
+- Assets/Resources/Texture/Level/103/Lv103.tpsheet
+- Assets/Resources/Texture/Level/103/Lv103_wall.tpsheet
+textureFileNames:
+- Assets/_Project/Textures/_Level/001/Lv001.png
+- Assets/_Project/Textures/_Level/004/Lv004-0.png
+- Assets/_Project/Textures/_Level/006/Level006.png
+- Assets/_Project/Textures/_UI/Popup.png
+- Assets/_Project/Textures/_UI/Popup_1.png
+- Assets/_Project/Textures/_UI/UI.png
+- Assets/_Project/Textures/Level/001/Lv001.png
+- Assets/_Project/Textures/Level/004/Lv004-0.png
+- Assets/_Project/Textures/Level/005/Lv005.png
+- Assets/_Project/Textures/Level/006/Level006.png
+- Assets/_Project/Textures/Level/007/Lv007.png
+- Assets/_Project/Textures/Level/009/Lv009.png
+- Assets/_Project/Textures/Level/010/lv010-0.png
+- Assets/_Project/Textures/Level/010/lv010-1.png
+- Assets/_Project/Textures/Level/011/Lv011.png
+- Assets/_Project/Textures/Level/012/Lv012.png
+- Assets/_Project/Textures/Level/013/Lv013.png
+- Assets/_Project/Textures/Level/015/Lv015_1.png
+- Assets/_Project/Textures/Level/015/Lv015_2.png
+- Assets/_Project/Textures/Level/016/Lv016.png
+- Assets/_Project/Textures/Level/018/Lv018.png
+- Assets/_Project/Textures/Level/019/Lv019_1.png
+- Assets/_Project/Textures/Level/019/Lv019_2.png
+- Assets/_Project/Textures/Level/021/Lv021.png
+- Assets/_Project/Textures/Level/023/Lv023.png
+- Assets/_Project/Textures/Level/024/Lv024.png
+- Assets/_Project/Textures/Level/026/Lv026.png
+- Assets/_Project/Textures/Level/028/Lv028.png
+- Assets/_Project/Textures/Level/030/Lv030.png
+- Assets/_Project/Textures/Level/031/Lv031.png
+- Assets/_Project/Textures/Level/033/Lv033_1.png
+- Assets/_Project/Textures/Level/033/Lv033_2.png
+- Assets/_Project/Textures/Level/034/Lv034.png
+- Assets/_Project/Textures/Level/035/Lv035.png
+- Assets/_Project/Textures/Level/036/Lv036.png
+- Assets/_Project/Textures/Level/037/Lv037.png
+- Assets/_Project/Textures/Level/039/Lv039.png
+- Assets/_Project/Textures/Level/041/Lv041.png
+- Assets/_Project/Textures/Level/041/Lv041_2.png
+- Assets/_Project/Textures/Level/045/Lv45_1.png
+- Assets/_Project/Textures/Level/045/Lv45_2.png
+- Assets/_Project/Textures/Level/049/Lv049.png
+- Assets/_Project/Textures/Level/052/Lv51_1.png
+- Assets/_Project/Textures/Level/052/Lv51_2.png
+- Assets/_Project/Textures/Level/053/Lv053.png
+- Assets/_Project/Textures/Level/053/Lv053_2.png
+- Assets/_Project/Textures/Level/053/Lv053_brainrot.png
+- Assets/_Project/Textures/Level/054/Lv054.png
+- Assets/_Project/Textures/Level/055/Lv055_1.png
+- Assets/_Project/Textures/Level/055/Lv055_2.png
+- Assets/_Project/Textures/Level/056/Lv056.png
+- Assets/_Project/Textures/Level/057/Lv057.png
+- Assets/_Project/Textures/Level/058/Lv058_1.png
+- Assets/_Project/Textures/Level/058/Lv058_2.png
+- Assets/_Project/Textures/Level/059/Lv059.png
+- Assets/_Project/Textures/Level/060/Level060_1.png
+- Assets/_Project/Textures/Level/060/Level060_2.png
+- Assets/_Project/Textures/Level/061/Lv061.png
+- Assets/_Project/Textures/Level/062/Lv062.png
+- Assets/_Project/Textures/Level/068/Lv068.png
+- Assets/_Project/Textures/Level/070/Lv070.png
+- Assets/_Project/Textures/Level/071/Level71.png
+- Assets/_Project/Textures/Level/072/Level72_1.png
+- Assets/_Project/Textures/Level/072/Level72_2.png
+- Assets/_Project/Textures/Level/072/Level72_3.png
+- Assets/_Project/Textures/Level/074/Lv074.png
+- Assets/_Project/Textures/Level/075/Lv075.png
+- Assets/_Project/Textures/Level/076/Lv076.png
+- Assets/_Project/Textures/Level/077/Lv077_1.png
+- Assets/_Project/Textures/Level/077/Lv077_2.png
+- Assets/_Project/Textures/Level/078/Lv078_1.png
+- Assets/_Project/Textures/Level/078/Lv078_2.png
+- Assets/_Project/Textures/Level/079/Level079.png
+- Assets/_Project/Textures/Level/082/Level082.png
+- Assets/_Project/Textures/Level/091/Lv091_1.png
+- Assets/_Project/Textures/Level/091/Lv091_2.png
+- Assets/_Project/Textures/Level/092/Lv092.png
+- Assets/_Project/Textures/Level/093/Level093.png
+- Assets/_Project/Textures/Level/093/Level093_1.png
+- Assets/_Project/Textures/Level/094/Lv094_1.png
+- Assets/_Project/Textures/Level/094/Lv094_2.png
+- Assets/_Project/Textures/Level/095/Lv095_1.png
+- Assets/_Project/Textures/Level/095/Lv095_2.png
+- Assets/_Project/Textures/Level/097/Level097.png
+- Assets/_Project/Textures/Level/098/Lv098.png
+- Assets/_Project/Textures/Level/102/Lv102_1.png
+- Assets/_Project/Textures/Level/102/Lv102_2.png
+- Assets/_Project/Textures/Level/103/Lv103.png
+- Assets/_Project/Textures/Level/103/Lv103_wall.png
+- Assets/_Project/Textures/Level/104/level104.png
+- Assets/_Project/Textures/Level/107/Lv107.png
+- Assets/_Project/Textures/Level/108/Lv108.png
+- Assets/_Project/Textures/Level/109/Lv109.png
+- Assets/_Project/Textures/UI Funny/RemoveAd.png
+- Assets/_Project/Textures/UI Funny/UI.png
+- Assets/_Project/Textures/UI/UI.png
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/Project/Textures/Level/Daily/ArtistRoom/artistRoom-0.png
+- Assets/Project/Textures/Level/Daily/ArtistRoom/artistRoom-1.png
+- Assets/Project/Textures/Level/Daily/ArtistRoom/artistRoom-2.png
+- Assets/Project/Textures/Level/Daily/Bakery/bakery-0.png
+- Assets/Project/Textures/Level/Daily/Bakery/bakery-1.png
+- Assets/Project/Textures/Level/Daily/Bakery/bakery-2.png
+- Assets/Project/Textures/Level/Daily/Beach/beach-0.png
+- Assets/Project/Textures/Level/Daily/Beach/beach-1.png
+- Assets/Project/Textures/Level/Daily/BusStation/busstation-0.png
+- Assets/Project/Textures/Level/Daily/BusStation/busstation-1.png
+- Assets/Project/Textures/Level/Daily/BusStation/busstation-2.png
+- Assets/Project/Textures/Level/Daily/Camping/camping-0.png
+- Assets/Project/Textures/Level/Daily/Camping/camping-1.png
+- Assets/Project/Textures/Level/Daily/Camping/camping-2.png
+- Assets/Project/Textures/Level/Daily/CatDoodle/catdoodle-0.png
+- Assets/Project/Textures/Level/Daily/CatDoodle/catdoodle-1.png
+- Assets/Project/Textures/Level/Daily/Circus/circus-0.png
+- Assets/Project/Textures/Level/Daily/Circus/circus-1.png
+- Assets/Project/Textures/Level/Daily/Class/class-0.png
+- Assets/Project/Textures/Level/Daily/Class/class-1.png
+- Assets/Project/Textures/Level/Daily/Court/court-0.png
+- Assets/Project/Textures/Level/Daily/Court/court-1.png
+- Assets/Project/Textures/Level/Daily/Court/court-2.png
+- Assets/Project/Textures/Level/Daily/Farm/farm-0.png
+- Assets/Project/Textures/Level/Daily/Farm/farm-1.png
+- Assets/Project/Textures/Level/Daily/Fishmonger/fishmonger-0.png
+- Assets/Project/Textures/Level/Daily/Fishmonger/fishmonger-1.png
+- Assets/Project/Textures/Level/Daily/Forest/forest-0.png
+- Assets/Project/Textures/Level/Daily/Forest/forest-1.png
+- Assets/Project/Textures/Level/Daily/Forest/forest-2.png
+- Assets/Project/Textures/Level/Daily/Gym/gym-0.png
+- Assets/Project/Textures/Level/Daily/Gym/gym-1.png
+- Assets/Project/Textures/Level/Daily/HairSalon/hairsalon-0.png
+- Assets/Project/Textures/Level/Daily/HairSalon/hairsalon-1.png
+- Assets/Project/Textures/Level/Daily/HotSpring/hotspring-0.png
+- Assets/Project/Textures/Level/Daily/HotSpring/hotspring-1.png
+- Assets/Project/Textures/Level/Daily/IceCreamTruck/icecreamtruck-0.png
+- Assets/Project/Textures/Level/Daily/IceCreamTruck/icecreamtruck-1.png
+- Assets/Project/Textures/Level/Daily/IceCreamTruck/icecreamtruck-2.png
+- Assets/Project/Textures/Level/Daily/KitchenCorner/kitchencorner-0.png
+- Assets/Project/Textures/Level/Daily/KitchenCorner/kitchencorner-1.png
+- Assets/Project/Textures/Level/Daily/KitchenCorner/kitchencorner-2.png
+- Assets/Project/Textures/Level/Daily/Library/library-0.png
+- Assets/Project/Textures/Level/Daily/Library/library-1.png
+- Assets/Project/Textures/Level/Daily/Ocean/ocean-0.png
+- Assets/Project/Textures/Level/Daily/Ocean/ocean-1.png
+- Assets/Project/Textures/Level/Daily/Ocean/ocean-2.png
+- Assets/Project/Textures/Level/Daily/Park/park-0.png
+- Assets/Project/Textures/Level/Daily/Park/park-1.png
+- Assets/Project/Textures/Level/Daily/Party/party-0.png
+- Assets/Project/Textures/Level/Daily/Party/party-1.png
+- Assets/Project/Textures/Level/Daily/Playground/playground-0.png
+- Assets/Project/Textures/Level/Daily/Playground/playground-1.png
+- Assets/Project/Textures/Level/Daily/Porch/porch-0.png
+- Assets/Project/Textures/Level/Daily/Porch/porch-1.png
+- Assets/Project/Textures/Level/Daily/PostOffice/postoffice-0.png
+- Assets/Project/Textures/Level/Daily/PostOffice/postoffice-1.png
+- Assets/Project/Textures/Level/Daily/Skiing/skiing-0.png
+- Assets/Project/Textures/Level/Daily/Skiing/skiing-1.png
+- Assets/Project/Textures/Level/Daily/SpaShop/spashop-0.png
+- Assets/Project/Textures/Level/Daily/SpaShop/spashop-1.png
+- Assets/Project/Textures/Level/Daily/SpaShop/spashop-2.png
+- Assets/Project/Textures/Level/Epic/Cake/cake-0.png
+- Assets/Project/Textures/Level/Epic/Cake/cake-1.png
+- Assets/Project/Textures/Level/Epic/Cake/cake-2.png
+- Assets/Project/Textures/Level/Epic/Cake/cake-3.png
+- Assets/Project/Textures/Level/Epic/Cake/cake-4.png
+- Assets/Project/Textures/Level/Epic/Cake/cake-5.png
+- Assets/Project/Textures/Level/Epic/Cake/cake-6.png
+- Assets/Project/Textures/Level/Epic/Cake/cake-7.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-0.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-1.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-10.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-11.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-12.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-2.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-3.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-4.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-5.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-6.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-7.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-8.png
+- Assets/Project/Textures/Level/Epic/Coffee Factory/coffee-9.png
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-0.png
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-1.png
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-2.png
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-3.png
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-4.png
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-5.png
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-6.png
+- Assets/Project/Textures/Level/Epic/Gaming Universe/gameuniverse-7.png
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-0.png
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-1.png
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-2.png
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-3.png
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-4.png
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-5.png
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-6.png
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-7.png
+- Assets/Project/Textures/Level/Epic/Pink Space/pinkspace-8.png
+- Assets/Project/Textures/Level/Epic/Sea/sea-0.png
+- Assets/Project/Textures/Level/Epic/Sea/sea-1.png
+- Assets/Project/Textures/Level/Epic/Sea/sea-2.png
+- Assets/Project/Textures/Level/Epic/Sea/sea-3.png
+- Assets/Project/Textures/Level/Epic/Sea/sea-4.png
+- Assets/Project/Textures/Level/Epic/Sea/sea-5.png
+- Assets/Project/Textures/Level/Epic/Sea/sea-6.png
+- Assets/Project/Textures/Level/Normal/A1_FastFood/fastfood-0.png
+- Assets/Project/Textures/Level/Normal/A1_FastFood/fastfood-1.png
+- Assets/Project/Textures/Level/Normal/A1_FastFood/fastfood-2.png
+- Assets/Project/Textures/Level/Normal/A2_Trend/trend-0.png
+- Assets/Project/Textures/Level/Normal/A2_Trend/trend-1.png
+- Assets/Project/Textures/Level/Normal/A2_Trend/trend-2.png
+- Assets/Project/Textures/Level/Normal/Beach/beach-0.png
+- Assets/Project/Textures/Level/Normal/Beach/beach-1.png
+- Assets/Project/Textures/Level/Normal/Beach/beach-2.png
+- Assets/Project/Textures/Level/Normal/Beach/beach-3.png
+- Assets/Project/Textures/Level/Normal/Birthday/birthday-0.png
+- Assets/Project/Textures/Level/Normal/Birthday/birthday-1.png
+- Assets/Project/Textures/Level/Normal/Birthday/birthday-2.png
+- Assets/Project/Textures/Level/Normal/Birthday/birthday-3.png
+- Assets/Project/Textures/Level/Normal/Birthday/birthday-4.png
+- Assets/Project/Textures/Level/Normal/Christmas/christmas-0.png
+- Assets/Project/Textures/Level/Normal/Christmas/christmas-1.png
+- Assets/Project/Textures/Level/Normal/Christmas/christmas-2.png
+- Assets/Project/Textures/Level/Normal/Concert/concert-0.png
+- Assets/Project/Textures/Level/Normal/Concert/concert-1.png
+- Assets/Project/Textures/Level/Normal/Concert/concert-2.png
+- Assets/Project/Textures/Level/Normal/Concert/concert-3.png
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-0.png
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-1.png
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-2.png
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-3.png
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-4.png
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-5.png
+- Assets/Project/Textures/Level/Normal/CrazyPark/crazypark-6.png
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-0.png
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-1.png
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-2.png
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-3.png
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-4.png
+- Assets/Project/Textures/Level/Normal/FairyTale/fairytale-5.png
+- Assets/Project/Textures/Level/Normal/Farm/farm-0.png
+- Assets/Project/Textures/Level/Normal/Farm/farm-1.png
+- Assets/Project/Textures/Level/Normal/Farm/farm-2.png
+- Assets/Project/Textures/Level/Normal/Farm/farm-3.png
+- Assets/Project/Textures/Level/Normal/Farm/farm-4.png
+- Assets/Project/Textures/Level/Normal/Farm/farm-5.png
+- Assets/Project/Textures/Level/Normal/Food/food-0.png
+- Assets/Project/Textures/Level/Normal/Food/food-1.png
+- Assets/Project/Textures/Level/Normal/Food/food-2.png
+- Assets/Project/Textures/Level/Normal/Food/food-3.png
+- Assets/Project/Textures/Level/Normal/Museum/museum-0.png
+- Assets/Project/Textures/Level/Normal/Museum/museum-1.png
+- Assets/Project/Textures/Level/Normal/Museum/museum-2.png
+- Assets/Project/Textures/Level/Normal/Museum/museum-3.png
+- Assets/Project/Textures/Level/Normal/Museum/museum-4.png
+- Assets/Project/Textures/Level/Normal/Museum/museum-5.png
+- Assets/Project/Textures/Level/Normal/Museum/museum-6.png
+- Assets/Project/Textures/Level/Normal/NewYear/newyear-0.png
+- Assets/Project/Textures/Level/Normal/NewYear/newyear-1.png
+- Assets/Project/Textures/Level/Normal/NewYear/newyear-2.png
+- Assets/Project/Textures/Level/Normal/NewYear/newyear-3.png
+- Assets/Project/Textures/Level/Normal/P_Hotel/hotel-0.png
+- Assets/Project/Textures/Level/Normal/P_Hotel/hotel-1.png
+- Assets/Project/Textures/Level/Normal/P_Hotel/hotel-2.png
+- Assets/Project/Textures/Level/Normal/Picnic/picnic-0.png
+- Assets/Project/Textures/Level/Normal/Picnic/picnic-1.png
+- Assets/Project/Textures/Level/Normal/Picnic/picnic-2.png
+- Assets/Project/Textures/Level/Normal/Picnic/picnic-3.png
+- Assets/Project/Textures/Level/Normal/Picnic/picnic-4.png
+- Assets/Project/Textures/Level/Normal/R_America_2/america-0.png
+- Assets/Project/Textures/Level/Normal/R_America_2/america-1.png
+- Assets/Project/Textures/Level/Normal/R_America_2/america-2.png
+- Assets/Project/Textures/Level/Normal/R_America_2/america-3.png
+- Assets/Project/Textures/Level/Normal/R_America_2/america-4.png
+- Assets/Project/Textures/Level/Normal/R_America_2/america-5.png
+- Assets/Project/Textures/Level/Normal/S_France_2/france-0.png
+- Assets/Project/Textures/Level/Normal/S_France_2/france-1.png
+- Assets/Project/Textures/Level/Normal/S_France_2/france-2.png
+- Assets/Project/Textures/Level/Normal/S_France_2/france-3.png
+- Assets/Project/Textures/Level/Normal/S_France_2/france-4.png
+- Assets/Project/Textures/Level/Normal/S_France_2/france-5.png
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-0.png
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-1.png
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-2.png
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-3.png
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-4.png
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-5.png
+- Assets/Project/Textures/Level/Normal/Supermarket/supermarket-6.png
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-0.png
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-1.png
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-2.png
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-3.png
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-4.png
+- Assets/Project/Textures/Level/Normal/T_Brazil_2/brazil-5.png
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-0.png
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-1.png
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-2.png
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-3.png
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-4.png
+- Assets/Project/Textures/Level/Normal/U_Mexico_2/mexico-5.png
+- Assets/Project/Textures/Level/Normal/V_Japan_2/japan-0.png
+- Assets/Project/Textures/Level/Normal/V_Japan_2/japan-1.png
+- Assets/Project/Textures/Level/Normal/V_Japan_2/japan-2.png
+- Assets/Project/Textures/Level/Normal/V_Japan_2/japan-3.png
+- Assets/Project/Textures/Level/Normal/V_Japan_2/japan-4.png
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-0.png
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-1.png
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-2.png
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-3.png
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-4.png
+- Assets/Project/Textures/Level/Normal/VietnameseTet/tet-5.png
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-0.png
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-1.png
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-2.png
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-3.png
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-4.png
+- Assets/Project/Textures/Level/Normal/WaterPark/waterpark-5.png
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-0.png
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-1.png
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-2.png
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-3.png
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-4.png
+- Assets/Project/Textures/Level/Normal/Wedding/wedding-5.png
+- Assets/Project/Textures/Level/Normal/X_Russia_2/russia-0.png
+- Assets/Project/Textures/Level/Normal/X_Russia_2/russia-1.png
+- Assets/Project/Textures/Level/Normal/X_Russia_2/russia-2.png
+- Assets/Project/Textures/Level/Normal/X_Russia_2/russia-3.png
+- Assets/Project/Textures/Level/Normal/X_Russia_2/russia-4.png
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-0.png
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-1.png
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-2.png
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-3.png
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-4.png
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-5.png
+- Assets/Project/Textures/Level/Normal/Y_Halloween/halloween-6.png
+- Assets/Project/Textures/UI/Big.png
+- Assets/Project/Textures/UI/halloween.png
+- Assets/Project/Textures/UI/loading_3.png
+- Assets/Project/Textures/UI/UI.png
+- Assets/Project/Textures/UI/UI_1.png
+- Assets/Projects/Textures/UI/Avatar.png
+- Assets/Projects/Textures/UI/newUI.png
+- Assets/Projects/Textures/UI/UIQuitBoard.png
+- Assets/Resources/Texture/Level/058/Lv058_1.png
+- Assets/Resources/Texture/Level/058/Lv058_2.png
+- Assets/Resources/Texture/Level/103/Lv103.png
+- Assets/Resources/Texture/Level/103/Lv103_wall.png
+normalmapFileNames:
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+enableDebugOutput: 0

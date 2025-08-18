@@ -1,0 +1,25 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:6960faa8fb7ebba7a612f56d0490fdd9:cf61e1ede8427e8e17a34e24938132d9:284f157d23d5e92e34bda703af7cdeed$
+#
+:format=40300
+:texture=Lv058_1.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+1F_BG;299;1248;648;798; 0.5;0.5; 0;0;0;0
+1F_girl;2;232;236;874; 0.5;0.5; 0;0;0;0
+1F_Mummy;240;259;315;847; 0.5;0.5; 0;0;0;0
+2F_BG;557;448;648;798; 0.5;0.5; 0;0;0;0
+2F_Boy;2;1108;295;938; 0.5;0.5; 0;0;0;0
+2F_Door_bath;1599;1327;317;719; 0.5;0.5; 0;0;0;0
+3F_BG;949;1248;648;798; 0.5;0.5; 0;0;0;0
+4F_BG;1207;448;648;798; 0.5;0.5; 0;0;0;0
+grey_hair;557;105;82;341; 0.5;0.5; 0;0;0;0
+white_hair;240;19;204;238; 0.5;0.5; 0;0;0;0

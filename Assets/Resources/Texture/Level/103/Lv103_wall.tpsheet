@@ -1,0 +1,21 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:2328833ee7d4e898cb9373480477cc22:678531a11f10c6b098f25eb3058a1828:8605097057c9121042a70028a6065724$
+#
+:format=40300
+:texture=Lv103_wall.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=KeepTransparentPixels
+
+Door_ice;1095;564;545;740; 0.5;0.5; 0;0;0;0
+Door_metal;1;1306;545;741; 0.5;0.5; 0;0;0;0
+Door_paper_1;1;563;545;741; 0.5;0.5; 0;0;0;0
+Door_paper_2;1098;1306;545;741; 0.5;0.5; 0;0;0;0
+Door_paper_3;548;564;545;741; 0.5;0.5; 0;0;0;0
+Door_wood;548;1307;548;740; 0.5;0.5; 0;0;0;0
