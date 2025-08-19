@@ -43,9 +43,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -67,7 +67,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -80,7 +80,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -93,7 +93,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -106,8 +106,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
+  - serializedVersion: 4
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,27 +123,227 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: family_eating_2_0
+      name: BossLv58_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1079
-        height: 1124
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2
+        y: 201
+        width: 566
+        height: 143
+      alignment: 9
+      pivot: {x: 0.05565925, y: 0.31547856}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ec116ef1fefadab70800000000000000
-      internalID: 8911972679203295694
+      spriteID: 461b0b35e1345154da2a9936498234b6
+      internalID: -333427593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossLv58_1
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 221
+        width: 369
+        height: 145
+      alignment: 9
+      pivot: {x: 0.048604, y: 0.40332493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6535422190da83419651eb9588dddd5
+      internalID: -1112012838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossLv58_2
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 221
+        width: 119
+        height: 141
+      alignment: 9
+      pivot: {x: 0.31291032, y: 0.16665898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6154c590ab4f34aab0c7cb853cdac6
+      internalID: 1831724630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossLv58_3
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 220
+        width: 170
+        height: 90
+      alignment: 9
+      pivot: {x: 0.22837345, y: 0.6924018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2143f89dd29054944914e4f10ce7cf81
+      internalID: 946229379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossLv58_4
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 220
+        width: 116
+        height: 138
+      alignment: 9
+      pivot: {x: 0.194337, y: 0.864488}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86293f5fd6c61349be2f125d9a86f46
+      internalID: -523377701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossLv58_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 599
+        height: 197
+      alignment: 9
+      pivot: {x: 0.05260691, y: 0.76369804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3dc773a57821d04eb6ba6d3529753c8
+      internalID: 1506487679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossLv58_6
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 19
+        width: 179
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe050983450a3e44bb3761a9ca2c2ece
+      internalID: 1336348764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossLv58_7
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 2
+        width: 112
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac2ea0b84da06e4797e23371cbf33d2
+      internalID: 809564670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossLv58_8
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 2
+        width: 325
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87815e75f24de0148ae20947a53587be
+      internalID: 712587869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossLv58_9
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 2
+        width: 105
+        height: 192
+      alignment: 9
+      pivot: {x: 0.16231515, y: 0.14783554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac148cbb62156545b149fdaef028a3e
+      internalID: 1966604798
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -153,8 +353,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: True
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      family_eating_2_0: 8911972679203295694
+      BossLv58_0: -333427593
+      BossLv58_1: -1112012838
+      BossLv58_2: 1831724630
+      BossLv58_3: 946229379
+      BossLv58_4: -523377701
+      BossLv58_5: 1506487679
+      BossLv58_6: 1336348764
+      BossLv58_7: 809564670
+      BossLv58_8: 712587869
+      BossLv58_9: 1966604798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

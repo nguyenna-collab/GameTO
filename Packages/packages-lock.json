@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f213ff497e4ff462a77319cf677cf20cc0860ca9"
+    },
     "com.singularitygroup.hotreload": {
       "version": "file:com.singularitygroup.hotreload",
       "depth": 0,
@@ -8,6 +15,13 @@
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
       }
+    },
+    "com.unity-atoms.unity-atoms": {
+      "version": "https://github.com/unity-atoms/unity-atoms.git#master",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "2e11570e7401177fa8e44f97ea08d939407b9ebd"
     },
     "com.unity.2d.animation": {
       "version": "11.0.0",
