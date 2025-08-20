@@ -11,15 +11,14 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
 
     [Header("Events")]
-    [SerializeField] private UnityEvent _onBeginDrag;
-    [SerializeField] private UnityEvent _onDrag;
-    [SerializeField] private UnityEvent _onEndDrag;
-
+    public UnityEvent OnBeginDragEvent;
+    public UnityEvent OnDragEvent;
+    public UnityEvent OnEndDragEvent;
 
     // == Init Data ==
     private Image _image;
     private Transform _parent;
-    private Vector3 _originalPosition;
+    public Vector3 OriginalPosition { get; private set; }
     private int _siblingOrder;
 
     private Vector3 _distToTouchPosition;
@@ -30,28 +29,27 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         _parent = transform.parent;
         _siblingOrder = transform.GetSiblingIndex();
         _image = GetComponent<Image>();
-        _originalPosition = transform.position;
+        OriginalPosition = transform.position;
     }
 
     private void OnEnable()
     {
-        _onBeginDrag.AddListener(HandleBeginDrag);
-        _onDrag.AddListener(HandleDrag);
-        _onEndDrag.AddListener(HandleEndDrag);
+        OnBeginDragEvent.AddListener(HandleBeginDrag);
+        OnDragEvent.AddListener(HandleDrag);
+        OnEndDragEvent.AddListener(HandleEndDrag);
     }
 
     private void OnDisable()
     {
-        _onBeginDrag.RemoveListener(HandleBeginDrag);
-        _onDrag.RemoveListener(HandleDrag);
-        _onEndDrag.RemoveListener(HandleEndDrag);
+        OnBeginDragEvent.RemoveListener(HandleBeginDrag);
+        OnDragEvent.RemoveListener(HandleDrag);
+        OnEndDragEvent.RemoveListener(HandleEndDrag);
     }
     #endregion
 
     #region Drag Event Methods
     private void HandleBeginDrag()
     {
-        transform.SetParent(_dragUICanvas.transform, true);
         _image.preserveAspect = true;
     }
 
@@ -67,40 +65,31 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         _image.preserveAspect = true;
     }
 
+    // Implement interface
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (UIHelper.IsTouchingUI(eventData, this, out Vector3 worldPosition))
         {
             _distToTouchPosition = transform.position - worldPosition;
-            _onBeginDrag?.Invoke();
+            OnBeginDragEvent?.Invoke();
         }
     }
 
+    // Implement interface
     public void OnDrag(PointerEventData eventData)
     {
         if (UIHelper.IsTouchingUI(eventData, this, out Vector3 worldPosition))
         {
             transform.position = worldPosition + _distToTouchPosition;
             //TODO: following touch finger smoothly - Lerp
-            _onDrag?.Invoke();
+            OnDragEvent?.Invoke();
         }
     }
 
+    // Implement interface
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (UIHelper.IsTouchingUI(eventData, this, out Vector3 worldPosition))
-        {
-            if (GetComponent<RectTransform>().IsOverlapUI(_mainCharacter))
-            {
-                Debug.Log("Snapped to character position");
-                transform.position = _mainCharacter.position;
-            }
-            else
-            {
-                Debug.Log("Snapped back to original position");
-                transform.position = _originalPosition;
-            }
-        }
+        OnEndDragEvent?.Invoke();
     }
     #endregion
 }
