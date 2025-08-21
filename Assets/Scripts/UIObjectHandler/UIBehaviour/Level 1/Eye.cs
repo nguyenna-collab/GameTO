@@ -1,20 +1,20 @@
+using System;
+using GameSystemsCookbook;
 using UnityEngine;
 
-[RequireComponent(typeof(DraggableUI))]
 public class Eye : AUIBehaviour
 {
     [SerializeField] private Transform _eyePosition;
     [SerializeField] private RestorePositionSO _restorePositionSO;
+    [SerializeField] private ObjectiveSO _objectiveSO;
 
-    private DraggableUI _draggableUI;
-
-    void Awake()
+    protected override void OnEnable()
     {
-        _draggableUI = GetComponent<DraggableUI>();
+        base.OnEnable();
         _draggableUI.OnEndDragEvent.AddListener(SnapToFace);
     }
 
-    private void OnDestroy()
+    protected override void OnDisable()
     {
         _draggableUI.OnEndDragEvent.RemoveListener(SnapToFace);
     }
@@ -25,13 +25,26 @@ public class Eye : AUIBehaviour
         {
             if (_eyePosition != null)
             {
-                transform.position = _eyePosition.position;
-                transform.SetParent(_eyePosition.parent, true);
+                CompleteObjective();
             }
         }
         else
         {
-            _restorePositionSO.ApplyBehaviour(transform, _draggableUI.OriginalPosition);
+            FailObjective();
         }
+    }
+
+    protected override void CompleteObjective()
+    {
+        transform.position = _eyePosition.position;
+        transform.SetParent(_eyePosition.parent, true);
+        _objectiveSO.CompleteObjective();
+    }
+
+    protected override void FailObjective()
+    {
+        _restorePositionSO.ApplyBehaviour(transform, _draggableUI.OriginalPosition);
+        transform.SetParent(_draggableUI.DragUICanvas.transform, _draggableUI.InitialSiblingOrder);
+        _objectiveSO.FailObjective();
     }
 }

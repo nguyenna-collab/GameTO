@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fdd8a87e7748345a6f19c0dbf2307e, type: 3}
+  m_Name: Level1_Floor1_eye2_Objective
+  m_EditorClassIdentifier: Assembly-CSharp::GameSystemsCookbook.ObjectiveSO
+  Description: 
+  _Title: 
+  _ObjectiveCompleted: {fileID: 11400000, guid: aac382490c8a2ea449ef563bf95810e7, type: 2}
+  _ObjectiveFailed: {fileID: 11400000, guid: 697edc42d70afac409c67a9afee4790f, type: 2}

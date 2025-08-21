@@ -16,18 +16,19 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public UnityEvent OnEndDragEvent;
 
     // == Init Data ==
-    private Image _image;
-    private Transform _parent;
     public Vector3 OriginalPosition { get; private set; }
-    private int _siblingOrder;
+    public int InitialSiblingOrder { get; private set; }
+    public Canvas DragUICanvas { get => _dragUICanvas; }
 
     private Vector3 _distToTouchPosition;
+    private Image _image;
+    private Transform _parent;
 
     #region Unity Callbacks
     void Awake()
     {
         _parent = transform.parent;
-        _siblingOrder = transform.GetSiblingIndex();
+        InitialSiblingOrder = transform.GetSiblingIndex();
         _image = GetComponent<Image>();
         OriginalPosition = transform.position;
     }
@@ -61,7 +62,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private void HandleEndDrag()
     {
         transform.SetParent(_parent, true);
-        transform.SetSiblingIndex(_siblingOrder);
+        transform.SetSiblingIndex(InitialSiblingOrder);
         _image.preserveAspect = true;
     }
 
