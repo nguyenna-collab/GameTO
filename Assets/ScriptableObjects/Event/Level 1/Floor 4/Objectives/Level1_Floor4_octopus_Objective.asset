@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35fdd8a87e7748345a6f19c0dbf2307e, type: 3}
-  m_Name: Level1_Floor1_eye1_Objective
+  m_Name: Level1_Floor4_octopus_Objective
   m_EditorClassIdentifier: Assembly-CSharp::GameSystemsCookbook.ObjectiveSO
   Description: 
   _Title: 
-  _ObjectiveCompleted: {fileID: 11400000, guid: aac382490c8a2ea449ef563bf95810e7, type: 2}
-  _ObjectiveFailed: {fileID: 11400000, guid: 864584451c5803242816e62d2dee9958, type: 2}
+  _ObjectiveCompleted: {fileID: 11400000, guid: 474a4a67e69c8174491fb7ab90e8597a, type: 2}
+  _ObjectiveFailed: {fileID: 11400000, guid: ffeeb44f119952549bf69f944bc16802, type: 2}

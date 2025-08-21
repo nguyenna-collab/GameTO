@@ -7,16 +7,15 @@ using UnityEngine.UI;
 public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private Canvas _dragUICanvas;
-    [SerializeField] private RectTransform _mainCharacter;
-
 
     [Header("Events")]
     public UnityEvent OnBeginDragEvent;
     public UnityEvent OnDragEvent;
     public UnityEvent OnEndDragEvent;
+    [SerializeField] private bool _disableBeginDragEvent;
+    [SerializeField] private bool _disableEndDragEvent;
 
     // == Init Data ==
-    public Vector3 OriginalPosition { get; private set; }
     public int InitialSiblingOrder { get; private set; }
     public Canvas DragUICanvas { get => _dragUICanvas; }
 
@@ -25,16 +24,13 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Transform _parent;
 
     #region Unity Callbacks
-    void Awake()
-    {
-        _parent = transform.parent;
-        InitialSiblingOrder = transform.GetSiblingIndex();
-        _image = GetComponent<Image>();
-        OriginalPosition = transform.position;
-    }
 
     private void OnEnable()
     {
+        _image = GetComponent<Image>();
+        _parent = transform.parent;
+        InitialSiblingOrder = transform.GetSiblingIndex();
+
         OnBeginDragEvent.AddListener(HandleBeginDrag);
         OnDragEvent.AddListener(HandleDrag);
         OnEndDragEvent.AddListener(HandleEndDrag);
@@ -51,7 +47,10 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     #region Drag Event Methods
     private void HandleBeginDrag()
     {
-        _image.preserveAspect = true;
+        if (_disableBeginDragEvent)
+            return;
+        _image.SetNativeSize();
+        transform.SetParent(_dragUICanvas.transform);
     }
 
     private void HandleDrag()
@@ -61,9 +60,11 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private void HandleEndDrag()
     {
-        transform.SetParent(_parent, true);
+        if (_disableEndDragEvent)
+            return;
+        transform.SetParent(_parent);
         transform.SetSiblingIndex(InitialSiblingOrder);
-        _image.preserveAspect = true;
+        _image.SetNativeSize();
     }
 
     // Implement interface

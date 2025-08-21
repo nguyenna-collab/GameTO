@@ -1,20 +1,24 @@
-using System;
-using GameSystemsCookbook;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Eye : AUIBehaviour
+public class DragAndRepositionUI : AUIBehaviour
 {
-    [SerializeField] private Transform _eyePosition;
+    [SerializeField] private Transform _targetPosition;
     [SerializeField] private RestorePositionSO _restorePositionSO;
     [SerializeField] private ObjectiveSO _objectiveSO;
+
+    private DraggableUI _draggableUI;
+    private Image _image;
 
     protected override void OnEnable()
     {
         base.OnEnable();
+        _draggableUI = GetComponent<DraggableUI>();
+        _image = GetComponent<Image>();
         _draggableUI.OnEndDragEvent.AddListener(SnapToFace);
     }
 
-    protected override void OnDisable()
+    protected void OnDisable()
     {
         _draggableUI.OnEndDragEvent.RemoveListener(SnapToFace);
     }
@@ -23,7 +27,7 @@ public class Eye : AUIBehaviour
     {
         if (IsTouchingTarget())
         {
-            if (_eyePosition != null)
+            if (_targetPosition != null)
             {
                 CompleteObjective();
             }
@@ -36,15 +40,17 @@ public class Eye : AUIBehaviour
 
     protected override void CompleteObjective()
     {
-        transform.position = _eyePosition.position;
-        transform.SetParent(_eyePosition.parent, true);
+        transform.SetParent(_targetPosition);
+        transform.position = _targetPosition.position;
         _objectiveSO.CompleteObjective();
     }
 
     protected override void FailObjective()
     {
-        _restorePositionSO.ApplyBehaviour(transform, _draggableUI.OriginalPosition);
-        transform.SetParent(_draggableUI.DragUICanvas.transform, _draggableUI.InitialSiblingOrder);
+        transform.SetParent(_initialParent);
+        transform.SetSiblingIndex(_initialSiblingIndex);
+        transform.position = OriginalPosition;
+        _image.SetNativeSize();
         _objectiveSO.FailObjective();
     }
 }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35fdd8a87e7748345a6f19c0dbf2307e, type: 3}
-  m_Name: Level1_Floor1_eye1_Objective
+  m_Name: Level1_Floor2_Trimmed Fur_Objective
   m_EditorClassIdentifier: Assembly-CSharp::GameSystemsCookbook.ObjectiveSO
   Description: 
   _Title: 
-  _ObjectiveCompleted: {fileID: 11400000, guid: aac382490c8a2ea449ef563bf95810e7, type: 2}
-  _ObjectiveFailed: {fileID: 11400000, guid: 864584451c5803242816e62d2dee9958, type: 2}
+  _ObjectiveCompleted: {fileID: 11400000, guid: 4ba60f0f11f419f44a7849b35064320d, type: 2}
+  _ObjectiveFailed: {fileID: 11400000, guid: be56f43553d317f489ce26ef2e1dd265, type: 2}

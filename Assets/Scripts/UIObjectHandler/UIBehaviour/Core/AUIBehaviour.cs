@@ -1,28 +1,19 @@
 using UnityEngine;
 
-[RequireComponent(typeof(DraggableUI))]
 public abstract class AUIBehaviour : MonoBehaviour
 {
     [SerializeField] protected RectTransform _targetRect;
-    [SerializeField] private Transform _dragUICanvas;
     
-    protected DraggableUI _draggableUI;
+    public Vector3 OriginalPosition { get; private set; }
+    
+    protected Transform _initialParent;
     protected int _initialSiblingIndex;
-    
+
     protected virtual void OnEnable()
     {
+        _initialParent = transform.parent;
         _initialSiblingIndex = transform.GetSiblingIndex();
-        
-        _draggableUI = GetComponent<DraggableUI>();
-        
-        _draggableUI.OnBeginDragEvent.AddListener(OnBeginDrag);
-        _draggableUI.OnEndDragEvent.AddListener(OnEndDrag);
-    }
-
-    protected virtual void OnDisable()
-    {
-        _draggableUI.OnBeginDragEvent.RemoveListener(OnBeginDrag);
-        _draggableUI.OnEndDragEvent.RemoveListener(OnEndDrag);
+        OriginalPosition = transform.position;
     }
     
     protected virtual bool IsTouchingTarget()
@@ -32,14 +23,4 @@ public abstract class AUIBehaviour : MonoBehaviour
     
     protected abstract void CompleteObjective();
     protected abstract void FailObjective();
-    
-    protected virtual void OnBeginDrag()
-    {
-        transform.SetParent(_dragUICanvas);
-    }
-
-    protected virtual void OnEndDrag()
-    {
-        transform.SetParent(_dragUICanvas, _initialSiblingIndex);
-    }
 }

@@ -31,9 +31,11 @@ namespace GameSystemsCookbook
         [SerializeField] private List<ObjectiveManager> _SubObjectiveManagers = new();
         [SerializeField] private VoidEvent _AllSubObjectiveManagerCompleted;
         [SerializeField] private VoidEvent _SubObjectiveManagerCompleted;
-        
+
+        public List<ObjectiveManager> SubObjectiveManagers { get => _SubObjectiveManagers; }
 
         public bool IsAllObjectivesCompleted { get; private set; }
+        public bool IsAllSubObjectiveManagersCompleted { get; private set; }
 
         // Subscribes to event channels for starting the game and for the completion of each Objective
         private void OnEnable()
@@ -44,7 +46,7 @@ namespace GameSystemsCookbook
 
             if (_ObjectiveCompleted != null)
                 _ObjectiveCompleted.Register(OnCompleteObjective);
-            
+
             // == Sub ObjectiveManagers
             if (_SubObjectiveManagerCompleted != null)
                 _SubObjectiveManagerCompleted.Register(SubObjectiveManagerCompleted);
@@ -77,7 +79,7 @@ namespace GameSystemsCookbook
                 }
             }
 
-            Debug.Log("All Objectives completed");
+            Debug.Log($"{gameObject.name}: All Objectives completed");
             IsAllObjectivesCompleted = true;
             return true;
         }
@@ -114,9 +116,10 @@ namespace GameSystemsCookbook
 
         public bool IsSubObjectiveManagerListComplete()
         {
-            if (_SubObjectiveManagers == null || _SubObjectiveManagers.Count < 0) return false;
+            if (_SubObjectiveManagers == null || _SubObjectiveManagers.Count <= 0) return false;
             foreach (ObjectiveManager om in _SubObjectiveManagers)
             {
+                Debug.Log($"{om.gameObject.name}: {om.IsAllObjectivesCompleted}");
                 if (!om.IsAllObjectivesCompleted)
                 {
                     return false;
@@ -130,7 +133,10 @@ namespace GameSystemsCookbook
             if (IsSubObjectiveManagerListComplete())
             {
                 if (_AllSubObjectiveManagerCompleted != null)
+                {
                     _AllSubObjectiveManagerCompleted.Raise();
+                }
+                IsAllSubObjectiveManagersCompleted = true;
             }
         }
         

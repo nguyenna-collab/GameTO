@@ -34,4 +34,11 @@ public static class UIHelper
 
         return rectBounds.Intersects(targetBounds);
     }
+
+    public static void FlipX(this Transform transform)
+    {
+        var localScale = transform.localScale;
+        localScale.x *= -1;
+        transform.localScale = localScale;
+    }
 }
