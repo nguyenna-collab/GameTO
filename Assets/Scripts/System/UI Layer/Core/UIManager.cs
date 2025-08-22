@@ -31,42 +31,44 @@ public class UIManager : Singleton<UIManager>
         RegisterAllScreensOnLayers();
     }
 
-        // This method is now internal, called by UIManager itself
-        public void RegisterScreen(string screenId, AUIScreenController screenController)
+    // This method is now internal, called by UIManager itself
+    public void RegisterScreen(string screenId, AUIScreenController screenController, AUILayerController targetLayer)
+    {
+        if (string.IsNullOrEmpty(screenId)) return;
+        if (instantiatedScreens.ContainsKey(screenId))
         {
-            if (string.IsNullOrEmpty(screenId)) return;
-            if (instantiatedScreens.ContainsKey(screenId))
-            {
-                Debug.LogWarning($"UIManager: Screen with ID '{screenId}' already registered. Overwriting.");
-            }
-            instantiatedScreens[screenId] = screenController;
+            Debug.LogWarning($"UIManager: Screen with ID '{screenId}' already registered. Overwriting.");
         }
+        instantiatedScreens[screenId] = screenController;
+        targetLayer.RegisterScreen(screenController);
+    }
 
-        // This method is now internal, called by UIManager itself
-        private void UnregisterScreen(string screenId)
+    // This method is now internal, called by UIManager itself
+    private void UnregisterScreen(string screenId, AUILayerController targetLayer)
+    {
+        if (string.IsNullOrEmpty(screenId)) return;
+        if (instantiatedScreens.ContainsKey(screenId))
         {
-            if (string.IsNullOrEmpty(screenId)) return;
-            if (instantiatedScreens.ContainsKey(screenId))
-            {
-                instantiatedScreens.Remove(screenId);
-            }
+            instantiatedScreens.Remove(screenId);
+            targetLayer.UnregisterScreen(instantiatedScreens[screenId]);
         }
+    }
 
     private void RegisterAllScreensOnLayers()
     {
         foreach (var screen in panelLayer.GetComponentsInChildren<AUIScreenController>(true))
         {
-            RegisterScreen(screen.ScreenID, screen);
+            RegisterScreen(screen.ScreenID, screen, panelLayer);
         }
 
         foreach (var screen in dialogLayer.GetComponentsInChildren<AUIScreenController>(true))
         {
-            RegisterScreen(screen.ScreenID, screen);
+            RegisterScreen(screen.ScreenID, screen, dialogLayer);
         }
 
         foreach (var screen in overlayLayer.GetComponentsInChildren<AUIScreenController>(true))
         {
-            RegisterScreen(screen.ScreenID, screen);
+            RegisterScreen(screen.ScreenID, screen, overlayLayer);
         }
     }
 
@@ -100,7 +102,7 @@ public class UIManager : Singleton<UIManager>
         // Ensure the screenID matches the entry's screenID
         screenController.ScreenID = screenId;
 
-        RegisterScreen(screenId, screenController);
+        RegisterScreen(screenId, screenController, targetLayer);
         return screenController;
     }
 
@@ -108,11 +110,6 @@ public class UIManager : Singleton<UIManager>
         public void ShowPanel(string screenId, object properties = null)
         {
             Debug.Log($"UIManager: Showing panel with ID '{screenId}'");
-            if (properties != null)
-            {
-                Debug.Log($"UIManager: Properties: {properties}");
-            }
-
             if (panelLayer != null)
             {
                 AUIScreenController screen = GetOrCreateScreenController(screenId, panelLayer);
@@ -144,120 +141,130 @@ public class UIManager : Singleton<UIManager>
             }
         }
 
-        public void HidePanel(string screenId)
+    //For Button Event
+    public void ShowPanel(string screenId)
+    {
+        if (panelLayer != null)
         {
-            if (panelLayer != null)
-            {
-                panelLayer.HideScreen(screenId);
-                Debug.Log($"UIManager: Hiding panel with ID '{screenId}'");
-            }
+            AUIScreenController screen = GetOrCreateScreenController(screenId, panelLayer);
+            panelLayer.ShowScreen(screen);
+        }
+    }
+
+    public void HidePanel(string screenId)
+    {
+        if (panelLayer != null)
+        {
+            panelLayer.HideScreen(screenId);
+            Debug.Log($"UIManager: Hiding panel with ID '{screenId}'");
+        }
+    }
+
+    public void ShowDialog(string screenId, object properties = null)
+    {
+        Debug.Log($"UIManager: Showing dialog with ID '{screenId}'");
+        if (properties != null)
+        {
+            Debug.Log($"UIManager: Properties: {properties}");
         }
 
-        public void ShowDialog(string screenId, object properties = null)
+        if (dialogLayer != null)
         {
-            Debug.Log($"UIManager: Showing dialog with ID '{screenId}'");
-            if (properties != null)
+            AUIScreenController screen = GetOrCreateScreenController(screenId, dialogLayer);
+            if (screen != null)
             {
-                Debug.Log($"UIManager: Properties: {properties}");
-            }
-
-            if (dialogLayer != null)
-            {
-                AUIScreenController screen = GetOrCreateScreenController(screenId, dialogLayer);
-                if (screen != null)
+                // Handle properties validation
+                if (properties is ScreenProperties screenProps)
                 {
-                    // Handle properties validation
-                    if (properties is ScreenProperties screenProps)
+                    if (!screenProps.Validate())
                     {
-                        if (!screenProps.Validate())
-                        {
-                            Debug.LogError($"UIManager: Invalid properties for dialog '{screenId}': {screenProps.GetSummary()}");
-                            return;
-                        }
-
-                        // Handle special properties
-                        if (screenProps.blockInput)
-                        {
-                            ShowBlockingOverlay();
-                        }
+                        Debug.LogError($"UIManager: Invalid properties for dialog '{screenId}': {screenProps.GetSummary()}");
+                        return;
                     }
 
-                    dialogLayer.ShowScreen(screen, properties);
-                }
-            }
-        }
-
-        public void HideDialog(string screenId)
-        {
-            if (dialogLayer != null)
-            {
-                // Check if we need to hide the blocking overlay
-                if (instantiatedScreens.TryGetValue(screenId, out AUIScreenController screen))
-                {
-                    if (screen.BaseProperties != null && screen.BaseProperties.blockInput)
+                    // Handle special properties
+                    if (screenProps.blockInput)
                     {
-                        HideBlockingOverlay();
+                        ShowBlockingOverlay();
                     }
                 }
 
-                dialogLayer.HideScreen(screenId);
-            }
-        }
-
-        public void HideAllUI()
-        {
-            if (panelLayer != null) panelLayer.HideAll();
-            if (dialogLayer != null) dialogLayer.HideAll();
-            if (overlayLayer != null) overlayLayer.HideAll();
-        }
-
-        // Overlay Layer methods
-        public void ShowOverlay(string screenId, object properties = null)
-        {
-            if (overlayLayer != null)
-            {
-                AUIScreenController screen = GetOrCreateScreenController(screenId, overlayLayer);
-                if (screen != null)
-                {
-                    overlayLayer.ShowScreen(screen, properties);
-                }
-            }
-        }
-
-        public void HideOverlay(string screenId)
-        {
-            if (overlayLayer != null)
-            {
-                overlayLayer.HideScreen(screenId);
-            }
-        }
-
-        public void ShowBlockingOverlay()
-        {
-            if (overlayLayer != null && overlayLayer is OverlayLayerController overlayController)
-            {
-                overlayController.ShowBlockingOverlay();
-            }
-        }
-
-        public void HideBlockingOverlay()
-        {
-            if (overlayLayer != null && overlayLayer is OverlayLayerController overlayController)
-            {
-                overlayController.HideBlockingOverlay();
-            }
-        }
-        
-        [Button]
-        public void LogAllRegisteredScreens()
-        {
-            Debug.Log("UIManager: Registered Screens:");
-            foreach (var entry in instantiatedScreens)
-            {
-                Debug.Log($"- {entry.Key}: {entry.Value.name}");
+                dialogLayer.ShowScreen(screen, properties);
             }
         }
     }
+
+    public void HideDialog(string screenId)
+    {
+        if (dialogLayer != null)
+        {
+            // Check if we need to hide the blocking overlay
+            if (instantiatedScreens.TryGetValue(screenId, out AUIScreenController screen))
+            {
+                if (screen.BaseProperties != null && screen.BaseProperties.blockInput)
+                {
+                    HideBlockingOverlay();
+                }
+            }
+
+            dialogLayer.HideScreen(screenId);
+        }
+    }
+
+    public void HideAllUI()
+    {
+        if (panelLayer != null) panelLayer.HideAll();
+        if (dialogLayer != null) dialogLayer.HideAll();
+        if (overlayLayer != null) overlayLayer.HideAll();
+    }
+
+    // Overlay Layer methods
+    public void ShowOverlay(string screenId, object properties = null)
+    {
+        if (overlayLayer != null)
+        {
+            AUIScreenController screen = GetOrCreateScreenController(screenId, overlayLayer);
+            if (screen != null)
+            {
+                overlayLayer.ShowScreen(screen, properties);
+            }
+        }
+    }
+
+    public void HideOverlay(string screenId)
+    {
+        if (overlayLayer != null)
+        {
+            overlayLayer.HideScreen(screenId);
+        }
+    }
+
+    public void ShowBlockingOverlay()
+    {
+        if (overlayLayer != null && overlayLayer is OverlayLayerController overlayController)
+        {
+            overlayController.ShowBlockingOverlay();
+        }
+    }
+
+    public void HideBlockingOverlay()
+    {
+        if (overlayLayer != null && overlayLayer is OverlayLayerController overlayController)
+        {
+            overlayController.HideBlockingOverlay();
+        }
+    }
+    
+    [Button]
+    public void LogAllRegisteredScreens()
+    {
+        Debug.Log("UIManager: Registered Screens:");
+        foreach (var entry in instantiatedScreens)
+        {
+            Debug.Log($"- {entry.Key}: {entry.Value.name}");
+        }
+    }
+}
 
 internal class CinemachineCamera
 {

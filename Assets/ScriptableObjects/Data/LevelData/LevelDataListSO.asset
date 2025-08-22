@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9291a85b18210a942bdab18edde9346a, type: 3}
-  m_Name: Level_00
+  m_Script: {fileID: 11500000, guid: e31b05f39e1755d49aadb5cbd1c5a536, type: 3}
+  m_Name: LevelDataListSO
   m_EditorClassIdentifier: 
-  openConfiguration: 1
-  LevelIndex: 0
-  Icon: {fileID: 424673294, guid: 84155ab7c548e5447b0261d26101a5bd, type: 3}
+  levelDataList:
+  - {fileID: 11400000, guid: f8c7f6ab02d380741bbd729e81155b0a, type: 2}
+  - {fileID: 11400000, guid: 86c698d33d84159458b64c8a78ba3261, type: 2}

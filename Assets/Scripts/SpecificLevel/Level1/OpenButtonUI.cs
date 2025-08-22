@@ -7,12 +7,13 @@ using UnityEngine.UI;
 
 namespace Level1
 {
-    public class OpenButtonUI : MonoBehaviour
+    public class MoveButtonUI : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private Killer _killer;
         [SerializeField] private List<Transform> _doorList;
         [SerializeField] private ObjectiveManager _superObjectiveManager;
+        [SerializeField] private FloorMover _floorMover;
         
         [Header("Parameters")]
         [SerializeField] private Ease _easeType = Ease.Linear;
@@ -42,7 +43,7 @@ namespace Level1
 
         private void ButtonClick()
         {
-            int index = LevelManager.Instance.CurrentFloorIndex;
+            int index = _floorMover.CurrentFloorIndex;
             if (_superObjectiveManager.ObjectiveManagerIsCompleted(_superObjectiveManager.SubObjectiveManagers[index]))
                 ObjectivesCompleted();
             else
@@ -52,20 +53,19 @@ namespace Level1
         private void ObjectivesCompleted()
         {
             var killerTransform = _killer.transform;
-            var levelManager = LevelManager.Instance;
             var killerScale = killerTransform.localScale;
 
-            if (!levelManager.IsLastFloor)
+            if (!_floorMover.IsLastFloor)
             {
                 Sequence s = DOTween.Sequence();
                 s.AppendCallback(() =>
                 {
-                    _doorList[levelManager.CurrentFloorIndex].gameObject.SetActive(false);
+                    _doorList[_floorMover.CurrentFloorIndex].gameObject.SetActive(false);
                 }).AppendInterval(0.5f);
                 s.Append(killerTransform.DOMove(_targetRight.position, _killerMoveRightDuration).SetEase(_easeType));
                 s.AppendCallback(() => killerTransform.FlipX());
                 s.Append(killerTransform.DOMove(_targetLeft.position, _killerMoveLeftDuration).SetEase(_easeType));
-                s.Append(levelManager.MoveToNextFloor());
+                s.Append(_floorMover.MoveToNextFloor());
                 s.AppendCallback(() => killerTransform.FlipX());
                 s.Append(killerTransform.DOMove(_targetCenter.position, _killerMoveCenterDuration).SetEase(_easeType)); 
             }

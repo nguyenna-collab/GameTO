@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class LevelIconController : MonoBehaviour
 {
     [SerializeField] private Image _iconImage;
+    [SerializeField] private Image _lockedImage;
+    [SerializeField] private Image _hotImage;
     [SerializeField] private TMP_Text _levelText;
 
     private Button _btn;
+    private LevelDataSO _levelData;
 
     void Awake()
     {
@@ -25,7 +28,7 @@ public class LevelIconController : MonoBehaviour
         _btn.onClick.RemoveListener(OnButtonClick);
     }
 
-    public void SetIconData(LevelIconDataSO iconData)
+    public void SetIconData(LevelDataSO iconData)
     {
         if (_iconImage == null || _levelText == null || iconData == null)
         {
@@ -34,11 +37,27 @@ public class LevelIconController : MonoBehaviour
         }
 
         _iconImage.sprite = iconData.Icon;
-        _levelText.text = iconData.LevelIndex.ToString();
+        _levelText.SetText($"Level {iconData.LevelIndex}");
+        _levelData = iconData;
+        if (_levelData.IsLocked)
+            _lockedImage.gameObject.SetActive(true);
+        else
+            _lockedImage.gameObject.SetActive(false);
+        if (_levelData.IsHotLevel)
+            _hotImage.gameObject.SetActive(true);
+        else
+            _hotImage.gameObject.SetActive(false);
     }
 
     private void OnButtonClick()
     {
-        SceneManagementService.Instance.LoadScene("Level_" + _levelText.text);
+        if (_levelData != null && !_levelData.IsLocked)
+        {
+            SceneManagementService.Instance.LoadLevel(_levelData.LevelIndex);
+        }
+        else
+        {
+            Debug.Log("Level is locked.");
+        }
     }
 }

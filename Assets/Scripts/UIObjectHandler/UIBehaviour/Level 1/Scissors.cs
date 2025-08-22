@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(DraggableUI))]
@@ -27,24 +28,20 @@ public class Scissors : AUIBehaviour
     {
         base.OnEnable();
         _draggableUI = GetComponent<DraggableUI>();
-        _draggableUI.OnEndDragEvent.AddListener(TrimDogFur);
+        _draggableUI.OnDropped.AddListener(HandleDrop);
     }
 
     protected void OnDisable()
     {
-        _draggableUI.OnEndDragEvent.RemoveListener(TrimDogFur);
+        _draggableUI.OnDropped.RemoveListener(HandleDrop);
     }
-    
-    private void TrimDogFur()
+
+    private void HandleDrop(PointerEventData eventData)
     {
         if (IsTouchingTarget())
-        {
             CompleteObjective();
-        }
         else
-        {
             FailObjective();
-        }
     }
 
     protected override void CompleteObjective()
@@ -54,8 +51,7 @@ public class Scissors : AUIBehaviour
 
     protected override void FailObjective()
     {
-        transform.SetParent(_initialParent, _draggableUI.InitialSiblingOrder);
-        _restorePositionSO.ApplyBehaviour(transform, OriginalPosition);
+        _draggableUI.RestoreToInitial();
     }
 
     private Sequence TrimFur()

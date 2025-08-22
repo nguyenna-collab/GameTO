@@ -2,7 +2,7 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
- public abstract class AUIScreenController : MonoBehaviour
+public abstract class AUIScreenController : MonoBehaviour
 {
     public abstract ScreenProperties BaseProperties { get; }
 
@@ -109,12 +109,6 @@ using UnityEngine;
         }
     }
 
-    // The UIManager is now responsible for registration.
-    // This Start method can be removed or used for other initialization.
-    protected virtual void Start()
-    {
-    }
-
     // The UIManager should also handle unregistering if it destroys the object.
     // If screens are destroyed by other means, this might be needed, but for now, we'll let the UIManager handle it.
     protected virtual void OnDestroy()
@@ -128,6 +122,7 @@ public abstract class AUIScreenController<T> : AUIScreenController where T : cla
     protected T Properties;
     protected bool PropertiesSet { get; private set; }
 
+    // This method is called automatically in ShowScreen method of AUILayerController
     public void SetProperties(T properties)
     {
         this.Properties = properties;
@@ -145,15 +140,14 @@ public abstract class AUIScreenController<T> : AUIScreenController where T : cla
         return PropertiesSet && Properties != null;
     }
 
-    protected virtual void OnPropertiesSet() { }
+    protected abstract void OnPropertiesSet();
 
     // Override Show to handle properties
     public override void Show(Action onShowComplete = null)
     {
         base.Show(() =>
         {
-            // If properties are set after showing, update the UI
-            if (PropertiesSet)
+            if (!PropertiesSet)
             {
                 OnPropertiesSet();
             }

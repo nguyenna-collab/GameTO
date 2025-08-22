@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public abstract class AUILayerController : MonoBehaviour
@@ -49,7 +50,22 @@ public abstract class AUILayerController : MonoBehaviour
 
         screen.Show();
     }
-    
-    public abstract void HideScreen(string screenId);
+
+    public virtual void HideScreen(string screenId)
+    {
+        if (screens.ContainsKey(screenId))
+        {
+            screens[screenId].Hide();
+        }
+    }
     public abstract void HideAll();
+
+    [Button]
+    private void LogAllScreens()
+    {
+        foreach (var screen in screens)
+        {
+            Debug.Log($"Screen ID: {screen.Key}, Active: {screen.Value.IsVisible}");
+        }
+    }
 }

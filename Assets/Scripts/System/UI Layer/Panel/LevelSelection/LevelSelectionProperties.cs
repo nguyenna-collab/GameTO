@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class LevelSelectionProperties : ScreenProperties
 {
-    public LevelIconListSO levelIconList;
+    public LevelDataListSO levelDataList;
 
-    public LevelSelectionProperties(LevelIconListSO levelIconList) : base()
+    public LevelSelectionProperties(LevelDataListSO levelDataList) : base()
     {
-        this.levelIconList = levelIconList;
+        this.levelDataList = levelDataList;
     }
 }

@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 404a954ebad74e64fad7a3fe9b46e808, type: 3}
-  m_Name: LevelIconListSO
-  m_EditorClassIdentifier: 
-  levelIcons:
-  - {fileID: 11400000, guid: f8c7f6ab02d380741bbd729e81155b0a, type: 2}
+  m_Script: {fileID: 11500000, guid: 41856ddc85877414dbf32b336b6582c4, type: 3}
+  m_Name: HintDataSO-Level_2
+  m_EditorClassIdentifier: Assembly-CSharp::HintDataSO
+  Description: 
+  DefaultHint: No More Hints Available
+  Hints:
+  - aa
+  - bb

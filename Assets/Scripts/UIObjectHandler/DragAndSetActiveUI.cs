@@ -1,6 +1,7 @@
 using System;
 using GameSystemsCookbook;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(DraggableUI))]
@@ -17,15 +18,15 @@ public class DragAndSetActiveUI : AUIBehaviour
     {
         base.OnEnable();
         _draggableUI = GetComponent<DraggableUI>();
-        _draggableUI.OnEndDragEvent.AddListener(SnapToFace);
+        _draggableUI.OnDropped.AddListener(SnapToFace);
     }
 
     protected void OnDisable()
     {
-        _draggableUI.OnEndDragEvent.RemoveListener(SnapToFace);
+        _draggableUI.OnDropped.RemoveListener(SnapToFace);
     }
 
-    private void SnapToFace()
+    private void SnapToFace(PointerEventData eventData)
     {
         if (IsTouchingTarget())
         {
@@ -39,15 +40,14 @@ public class DragAndSetActiveUI : AUIBehaviour
 
     protected override void CompleteObjective()
     {
-        _objectiveSO.CompleteObjective();
         _enableUI.SetActive(true);
         _disableUI.SetActive(false);
+        _objectiveSO.CompleteObjective();
     }
 
     protected override void FailObjective()
     {
-        _restorePositionSO.ApplyBehaviour(transform, OriginalPosition);
-        transform.SetParent(_initialParent, _draggableUI.InitialSiblingOrder);
+        _draggableUI.RestoreToInitial();
         _objectiveSO.FailObjective();
     }
 }

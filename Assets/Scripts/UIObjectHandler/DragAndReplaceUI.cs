@@ -1,12 +1,12 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(DraggableUI))]
-public class DragAndReplaceUI : AUIBehaviour
+public class DragAndReplaceUI : AUIBehaviour, IDropTarget
 {
     [SerializeField] private Transform _targetPosition;
     [SerializeField] private Sprite _replacmentSprite;
-    [SerializeField] private RestorePositionSO _restorePositionSO;
     [SerializeField] private ObjectiveSO _objectiveSO;
 
     private DraggableUI _draggableUI;
@@ -18,42 +18,47 @@ public class DragAndReplaceUI : AUIBehaviour
         base.OnEnable();
         _draggableUI = GetComponent<DraggableUI>();
         _image =  GetComponent<Image>();
-        _draggableUI.OnEndDragEvent.AddListener(SnapToFace);
+        _draggableUI.OnDropped.AddListener(SnapToFace);
     }
     
     protected void OnDisable()
     {
-        _draggableUI.OnEndDragEvent.RemoveListener(SnapToFace);
+        _draggableUI.OnDropped.RemoveListener(SnapToFace);
     }
 
-    private void SnapToFace()
+    private void SnapToFace(PointerEventData eventData)
     {
         if (IsTouchingTarget())
-        {
-            if (_targetPosition != null)
-            {
-                CompleteObjective();
-            }
-        }
+            OnDropReceived(_draggableUI, eventData);
         else
-        {
             FailObjective();
-        }
     }
 
     protected override void CompleteObjective()
     {
+        transform.SetParent(_targetPosition.parent, true);
+        transform.position = _targetPosition.position;
+
         _image.sprite = _replacmentSprite;
         _image.SetNativeSize();
-        transform.position = _targetPosition.position;
-        transform.SetParent(_targetPosition.parent, true);
+    
         _objectiveSO.CompleteObjective();
     }
 
     protected override void FailObjective()
     {
-        _restorePositionSO.ApplyBehaviour(transform, OriginalPosition);
-        transform.SetParent(_initialParent, _draggableUI.InitialSiblingOrder);
-        _objectiveSO.FailObjective();
+        _draggableUI.RestoreToInitial();
+        _objectiveSO?.FailObjective();
+    }
+
+    public void OnDropReceived(DraggableUI draggable, PointerEventData eventData)
+    {
+        if (_targetPosition == null)
+        {
+            FailObjective();
+            return;
+        }
+
+        CompleteObjective();
     }
 }

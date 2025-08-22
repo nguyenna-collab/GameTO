@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Level1
 {
-    public class LevelManager : Singleton<LevelManager>
+    public class FloorMover : MonoBehaviour
     {
         [SerializeField] private List<GameObject> _floorList = new();
         [SerializeField] private RectTransform _floorRoot;
@@ -16,9 +16,8 @@ namespace Level1
         public int CurrentFloorIndex { get; private set; }
         public bool IsLastFloor { get; private set; }
 
-        public override void Awake()
+        void Awake()
         {
-            base.Awake();
             CurrentFloorIndex = 0;
         }
 

@@ -3,95 +3,81 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+public interface IDropTarget
+{
+    void OnDropReceived(DraggableUI draggable, PointerEventData eventData);
+}
+
+
 [RequireComponent(typeof(Image))]
 public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private Canvas _dragUICanvas;
+    [SerializeField] private bool _resetSizeOnDrag = true;
+    [SerializeField] private bool _resetSizeOnDrop = true;
 
-    [Header("Events")]
     public UnityEvent OnBeginDragEvent;
     public UnityEvent OnDragEvent;
-    public UnityEvent OnEndDragEvent;
-    [SerializeField] private bool _disableBeginDragEvent;
-    [SerializeField] private bool _disableEndDragEvent;
+    public UnityEvent<PointerEventData> OnDropped;
 
-    // == Init Data ==
     public int InitialSiblingOrder { get; private set; }
-    public Canvas DragUICanvas { get => _dragUICanvas; }
+    public Vector3 InitialPosition { get; private set; }
+    public Transform InitialParent { get; private set; }
 
     private Vector3 _distToTouchPosition;
     private Image _image;
-    private Transform _parent;
 
-    #region Unity Callbacks
+    private bool _isAwaked;
 
     private void OnEnable()
     {
-        _image = GetComponent<Image>();
-        _parent = transform.parent;
-        InitialSiblingOrder = transform.GetSiblingIndex();
-
-        OnBeginDragEvent.AddListener(HandleBeginDrag);
-        OnDragEvent.AddListener(HandleDrag);
-        OnEndDragEvent.AddListener(HandleEndDrag);
-    }
-
-    private void OnDisable()
-    {
-        OnBeginDragEvent.RemoveListener(HandleBeginDrag);
-        OnDragEvent.RemoveListener(HandleDrag);
-        OnEndDragEvent.RemoveListener(HandleEndDrag);
-    }
-    #endregion
-
-    #region Drag Event Methods
-    private void HandleBeginDrag()
-    {
-        if (_disableBeginDragEvent)
-            return;
-        _image.SetNativeSize();
-        transform.SetParent(_dragUICanvas.transform);
-    }
-
-    private void HandleDrag()
-    {
-        // Handle the drag event
-    }
-
-    private void HandleEndDrag()
-    {
-        if (_disableEndDragEvent)
-            return;
-        transform.SetParent(_parent);
-        transform.SetSiblingIndex(InitialSiblingOrder);
-        _image.SetNativeSize();
-    }
-
-    // Implement interface
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        if (UIHelper.IsTouchingUI(eventData, this, out Vector3 worldPosition))
+        if (!_isAwaked)
         {
-            _distToTouchPosition = transform.position - worldPosition;
-            OnBeginDragEvent?.Invoke();
+            _isAwaked = true;
+            _image = GetComponent<Image>();
+            _dragUICanvas = GetComponentInParent<Canvas>();
+            CacheInitialState();
         }
     }
 
-    // Implement interface
+    private void CacheInitialState()
+    {
+        InitialParent = transform.parent;
+        InitialSiblingOrder = transform.GetSiblingIndex();
+        InitialPosition = transform.position;
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (!UIHelper.IsTouchingUI(eventData, this, out Vector3 worldPosition))
+            return;
+
+        _distToTouchPosition = transform.position - worldPosition;
+        if (_resetSizeOnDrag) _image.SetNativeSize();
+
+        transform.SetParent(_dragUICanvas.transform, true);
+        OnBeginDragEvent?.Invoke();
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
         if (UIHelper.IsTouchingUI(eventData, this, out Vector3 worldPosition))
         {
             transform.position = worldPosition + _distToTouchPosition;
-            //TODO: following touch finger smoothly - Lerp
             OnDragEvent?.Invoke();
         }
     }
 
-    // Implement interface
     public void OnEndDrag(PointerEventData eventData)
     {
-        OnEndDragEvent?.Invoke();
+        OnDropped?.Invoke(eventData);
     }
-    #endregion
+
+    public void RestoreToInitial()
+    {
+        transform.SetParent(InitialParent, true);
+        transform.position = InitialPosition;
+        transform.SetSiblingIndex(InitialSiblingOrder);
+        if (_resetSizeOnDrop) _image.SetNativeSize();
+    }
 }

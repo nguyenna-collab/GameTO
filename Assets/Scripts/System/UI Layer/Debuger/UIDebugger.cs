@@ -8,7 +8,7 @@ public class UIDebugger : MonoBehaviour
 
     [Header("Screen Debugging")]
     [SerializeField] private string screenIdToShow = "";
-    [SerializeField] private LevelIconListSO levelIconList;
+    [SerializeField] private LevelDataListSO levelIconList;
 
     private void Awake()
     {
