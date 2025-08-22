@@ -17,9 +17,6 @@ public class Scissors : AUIBehaviour
     [SerializeField] private Image _dogImage;
     [SerializeField] private Sprite _dogAfterTrimImage;
     [SerializeField] private GameObject _trimmedFur;
-    
-    [Space(20)]
-    [SerializeField] private RestorePositionSO _restorePositionSO;
 
     private DraggableUI _draggableUI;
     

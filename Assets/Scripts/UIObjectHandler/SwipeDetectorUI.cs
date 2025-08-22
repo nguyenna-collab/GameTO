@@ -3,14 +3,17 @@ using UnityEngine.EventSystems;
 
 public enum SwipeDirection { None, Up, Down, Left, Right, UpLeft, UpRight, DownLeft, DownRight }
 
+/// <summary>
+/// Detects swipe gestures on the UI.
+/// </summary>
 public class SwipeDetectorUI : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    
+
     [SerializeField] private float minSwipeDistance = 50f;
     [SerializeField] private SwipeDirection _swipeDirection = SwipeDirection.None;
-    
+
     private Vector2 startPos;
-    
+
     public SwipeDirection SwipeDirection => _swipeDirection;
 
     public void OnPointerDown(PointerEventData eventData)

@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages all the levels in the game.
+/// </summary>
 public class LevelsManager : Singleton<LevelsManager>
 {
     [SerializeField] private LevelDataListSO _levelDataList;

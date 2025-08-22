@@ -9,6 +9,9 @@ public interface IDropTarget
 }
 
 
+/// <summary>
+/// Draggable UI element that can be moved around the screen.
+/// </summary>
 [RequireComponent(typeof(Image))]
 public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -49,7 +52,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (!UIHelper.IsTouchingUI(eventData, this, out Vector3 worldPosition))
+        if (!UIHelper.IsTouchingUI(eventData, _image.rectTransform, out Vector3 worldPosition))
             return;
 
         _distToTouchPosition = transform.position - worldPosition;
@@ -61,7 +64,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (UIHelper.IsTouchingUI(eventData, this, out Vector3 worldPosition))
+        if (UIHelper.IsTouchingUI(eventData, _image.rectTransform, out Vector3 worldPosition))
         {
             transform.position = worldPosition + _distToTouchPosition;
             OnDragEvent?.Invoke();

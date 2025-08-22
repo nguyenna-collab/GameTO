@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using DG.Tweening;
-using GameSystemsCookbook;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,31 +53,56 @@ namespace Level1
             var killerTransform = _killer.transform;
             var killerScale = killerTransform.localScale;
 
+            // == Execute Action Sequence ==
             if (!_floorMover.IsLastFloor)
             {
                 Sequence s = DOTween.Sequence();
                 s.AppendCallback(() =>
                 {
                     _doorList[_floorMover.CurrentFloorIndex].gameObject.SetActive(false);
-                }).AppendInterval(0.5f);
+                });
                 s.Append(killerTransform.DOMove(_targetRight.position, _killerMoveRightDuration).SetEase(_easeType));
+                s.JoinCallback(() => _killer.SetWalkAnim());
+                s.AppendCallback(() =>
+                {
+                    _killer.SetIdle2Anim();
+                }).AppendInterval(1f);
                 s.AppendCallback(() => killerTransform.FlipX());
                 s.Append(killerTransform.DOMove(_targetLeft.position, _killerMoveLeftDuration).SetEase(_easeType));
+                s.JoinCallback(() => _killer.SetWalkAnim());
                 s.Append(_floorMover.MoveToNextFloor());
-                s.AppendCallback(() => killerTransform.FlipX());
-                s.Append(killerTransform.DOMove(_targetCenter.position, _killerMoveCenterDuration).SetEase(_easeType)); 
+                s.JoinCallback(() => killerTransform.FlipX());
+                s.Append(killerTransform.DOMove(_targetCenter.position, _killerMoveCenterDuration).SetEase(_easeType));
+                s.AppendCallback(() => _killer.SetIdleAnim());
             }
             else
             {
                 //TODO: Last Floor Sequence
                 Debug.Log("Execute last floor sequence");
-                Sequence s = DOTween.Sequence();
+                LevelsManager.Instance.OnCurrentLevelCompleted?.Invoke();
             }
         }
 
         private void ObjectivesFail()
         {
+            var killerTransform = _killer.transform;
+            var killerScale = killerTransform.localScale;
+
+            // == Execute Action Sequence ==
+            Sequence s = DOTween.Sequence();
+            s.AppendCallback(() =>
+            {
+                _doorList[_floorMover.CurrentFloorIndex].gameObject.SetActive(false);
+            });
+            s.Append(killerTransform.DOMove(_targetRight.position, _killerMoveRightDuration).SetEase(_easeType));
+            s.JoinCallback(() => _killer.SetWalkAnim());
+            s.AppendCallback(() =>
+            {
+                _killer.SetIdle2Anim();
+            }).AppendInterval(0.5f);
+
             Debug.Log("Mission Fail");
+            LevelsManager.Instance.OnCurrentLevelFailed?.Invoke();
         }
     }
 }

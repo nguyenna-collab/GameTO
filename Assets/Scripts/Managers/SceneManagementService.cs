@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manages the loading and unloading of scenes
+/// </summary>
 public class SceneManagementService : Singleton<SceneManagementService>
 {
     /// <summary>
