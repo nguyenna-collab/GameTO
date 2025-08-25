@@ -7,14 +7,4 @@ public class TouchAndSetActiveUI : AUIBehaviour, IPointerUpHandler
     {
         
     }
-
-    protected override void CompleteObjective()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    protected override void FailObjective()
-    {
-        throw new System.NotImplementedException();
-    }
 }

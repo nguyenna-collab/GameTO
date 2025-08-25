@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class DragAndRepositionUI : AUIBehaviour, IDropTarget
 {
     [SerializeField] private Transform _targetPosition;
-    [SerializeField] private ObjectiveSO _objectiveSO;
+    [SerializeField] private Objective _objective;
 
     private DraggableUI _draggableUI;
     private Image _image;
@@ -43,16 +43,16 @@ public class DragAndRepositionUI : AUIBehaviour, IDropTarget
         CompleteObjective();
     }
 
-    protected override void CompleteObjective()
+    private void CompleteObjective()
     {
         transform.SetParent(_targetPosition, true);
         transform.position = _targetPosition.position;
-        _objectiveSO?.CompleteObjective();
+        _objective?.CompleteObjective();
     }
 
-    protected override void FailObjective()
+    private void FailObjective()
     {
         _draggableUI.RestoreToInitial();
-        _objectiveSO?.FailObjective();
+        _objective?.FailObjective();
     }
 }

@@ -32,17 +32,17 @@ public class ObjectiveSO : DescriptionSO
     //[Tooltip("Signal that we cannot complete objective (optional)")]
     [SerializeField] private VoidEvent _ObjectiveFailed;
 
-    [SerializeField] private bool _IsCompleted;
+    [SerializeField] private bool _isCompleted;
 
     // Properties
-    public bool IsCompleted => _IsCompleted;
+    public bool IsCompleted => _isCompleted;
     public VoidEvent ObjectiveComplete => _ObjectiveCompleted;
 
     // Methods
 
     private void OnEnable()
     {
-        _IsCompleted = false;
+        _isCompleted = false;
     }
 
     // private void Awake()
@@ -52,19 +52,24 @@ public class ObjectiveSO : DescriptionSO
 
     public virtual void CompleteObjective()
     {
-        _IsCompleted = true;
+        _isCompleted = true;
         _ObjectiveCompleted.Raise();
     }
 
     public void ResetObjective()
     {
-        _IsCompleted = false;
+        _isCompleted = false;
     }
 
 
     public virtual void FailObjective()
     {
-        _IsCompleted = false;
+        _isCompleted = false;
         _ObjectiveFailed.Raise();
+    }
+
+    public void SetComplete(bool status)
+    {
+        _isCompleted = status;
     }
 }

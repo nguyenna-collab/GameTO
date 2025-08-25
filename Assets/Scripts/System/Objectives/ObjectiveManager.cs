@@ -12,8 +12,8 @@ public class ObjectiveManager : MonoBehaviour
 {
 
     [Tooltip("List of Objectives needed for win condition.")]
-    [SerializeField] private List<ObjectiveSO> _Objectives = new();
-
+    [SerializeField] private List<ObjectiveSO> _successObjectives = new();
+    [SerializeField] private List<ObjectiveSO> _failureObjectives = new();
     [Header("Broadcast on Event Channels")]
     [Tooltip("Signal that all objectives are complete.")]
     [SerializeField] private VoidEvent _AllObjectivesCompleted;
@@ -23,7 +23,8 @@ public class ObjectiveManager : MonoBehaviour
     [SerializeField] private VoidEvent _GameStarted;
     [Tooltip("Signal to update every time a single objective completes.")]
     [SerializeField] private VoidEvent _ObjectiveCompleted;
-    
+    [SerializeField] private VoidEvent _ObjectiveFailed;
+
     [Title("Sub ObjectiveManagers")]
     [SerializeField] private List<ObjectiveManager> _SubObjectiveManagers = new();
     [SerializeField] private VoidEvent _AllSubObjectiveManagerCompleted;
@@ -32,7 +33,24 @@ public class ObjectiveManager : MonoBehaviour
     public List<ObjectiveManager> SubObjectiveManagers { get => _SubObjectiveManagers; }
 
     public bool IsAllObjectivesCompleted { get; private set; }
+    public bool IsFailed
+    {
+        get
+        {
+            return _isFailed;
+        }
+        private set
+        {
+            _isFailed = value;
+            if (value == true)
+            {
+                IsAllObjectivesCompleted = false;
+            }
+        }
+    }
     public bool IsAllSubObjectiveManagersCompleted { get; private set; }
+
+    private bool _isFailed;
 
     // Subscribes to event channels for starting the game and for the completion of each Objective
     private void OnEnable()
@@ -57,7 +75,10 @@ public class ObjectiveManager : MonoBehaviour
 
         if (_ObjectiveCompleted != null)
             _ObjectiveCompleted.Unregister(OnCompleteObjective);
-        
+
+        if (_ObjectiveFailed != null)
+            _ObjectiveFailed.Unregister(OnFailObjective);
+
         // == Sub ObjectiveManagers
         if (_SubObjectiveManagerCompleted != null)
             _SubObjectiveManagerCompleted.Unregister(SubObjectiveManagerCompleted);
@@ -66,9 +87,9 @@ public class ObjectiveManager : MonoBehaviour
     #region Handle Objectives
 
     // Returns true if all objectives are complete
-    public bool IsObjectiveListComplete()
+    public bool IsSuccessObjectivesListComplete()
     {
-        foreach (ObjectiveSO objective in _Objectives)
+        foreach (ObjectiveSO objective in _successObjectives)
         {
             if (!objective.IsCompleted)
             {
@@ -81,13 +102,12 @@ public class ObjectiveManager : MonoBehaviour
         return true;
     }
 
-
     // Event-handling methods
 
     // Reset each Objective when the game begins
     private void OnGameStarted()
     {
-        foreach (ObjectiveSO objective in _Objectives)
+        foreach (ObjectiveSO objective in _successObjectives)
         {
             objective.ResetObjective();
         }
@@ -97,14 +117,32 @@ public class ObjectiveManager : MonoBehaviour
     // Broadcasts the m_AllObjectivesCompleted event to the GameManager, if so.
     private void OnCompleteObjective()
     {
-        if (IsObjectiveListComplete())
+        if (_failureObjectives != null && _failureObjectives.Count > 0)
+        {
+            foreach (ObjectiveSO obj in _failureObjectives)
+            {
+                if (obj.IsCompleted)
+                {
+                    Debug.Log($"{obj.name} failed");
+                    _ObjectiveFailed.Raise();
+                    return;
+                }
+            }
+        }
+
+        if (IsSuccessObjectivesListComplete())
         {
             if (_AllObjectivesCompleted != null)
                 _AllObjectivesCompleted.Raise();
-            
+
             if (_SubObjectiveManagerCompleted != null)
                 _SubObjectiveManagerCompleted.Raise();
         }
+    }
+
+    private void OnFailObjective()
+    {
+        IsFailed = true;
     }
 
     #endregion
@@ -124,7 +162,7 @@ public class ObjectiveManager : MonoBehaviour
         }
         return true;
     }
-    
+
     private void SubObjectiveManagerCompleted()
     {
         if (IsSubObjectiveManagerListComplete())
@@ -136,10 +174,10 @@ public class ObjectiveManager : MonoBehaviour
             IsAllSubObjectiveManagersCompleted = true;
         }
     }
-    
+
     #endregion
 
-    public bool ObjectiveManagerIsCompleted(ObjectiveManager manager)
+    public bool IsObjectiveManagerCompleted(ObjectiveManager manager)
     {
         bool match = _SubObjectiveManagers.Find(m => m == manager && m.IsAllObjectivesCompleted);
         return match;

@@ -38,7 +38,6 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             _isAwaked = true;
             _image = GetComponent<Image>();
-            _dragUICanvas = GetComponentInParent<Canvas>();
             CacheInitialState();
         }
     }
@@ -47,7 +46,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         InitialParent = transform.parent;
         InitialSiblingOrder = transform.GetSiblingIndex();
-        InitialPosition = transform.position;
+        InitialPosition = transform.localPosition;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -79,8 +78,8 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public void RestoreToInitial()
     {
         transform.SetParent(InitialParent, true);
-        transform.position = InitialPosition;
         transform.SetSiblingIndex(InitialSiblingOrder);
+        transform.localPosition = InitialPosition;
         if (_resetSizeOnDrop) _image.SetNativeSize();
     }
 }

@@ -6,7 +6,7 @@ public class DragAndSetActiveUI : AUIBehaviour
 {
     [SerializeField] private GameObject _disableUI;
     [SerializeField] private GameObject _enableUI;
-    [SerializeField] private ObjectiveSO _objectiveSO;
+    [SerializeField] private Objective _objective;
 
     private DraggableUI _draggableUI;
 
@@ -34,16 +34,16 @@ public class DragAndSetActiveUI : AUIBehaviour
         }
     }
 
-    protected override void CompleteObjective()
+    private void CompleteObjective()
     {
         _enableUI.SetActive(true);
         _disableUI.SetActive(false);
-        _objectiveSO.CompleteObjective();
+        _objective.CompleteObjective();
     }
 
-    protected override void FailObjective()
+    private void FailObjective()
     {
         _draggableUI.RestoreToInitial();
-        _objectiveSO.FailObjective();
+        _objective?.FailObjective();
     }
 }

@@ -5,6 +5,7 @@ public abstract class AUIBehaviour : MonoBehaviour
     [SerializeField] protected RectTransform _targetRect;
 
     public Vector3 OriginalPosition { get; private set; }
+    public bool CanDetectTarget { get; set; } = true;
 
     protected Transform _initialParent;
     protected int _initialSiblingIndex;
@@ -18,9 +19,7 @@ public abstract class AUIBehaviour : MonoBehaviour
 
     protected virtual bool IsTouchingTarget()
     {
+        if (!CanDetectTarget) return false;
         return GetComponent<RectTransform>().IsOverlapUI(_targetRect);
     }
-
-    protected abstract void CompleteObjective();
-    protected abstract void FailObjective();
 }

@@ -6,7 +6,7 @@ public class TouchAndSetReplaceUI : AUIBehaviour, IPointerClickHandler
 {
     [SerializeField] private Sprite _newSprite;
     [SerializeField] private bool _setNativeSize;
-    [SerializeField] private ObjectiveSO _objectiveSO;
+    [SerializeField] private Objective _objective;
 
     private Image _image;
 
@@ -14,17 +14,12 @@ public class TouchAndSetReplaceUI : AUIBehaviour, IPointerClickHandler
         _image ??= GetComponent<Image>();
     }
 
-    protected override void CompleteObjective()
+    private void CompleteObjective()
     {
         _image.color = Color.white;
         if (_setNativeSize) _image.SetNativeSize();
         _image.sprite = _newSprite;
-        _objectiveSO.CompleteObjective();
-    }
-
-    protected override void FailObjective()
-    {
-        _objectiveSO.FailObjective();
+        _objective?.CompleteObjective();
     }
 
     public void OnPointerClick(PointerEventData eventData)

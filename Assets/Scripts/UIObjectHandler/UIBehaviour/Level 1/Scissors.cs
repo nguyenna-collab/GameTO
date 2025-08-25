@@ -9,16 +9,13 @@ public class Scissors : AUIBehaviour
 {
     [Header("Scissors")]
     [SerializeField] private Transform _trimPosition;
-    [SerializeField] private Transform _leftPart;
-    [SerializeField] private Transform _rightPart;
-    [SerializeField, Range(1, 30)] private int _amplitude;
     
     [Header("Dog")]
-    [SerializeField] private Image _dogImage;
-    [SerializeField] private Sprite _dogAfterTrimImage;
+    [SerializeField] private Transform _dog;
     [SerializeField] private GameObject _trimmedFur;
 
     private DraggableUI _draggableUI;
+    private Animator _anim;
     
     
     protected override void OnEnable()
@@ -26,6 +23,7 @@ public class Scissors : AUIBehaviour
         base.OnEnable();
         _draggableUI = GetComponent<DraggableUI>();
         _draggableUI.OnDropped.AddListener(HandleDrop);
+        _anim = GetComponent<Animator>();
     }
 
     protected void OnDisable()
@@ -41,12 +39,12 @@ public class Scissors : AUIBehaviour
             FailObjective();
     }
 
-    protected override void CompleteObjective()
+    private void CompleteObjective()
     {
         TrimFur();
     }
 
-    protected override void FailObjective()
+    private void FailObjective()
     {
         _draggableUI.RestoreToInitial();
     }
@@ -54,13 +52,15 @@ public class Scissors : AUIBehaviour
     private Sequence TrimFur()
     {
         Sequence sequence = DOTween.Sequence();
-        sequence.AppendCallback(() => transform.position = _trimPosition.position);
-        sequence.Join(_leftPart.DORotate(new Vector3(0, 0, -_amplitude), .25f)).SetLoops(2, LoopType.Yoyo);
-        sequence.Join(_rightPart.DORotate(new Vector3(0, 0, _amplitude), .25f)).SetLoops(2, LoopType.Yoyo);
         sequence.AppendCallback(() =>
         {
-            _dogImage.sprite = _dogAfterTrimImage;
-            _dogImage.preserveAspect = true;
+            transform.position = _trimPosition.position;
+            _anim.enabled = true;
+            _anim.SetTrigger("Trim");
+            _dog.GetComponent<Animator>().SetTrigger("Trim");
+        }).AppendInterval(_anim.GetCurrentAnimatorStateInfo(0).length);
+        sequence.AppendCallback(() =>
+        {
             gameObject.SetActive(false);
             _trimmedFur.SetActive(true);
         });
