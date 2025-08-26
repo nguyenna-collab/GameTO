@@ -35,7 +35,7 @@ public class ObjectiveSO : DescriptionSO
     [SerializeField] private bool _isCompleted;
 
     // Properties
-    public bool IsCompleted => _isCompleted;
+    public bool IsCompleted { get => _isCompleted; set => _isCompleted = value; }
     public VoidEvent ObjectiveComplete => _ObjectiveCompleted;
 
     // Methods

@@ -36,6 +36,14 @@ namespace Level1
         [Header("Failure")]
         [SerializeField] private Image _backgroundImage;
 
+        [Header("Sound")]
+        [SerializeField] private AudioClip _failClip;
+        [SerializeField] private AudioClip _successClip;
+        [SerializeField] private AudioClip _openDoorClip;
+        [SerializeField] private AudioClip _girlScreamClip;
+        [SerializeField] private AudioClip _knockknockClip;
+        [SerializeField] private AudioClip _manScreamClip;
+
         [Header("Animations")]
         [SerializeField, SpineAnimation] private string _idleAnimation;
         [SerializeField, SpineAnimation] private string _idle2Animation;
@@ -44,9 +52,16 @@ namespace Level1
 
         private SkeletonGraphic _skeletonGraphic;
 
+        public bool IsInFloorTransition { get; private set; }
+
         private void Awake()
         {
             _skeletonGraphic = GetComponent<SkeletonGraphic>();
+        }
+
+        void Start()
+        {
+            EnterFloor();
         }
 
         public void SetWalkAnim()
@@ -54,14 +69,14 @@ namespace Level1
             _skeletonGraphic.AnimationState.SetAnimation(0, _walkAnimation, true);
         }
 
-        public void SetIdleAnim()
+        public void SetIdleAnim(bool loop = true)
         {
-            _skeletonGraphic.AnimationState.SetAnimation(0, _idleAnimation, true);
+            _skeletonGraphic.AnimationState.SetAnimation(0, _idleAnimation, loop);
         }
 
-        public void SetIdle2Anim()
+        public void SetIdle2Anim(bool loop = false)
         {
-            _skeletonGraphic.AnimationState.SetAnimation(0, _idle2Animation, true);
+            _skeletonGraphic.AnimationState.SetAnimation(0, _idle2Animation, loop);
         }
 
         public void SetGetCaughtAnim()
@@ -77,23 +92,30 @@ namespace Level1
             // == Execute Action Sequence ==
             if (!_floorMover.IsLastFloor)
             {
-
                 Sequence s = DOTween.Sequence();
                 s.AppendCallback(() =>
                 {
-                    TouchManager.Instance.DisableEventSystem();
+                    IsInFloorTransition = true;
                     _doorList[_floorMover.CurrentFloorIndex].gameObject.SetActive(false);
-                });
-                s.Append(transform.DOMove(_targetRight.position, _killerMoveRightDuration).SetEase(_easeType));
-                s.JoinCallback(() => SetWalkAnim());
-                s.AppendCallback(() =>
-                {
-                    SetIdle2Anim();
-                });
+                    if (_openDoorClip != null)
+                    {
+                        SoundManager.Instance.PlaySFX(_openDoorClip);
+                    }
+                }).AppendInterval(0.35f);
+                // s.Append(transform.DOMove(_targetRight.position, _killerMoveRightDuration).SetEase(_easeType));
+                // s.JoinCallback(() => SetWalkAnim());
+                // s.AppendCallback(() =>
+                // {
+                //     SetIdle2Anim();
+                // });
                 s.AppendCallback(() =>
                 {
                     _dialogtransform.gameObject.SetActive(true);
                     _dialogueText.text = dialogueForFloors[index].CompleteDialogue;
+                    if (_successClip != null)
+                    {
+                        SoundManager.Instance.PlaySFX(_successClip);
+                    }
                 })
                 .AppendInterval(1f);
                 s.AppendCallback(() => _dialogtransform.gameObject.SetActive(false));
@@ -102,28 +124,34 @@ namespace Level1
                 s.JoinCallback(() => SetWalkAnim());
                 s.Append(_floorMover.MoveToNextFloor());
                 s.JoinCallback(() => transform.FlipX());
-                s.Append(transform.DOMove(_targetCenter.position, _killerMoveCenterDuration).SetEase(_easeType));
-                s.AppendCallback(() => SetIdleAnim());
-                s.AppendCallback(() => TouchManager.Instance.EnableEventSystem());
+                s.AppendCallback(() => EnterFloor());
+                s.AppendCallback(() => IsInFloorTransition = false);
             }
             else
             {
                 LevelsManager.Instance.OnCurrentLevelCompleted?.Invoke();
-                _doorList[_floorMover.CurrentFloorIndex].gameObject.SetActive(false);
                 Sequence s = DOTween.Sequence();
                 s.AppendCallback(() =>
                 {
-                    TouchManager.Instance.DisableEventSystem();
+                    IsInFloorTransition = true;
+                    _doorList[_floorMover.CurrentFloorIndex].gameObject.SetActive(false);
                     _dialogtransform.gameObject.SetActive(true);
                     _dialogueText.text = dialogueForFloors[index].CompleteDialogue;
                 })
-                .AppendInterval(1f);
+                .AppendInterval(0.5f);
                 s.AppendCallback(() => _dialogtransform.gameObject.SetActive(false));
-                s.SetDelay(0.35f);
                 s.AppendCallback(() =>
                 {
+                    if (_manScreamClip != null)
+                    {
+                        SoundManager.Instance.PlaySFX(_manScreamClip);
+                    }
                     SetGetCaughtAnim();
-                    TouchManager.Instance.EnableEventSystem();
+                }).AppendInterval(2f);
+                s.AppendCallback(() =>
+                {
+                    IsInFloorTransition = false;
+                    UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(LevelsManager.Instance.CurrentLevelData.Icon, true));
                 });
             }
         }
@@ -137,8 +165,12 @@ namespace Level1
             Sequence s = DOTween.Sequence();
             s.AppendCallback(() =>
             {
-                TouchManager.Instance.DisableEventSystem();
+                IsInFloorTransition = true;
                 _doorList[_floorMover.CurrentFloorIndex].gameObject.SetActive(false);
+                if (_openDoorClip != null)
+                {
+                    SoundManager.Instance.PlaySFX(_openDoorClip);
+                }
             });
             s.Append(transform.DOMove(_targetRight.position, _killerMoveRightDuration).SetEase(_easeType));
             s.JoinCallback(() => SetWalkAnim());
@@ -150,13 +182,46 @@ namespace Level1
             {
                 _dialogtransform.gameObject.SetActive(true);
                 _dialogueText.text = dialogueForFloors[index].FailDialogue;
+                if (_failClip != null)
+                {
+                    SoundManager.Instance.PlaySFX(_failClip);
+                }
             }).AppendInterval(1f);
-            s.AppendCallback(() => _backgroundImage.gameObject.SetActive(true));
+            s.AppendCallback(() =>
+            {
+                _backgroundImage.gameObject.SetActive(true);
+                if (_girlScreamClip != null)
+                {
+                    SoundManager.Instance.PlaySFX(_girlScreamClip);
+                }
+            });
             s.Append(_backgroundImage.DOFade(1, 1f));
-            s.AppendCallback(() => TouchManager.Instance.EnableEventSystem());
-
-            Debug.Log("Mission Fail");
+            s.AppendCallback(() =>
+            {
+                UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(LevelsManager.Instance.CurrentLevelData.Icon, false));
+                IsInFloorTransition = false;
+            });
             LevelsManager.Instance.OnCurrentLevelFailed?.Invoke();
+        }
+
+        private Sequence EnterFloor()
+        {
+            Sequence s = DOTween.Sequence();
+            s.Append(transform.DOMove(_targetCenter.position, _killerMoveCenterDuration).SetEase(_easeType));
+            s.JoinCallback(() => SetWalkAnim());
+            s.AppendCallback(() =>
+            {
+                SetIdleAnim();
+            }).AppendInterval(0.3f);
+            s.AppendCallback(() =>
+            {
+                if (_knockknockClip != null)
+                {
+                    SoundManager.Instance.PlaySFX(_knockknockClip);
+                }
+            }).AppendInterval(_knockknockClip.length);
+            s.AppendCallback(() => SetIdle2Anim(true));
+            return s;
         }
     }
 }

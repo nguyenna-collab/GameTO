@@ -2,19 +2,21 @@ using UnityEngine;
 
 public class OverlayLayerController : AUILayerController
 {
+    [SerializeField] private GameObject blockingOverlay;
     public void ShowBlockingOverlay()
     {
-        
+        if (blockingOverlay != null)
+        {
+            blockingOverlay.SetActive(true);
+        }
     }
 
     public void HideBlockingOverlay()
     {
-        
-    }
-
-    public override void HideAll()
-    {
-        throw new System.NotImplementedException();
+        if (blockingOverlay != null)
+        {
+            blockingOverlay.SetActive(false);
+        }
     }
 
     public override void HideScreen(string screenId)

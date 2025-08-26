@@ -16,7 +16,18 @@ namespace Managers
             _eventSystem = EventSystem.current;
         }
 
-        public void EnableEventSystem() => _eventSystem.enabled = true;
-        public void DisableEventSystem() => _eventSystem.enabled = false;
+        public void EnableEventSystem()
+        {
+            if (_eventSystem == null)
+                _eventSystem = EventSystem.current;
+            _eventSystem.enabled = true;
+        }
+        
+        public void DisableEventSystem()
+        {
+            if (_eventSystem == null)
+                _eventSystem = EventSystem.current;
+            _eventSystem.enabled = false;
+        }
     }
 }

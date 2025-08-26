@@ -8,8 +8,7 @@ public class LevelDataSO : ScriptableObject
     [PreviewField] public Sprite Icon;
     public bool IsLocked = true;
     public bool IsHotLevel = false;
-
-    [Header("Hint Data")] public HintDataSO Hint;
-
-    private bool _isCompleted = false;
+    public bool IsCompleted { get; set; } = false;
+    public HintDataSO Hint;
+    public string Description = "No Description";
 }

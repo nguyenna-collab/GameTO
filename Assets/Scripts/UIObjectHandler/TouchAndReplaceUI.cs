@@ -7,6 +7,7 @@ public class TouchAndSetReplaceUI : AUIBehaviour, IPointerClickHandler
     [SerializeField] private Sprite _newSprite;
     [SerializeField] private bool _setNativeSize;
     [SerializeField] private Objective _objective;
+    [SerializeField] private AudioClip _successSound;
 
     private Image _image;
 
@@ -16,8 +17,11 @@ public class TouchAndSetReplaceUI : AUIBehaviour, IPointerClickHandler
 
     private void CompleteObjective()
     {
+        if (_successSound != null)
+            SoundManager.Instance.PlaySFX(_successSound, default, 0.5f);
+        if (_setNativeSize)
+            _image.SetNativeSize();
         _image.color = Color.white;
-        if (_setNativeSize) _image.SetNativeSize();
         _image.sprite = _newSprite;
         _objective?.CompleteObjective();
     }

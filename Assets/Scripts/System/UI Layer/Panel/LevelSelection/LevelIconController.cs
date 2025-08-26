@@ -53,6 +53,8 @@ public class LevelIconController : MonoBehaviour
     {
         if (_levelData != null && !_levelData.IsLocked)
         {
+            UIManager.Instance.HideAllPanels();
+            UIManager.Instance.HideAllDialogs();
             SceneManagementService.Instance.LoadLevel(_levelData.LevelIndex);
         }
         else

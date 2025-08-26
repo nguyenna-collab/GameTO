@@ -7,6 +7,7 @@ public class DragAndSetActiveUI : AUIBehaviour
     [SerializeField] private GameObject _disableUI;
     [SerializeField] private GameObject _enableUI;
     [SerializeField] private Objective _objective;
+    [SerializeField] private AudioClip _successSound;
 
     private DraggableUI _draggableUI;
 
@@ -39,6 +40,8 @@ public class DragAndSetActiveUI : AUIBehaviour
         _enableUI.SetActive(true);
         _disableUI.SetActive(false);
         _objective.CompleteObjective();
+        if (_successSound != null)
+           SoundManager.Instance.PlaySFX(_successSound, default, 0.5f);
     }
 
     private void FailObjective()

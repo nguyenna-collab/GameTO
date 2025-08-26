@@ -9,15 +9,16 @@ public class Scissors : AUIBehaviour
 {
     [Header("Scissors")]
     [SerializeField] private Transform _trimPosition;
-    
+    [SerializeField] private AudioClip _trimSound;
+
     [Header("Dog")]
     [SerializeField] private Transform _dog;
     [SerializeField] private GameObject _trimmedFur;
 
     private DraggableUI _draggableUI;
     private Animator _anim;
-    
-    
+
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -64,7 +65,9 @@ public class Scissors : AUIBehaviour
             gameObject.SetActive(false);
             _trimmedFur.SetActive(true);
         });
-        
+
         return sequence;
     }
+
+    public void PlayTrimSound() => SoundManager.Instance.PlaySFX(_trimSound, default, 0.5f);
 }

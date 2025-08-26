@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level_01
   m_EditorClassIdentifier: 
   LevelIndex: 1
-  Icon: {fileID: 21300000, guid: a288f0966b0513c4babbf1ce1b431fdf, type: 3}
-  IsLocked: 0
+  Icon: {fileID: -1541269027, guid: 377506825bc856446b6733cfa453bc1e, type: 3}
+  IsLocked: 1
   IsHotLevel: 1
-  Hint: {fileID: 11400000, guid: fcdae75502139214eabae5068ee78c5e, type: 2}
+  Hint: {fileID: 11400000, guid: bc18a83a50ba78148a7e92a161e1e538, type: 2}

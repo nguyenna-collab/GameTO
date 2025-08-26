@@ -32,6 +32,7 @@ namespace Level1
 
         public void Click()
         {
+            if (_killer.IsInFloorTransition) return;
             int index = _floorMover.CurrentFloorIndex;
             if (_superObjectiveManager.IsObjectiveManagerCompleted(_superObjectiveManager.SubObjectiveManagers[index]))
             {

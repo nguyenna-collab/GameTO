@@ -11,7 +11,6 @@ public abstract class ScreenProperties
     [Header("Screen Behavior")]
     public bool blockInput = false;
     public bool showLoadingOverlay = false;
-    public bool clearHistory = false;
     
     [Header("Data")]
     public string sourceScreenId = "";

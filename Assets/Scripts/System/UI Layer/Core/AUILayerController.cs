@@ -58,7 +58,13 @@ public abstract class AUILayerController : MonoBehaviour
             screens[screenId].Hide();
         }
     }
-    public abstract void HideAll();
+    public virtual void HideAll()
+    {
+        foreach (var screen in screens.Values)
+        {
+            screen.Hide();
+        }
+    }
 
     [Button]
     private void LogAllScreens()

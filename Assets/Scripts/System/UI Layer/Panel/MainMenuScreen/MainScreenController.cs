@@ -15,6 +15,6 @@ public class MainScreenController : AUIScreenController
 
     private void OnPlayButtonClicked()
     {
-        UIManager.Instance.ShowPanel("MainMenu");
+        UIManager.Instance.ShowDialog("LevelSelection");
     }
 }

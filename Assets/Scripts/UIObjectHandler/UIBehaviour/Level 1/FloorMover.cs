@@ -39,13 +39,11 @@ namespace Level1
             Sequence s = DOTween.Sequence();
             s.AppendCallback(() =>
             {
-                TouchManager.Instance.DisableEventSystem();
                 _floorList[nextFloorIndex].gameObject.SetActive(true);
             });
             s.Append(_floorRoot.DOLocalMoveY(currentFloorPosY - _floorMask.rect.height, 2));
             s.AppendCallback(() =>
             {
-                TouchManager.Instance.EnableEventSystem();
                 _floorList[CurrentFloorIndex].gameObject.SetActive(false);
                 CurrentFloorIndex++;
                 if (CurrentFloorIndex >= _floorList.Count-1) IsLastFloor = true;

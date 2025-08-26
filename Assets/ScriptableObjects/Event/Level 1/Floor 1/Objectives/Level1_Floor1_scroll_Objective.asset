@@ -16,4 +16,4 @@ MonoBehaviour:
   _Title: 
   _ObjectiveCompleted: {fileID: 11400000, guid: aac382490c8a2ea449ef563bf95810e7, type: 2}
   _ObjectiveFailed: {fileID: 11400000, guid: 44edd8c4cb983044da756065731e858d, type: 2}
-  _IsCompleted: 0
+  _isCompleted: 0

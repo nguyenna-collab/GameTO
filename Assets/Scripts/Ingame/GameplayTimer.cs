@@ -29,11 +29,15 @@ public class GameplayTimer : MonoBehaviour
     void OnEnable()
     {
         OnTimeUp += HandleTimeUp;
+        LevelsManager.Instance.OnCurrentLevelCompleted += Pause;
+        LevelsManager.Instance.OnCurrentLevelFailed += Pause;
     }
 
     void OnDisable()
     {
         OnTimeUp -= HandleTimeUp;
+        LevelsManager.Instance.OnCurrentLevelCompleted -= Pause;
+        LevelsManager.Instance.OnCurrentLevelFailed -= Pause;
     }
 
     public void Pause()

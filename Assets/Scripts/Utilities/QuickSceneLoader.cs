@@ -8,9 +8,4 @@ public class QuickSceneLoader : MonoBehaviour
     {
         SceneManagementService.Instance.LoadScene(sceneName);
     }
-
-    public void LoadNextLevel()
-    {
-        LevelsManager.Instance.LoadNextLevel();
-    }
 }

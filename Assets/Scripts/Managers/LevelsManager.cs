@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -9,28 +8,29 @@ public class LevelsManager : Singleton<LevelsManager>
 {
     [SerializeField] private LevelDataListSO _levelDataList;
 
+    public LevelDataSO CurrentLevelData { get; set; } = null;
     public int CurrentLevelIndex { get; set; } = 0;
+    public LevelDataListSO LevelDataList => _levelDataList;
 
     public Action OnCurrentLevelCompleted;
     public Action OnCurrentLevelFailed;
 
-    public void LoadLevel(int index)
+    public override void Awake()
     {
-        CurrentLevelIndex = index;
-        SceneManagementService.Instance.LoadLevel(index);
+        base.Awake();
+        DontDestroyOnLoad(this.gameObject);
+        OnCurrentLevelCompleted += HandleLevelCompleted;
     }
 
-    public void LoadNextLevel()
+    void OnDestroy()
     {
-        if (CurrentLevelIndex >= 0 && CurrentLevelIndex < _levelDataList.levelDataList.Count - 1)
-        {
-            CurrentLevelIndex++;
-            var levelNumber = CurrentLevelIndex + 1;
-            SceneManagementService.Instance.LoadLevel(levelNumber);
-        }
-        else
-        {
-            Debug.LogWarning("No more levels to load.");
-        }
+        OnCurrentLevelCompleted -= HandleLevelCompleted;
+    }
+
+    private void HandleLevelCompleted()
+    {
+        _levelDataList.LevelDataList[CurrentLevelIndex].IsCompleted = true;
+        if (CurrentLevelIndex < _levelDataList.LevelDataList.Count - 1)
+            _levelDataList.LevelDataList[CurrentLevelIndex + 1].IsLocked = false;
     }
 }

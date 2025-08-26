@@ -11,6 +11,8 @@ public class Scroll : AUIBehaviour
     [SerializeField] private Image _mummyGirl;
     [SerializeField] private Transform _eye1;
     [SerializeField] private Transform _eye2;
+    [SerializeField] private Transform _poorGirlEye1Pos;
+    [SerializeField] private Transform _poorGirlEye2Pos;
     [SerializeField] private Transform _mummyGirlEye1Pos;
     [SerializeField] private Transform _mummyGirlEye2Pos;
     [SerializeField] private OpenButtonUI _openButtonUI;
@@ -42,10 +44,16 @@ public class Scroll : AUIBehaviour
         _poorGirl.gameObject.SetActive(false);
         _mummyGirl.gameObject.SetActive(true);
         _mummyGirl.SetNativeSize();
-        _eye1.transform.SetParent(_mummyGirlEye1Pos);
-        _eye1.transform.localPosition = Vector3.zero;
-        _eye2.transform.SetParent(_mummyGirlEye2Pos);
-        _eye2.transform.localPosition = Vector3.zero;
+        if (_poorGirlEye1Pos.childCount > 0)
+        {
+            _eye1.transform.SetParent(_mummyGirlEye1Pos);
+            _eye1.transform.localPosition = Vector3.zero;
+        }
+        if (_poorGirlEye2Pos.childCount > 0)
+        {
+            _eye2.transform.SetParent(_mummyGirlEye2Pos);
+            _eye2.transform.localPosition = Vector3.zero;
+        }
 
         _objective.CompleteObjective();
         _openButtonUI.Click();

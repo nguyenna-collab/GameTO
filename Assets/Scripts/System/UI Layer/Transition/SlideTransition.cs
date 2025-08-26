@@ -81,14 +81,15 @@ public class SlideTransition : ATransitionComponent
         {
             float progress = time / duration;
             float curveValue = curve.Evaluate(progress);
-            
+
             rectTransform.anchoredPosition = Vector2.Lerp(startPosition, endPosition, curveValue);
-            
+
             time += Time.unscaledDeltaTime;
             yield return null;
         }
 
         rectTransform.anchoredPosition = endPosition;
         onAnimationComplete?.Invoke();
+        OnTransitionComplete?.Invoke();
     }
 }

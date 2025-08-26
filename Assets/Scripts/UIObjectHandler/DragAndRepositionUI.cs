@@ -6,6 +6,7 @@ public class DragAndRepositionUI : AUIBehaviour, IDropTarget
 {
     [SerializeField] private Transform _targetPosition;
     [SerializeField] private Objective _objective;
+    [SerializeField] private AudioClip _clipWhenDroppedOnTarget;
 
     private DraggableUI _draggableUI;
     private Image _image;
@@ -45,6 +46,10 @@ public class DragAndRepositionUI : AUIBehaviour, IDropTarget
 
     private void CompleteObjective()
     {
+        if (_clipWhenDroppedOnTarget != null)
+        {
+            SoundManager.Instance.PlaySFX(_clipWhenDroppedOnTarget);
+        }
         transform.SetParent(_targetPosition, true);
         transform.position = _targetPosition.position;
         _objective?.CompleteObjective();

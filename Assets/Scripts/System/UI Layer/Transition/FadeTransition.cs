@@ -42,5 +42,6 @@ public class FadeTransition : ATransitionComponent
 
         canvasGroup.alpha = endAlpha;
         onAnimationComplete?.Invoke();
+        OnTransitionComplete?.Invoke();
     }
 }

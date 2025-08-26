@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31b05f39e1755d49aadb5cbd1c5a536, type: 3}
   m_Name: LevelDataListSO
   m_EditorClassIdentifier: 
-  levelDataList:
+  LevelDataList:
   - {fileID: 11400000, guid: f8c7f6ab02d380741bbd729e81155b0a, type: 2}
   - {fileID: 11400000, guid: 86c698d33d84159458b64c8a78ba3261, type: 2}

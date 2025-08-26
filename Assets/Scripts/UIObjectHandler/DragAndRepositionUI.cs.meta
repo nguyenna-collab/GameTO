@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: 3e6a69d3adfed7d4a96c8fee2b6b3954
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _targetRect: {instanceID: 0}
+  - _targetPosition: {instanceID: 0}
+  - _objective: {instanceID: 0}
+  - _clipWhenDroppedOnTarget: {fileID: 8300000, guid: 596ff578072a72945809972766833561, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

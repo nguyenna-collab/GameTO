@@ -32,7 +32,7 @@ public class LevelSelectionScreenController : AUIScreenController<LevelSelection
     protected override void OnPropertiesSet()
     {
         var levelDataListSO = Properties.levelDataList;
-        var levelDataList = levelDataListSO.levelDataList;
+        var levelDataList = levelDataListSO.LevelDataList;
 
         Debug.Log(Properties != null);
 
@@ -46,7 +46,7 @@ public class LevelSelectionScreenController : AUIScreenController<LevelSelection
                 var iconController = iconCtrl.GetComponent<LevelIconController>();
                 if (iconController != null)
                 {
-                    iconController.SetIconData(levelDataListSO.levelDataList.ElementAt(i));
+                    iconController.SetIconData(levelDataListSO.LevelDataList.ElementAt(i));
                 }
                 else
                 {

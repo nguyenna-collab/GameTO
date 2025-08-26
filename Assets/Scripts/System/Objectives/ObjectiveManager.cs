@@ -52,12 +52,35 @@ public class ObjectiveManager : MonoBehaviour
 
     private bool _isFailed;
 
+    void Awake()
+    {
+        Debug.Log($"{gameObject.name}: ObjectiveManager Awake");
+        foreach (ObjectiveSO objective in _successObjectives)
+        {
+            if (objective != null)
+            {
+                objective.IsCompleted = false;
+            }
+        }
+
+        foreach (ObjectiveSO objective in _failureObjectives)
+        {
+            if (objective != null)
+            {
+                objective.IsCompleted = false;
+            }
+        }
+    }
+
     // Subscribes to event channels for starting the game and for the completion of each Objective
     private void OnEnable()
     {
         // == Objectives ==
         if (_GameStarted != null)
             _GameStarted.Register(OnGameStarted);
+
+        if (_ObjectiveFailed != null)
+            _ObjectiveFailed.Register(OnFailObjective);
 
         if (_ObjectiveCompleted != null)
             _ObjectiveCompleted.Register(OnCompleteObjective);
@@ -123,7 +146,6 @@ public class ObjectiveManager : MonoBehaviour
             {
                 if (obj.IsCompleted)
                 {
-                    Debug.Log($"{obj.name} failed");
                     _ObjectiveFailed.Raise();
                     return;
                 }

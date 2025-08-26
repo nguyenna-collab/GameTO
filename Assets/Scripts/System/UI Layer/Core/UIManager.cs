@@ -3,23 +3,22 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
+{
+    [System.Serializable]
+    public class UIScreenEntry
     {
-        [System.Serializable]
-        public class UIScreenEntry
-        {
-            public string screenID;
-            public GameObject screenPrefab;
-        }
+        public string screenID;
+        public GameObject screenPrefab;
+    }
 
-        [Header("UI Layers")]
-        [SerializeField] public AUILayerController panelLayer;
-        [SerializeField] public AUILayerController dialogLayer;
-        [SerializeField] public AUILayerController overlayLayer;
+    [Header("UI Layers")]
+    [SerializeField] private AUILayerController panelLayer;
+    [SerializeField] private AUILayerController dialogLayer;
+    [SerializeField] private AUILayerController overlayLayer;
 
-        [Header("Screen Prefabs")]
-        [SerializeField] private List<UIScreenEntry> screenEntries;
-
-        private Dictionary<string, AUIScreenController> instantiatedScreens = new Dictionary<string, AUIScreenController>();
+    [Header("Screen Prefabs")]
+    [SerializeField] private List<UIScreenEntry> screenEntries;
+    private Dictionary<string, AUIScreenController> instantiatedScreens = new Dictionary<string, AUIScreenController>();
 
     public override void Awake()
     {
@@ -185,6 +184,7 @@ public class UIManager : Singleton<UIManager>
                     // Handle special properties
                     if (screenProps.blockInput)
                     {
+                        Debug.Log("UIManager: Showing blocking overlay for dialog");
                         ShowBlockingOverlay();
                     }
                 }
@@ -209,6 +209,16 @@ public class UIManager : Singleton<UIManager>
 
             dialogLayer.HideScreen(screenId);
         }
+    }
+
+    public void HideAllPanels()
+    {
+        if (panelLayer != null) panelLayer.HideAll();
+    }
+
+    public void HideAllDialogs()
+    {
+        if (dialogLayer != null) dialogLayer.HideAll();
     }
 
     public void HideAllUI()
