@@ -65,7 +65,7 @@ public class ObjectiveSO : DescriptionSO
     public virtual void FailObjective()
     {
         _isCompleted = false;
-        _ObjectiveFailed.Raise();
+        if (_ObjectiveFailed != null) _ObjectiveFailed.Raise();
     }
 
     public void SetComplete(bool status)

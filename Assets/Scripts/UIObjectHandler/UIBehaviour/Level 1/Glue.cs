@@ -22,7 +22,7 @@ public class Glue : AUIBehaviour, IDropTarget
 
     public void TriggerAnimation(PointerEventData eventData)
     {
-        if (IsTouchingTarget())
+        if (IsTouchingTarget(eventData))
             OnDropReceived(_draggableUI, eventData);
         else
             FailObjective();

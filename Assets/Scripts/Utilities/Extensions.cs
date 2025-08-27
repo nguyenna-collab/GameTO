@@ -1,10 +1,19 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public static class Extensions
 {
-    public static bool IsOverlapUI(this RectTransform rect, RectTransform target)
+    /// <summary>
+    /// Check if the given RectTransform overlaps with the target RectTransform.
+    /// </summary>
+    /// <param name="rect"></param>
+    /// <param name="target"></param>
+    /// <param name="screenPosition">Touch position</param>
+    /// <returns></returns>
+    public static bool IsOverlapUI(this RectTransform rect, RectTransform target, Vector2 screenPosition)
     {
-        //Convert RectTransform to World Space because rect and target may be in different parents
+        // Convert RectTransform to World Space because rect and target may be in different parents
         Vector3[] rectCorners = new Vector3[4];
         rect.GetWorldCorners(rectCorners);
         Bounds rectBounds = new Bounds(rectCorners[0], Vector3.zero);
@@ -21,7 +30,29 @@ public static class Extensions
             targetBounds.Encapsulate(targetCorners[i]);
         }
 
-        return rectBounds.Intersects(targetBounds);
+        if (!rectBounds.Intersects(targetBounds))
+            return false;
+
+        // Raycast to check if any UI blocks the target at the touch position
+        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        {
+            position = screenPosition
+        };
+        List<RaycastResult> raycastResults = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, raycastResults);
+
+        foreach (var result in raycastResults)
+        {
+            var resultRect = result.gameObject.GetComponent<RectTransform>();
+            if (resultRect == null) continue;
+            if (resultRect == target)
+                break; // Target is reached, no UI blocks above
+            // If have other UI blocks above the target, return false
+            if (resultRect != rect && resultRect != target)
+                return false;
+        }
+
+        return true;
     }
 
     public static void FlipX(this Transform transform)

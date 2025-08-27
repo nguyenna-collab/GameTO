@@ -13,13 +13,10 @@ public class DragAndReplaceUI : AUIBehaviour, IDropTarget
 
     private DraggableUI _draggableUI;
 
-    private Image _image;
-
     protected override void OnEnable()
     {
         base.OnEnable();
         _draggableUI = GetComponent<DraggableUI>();
-        _image = GetComponent<Image>();
         _draggableUI.OnDropped.AddListener(SnapToFace);
     }
 
@@ -30,7 +27,7 @@ public class DragAndReplaceUI : AUIBehaviour, IDropTarget
 
     private void SnapToFace(PointerEventData eventData)
     {
-        if (IsTouchingTarget())
+        if (IsTouchingTarget(eventData))
             OnDropReceived(_draggableUI, eventData);
         else
             FailObjective();

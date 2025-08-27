@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public abstract class AUIBehaviour : MonoBehaviour
 {
@@ -17,9 +18,9 @@ public abstract class AUIBehaviour : MonoBehaviour
         OriginalPosition = transform.position;
     }
 
-    protected virtual bool IsTouchingTarget()
+    protected virtual bool IsTouchingTarget(PointerEventData eventData)
     {
         if (!CanDetectTarget) return false;
-        return GetComponent<RectTransform>().IsOverlapUI(_targetRect);
+        return GetComponent<RectTransform>().IsOverlapUI(_targetRect, eventData.position);
     }
 }

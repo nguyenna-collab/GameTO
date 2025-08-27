@@ -33,7 +33,7 @@ public class Scroll : AUIBehaviour
 
     private void TouchGirl(PointerEventData eventData)
     {
-        if (IsTouchingTarget())
+        if (IsTouchingTarget(eventData))
             OnDropReceived(_draggableUI, eventData);
         else
             FailObjective();

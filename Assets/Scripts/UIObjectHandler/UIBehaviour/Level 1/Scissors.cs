@@ -34,7 +34,7 @@ public class Scissors : AUIBehaviour
 
     private void HandleDrop(PointerEventData eventData)
     {
-        if (IsTouchingTarget())
+        if (IsTouchingTarget(eventData))
             CompleteObjective();
         else
             FailObjective();

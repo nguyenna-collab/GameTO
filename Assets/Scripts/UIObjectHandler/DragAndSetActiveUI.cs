@@ -25,7 +25,7 @@ public class DragAndSetActiveUI : AUIBehaviour
 
     private void SnapToFace(PointerEventData eventData)
     {
-        if (IsTouchingTarget())
+        if (IsTouchingTarget(eventData))
         {
             CompleteObjective();
         }
@@ -37,8 +37,8 @@ public class DragAndSetActiveUI : AUIBehaviour
 
     private void CompleteObjective()
     {
-        _enableUI.SetActive(true);
-        _disableUI.SetActive(false);
+        if (_enableUI) _enableUI.SetActive(true);
+        if (_disableUI) _disableUI.SetActive(false);
         _objective.CompleteObjective();
         if (_successSound != null)
            SoundManager.Instance.PlaySFX(_successSound, default, 0.5f);
