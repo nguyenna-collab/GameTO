@@ -11,6 +11,7 @@ public class TouchableUI : MonoBehaviour, IPointerClickHandler
     [SerializeField] private List<Transform> _gameobjectsToShow;
     [Space(20), SerializeField] private List<Transform> _gameObjectsToHide;
     [SerializeField] private AudioClip touchClip;
+    [SerializeField] private Objective _objective;
 
     public UnityEvent OnTouchClick;
 
@@ -29,5 +30,6 @@ public class TouchableUI : MonoBehaviour, IPointerClickHandler
         {
             go.gameObject.SetActive(false);
         }
+        if (_objective != null) _objective.CompleteObjective();
     }
 }

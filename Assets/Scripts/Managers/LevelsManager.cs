@@ -20,11 +20,13 @@ public class LevelsManager : Singleton<LevelsManager>
         base.Awake();
         DontDestroyOnLoad(this.gameObject);
         OnCurrentLevelCompleted += HandleLevelCompleted;
+        OnCurrentLevelFailed += ShowLoseResultPanel;
     }
 
     void OnDestroy()
     {
         OnCurrentLevelCompleted -= HandleLevelCompleted;
+        OnCurrentLevelFailed -= ShowLoseResultPanel;
     }
 
     private void HandleLevelCompleted()
@@ -32,5 +34,16 @@ public class LevelsManager : Singleton<LevelsManager>
         _levelDataList.LevelDataList[CurrentLevelIndex].IsCompleted = true;
         if (CurrentLevelIndex < _levelDataList.LevelDataList.Count - 1)
             _levelDataList.LevelDataList[CurrentLevelIndex + 1].IsLocked = false;
+        ShowWinResultPanel();
+    }
+
+    public void ShowWinResultPanel()
+    {
+        UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(LevelsManager.Instance.CurrentLevelData.Icon, true));
+    }
+
+    public void ShowLoseResultPanel()
+    {
+        UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(LevelsManager.Instance.CurrentLevelData.Icon, false));
     }
 }

@@ -17,15 +17,15 @@ public class DragAndReplaceUI : AUIBehaviour, IDropTarget
     {
         base.OnEnable();
         _draggableUI = GetComponent<DraggableUI>();
-        _draggableUI.OnDropped.AddListener(SnapToFace);
+        _draggableUI.OnDropped.AddListener(DropOnTarget);
     }
 
     protected void OnDisable()
     {
-        _draggableUI.OnDropped.RemoveListener(SnapToFace);
+        _draggableUI.OnDropped.RemoveListener(DropOnTarget);
     }
 
-    private void SnapToFace(PointerEventData eventData)
+    private void DropOnTarget(PointerEventData eventData)
     {
         if (IsTouchingTarget(eventData))
             OnDropReceived(_draggableUI, eventData);

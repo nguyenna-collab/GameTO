@@ -129,7 +129,6 @@ namespace Level1
             }
             else
             {
-                LevelsManager.Instance.OnCurrentLevelCompleted?.Invoke();
                 Sequence s = DOTween.Sequence();
                 s.AppendCallback(() =>
                 {
@@ -151,7 +150,7 @@ namespace Level1
                 s.AppendCallback(() =>
                 {
                     IsInFloorTransition = false;
-                    UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(LevelsManager.Instance.CurrentLevelData.Icon, true));
+                    LevelsManager.Instance.OnCurrentLevelCompleted.Invoke();
                 });
             }
         }
@@ -201,7 +200,6 @@ namespace Level1
                 UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(LevelsManager.Instance.CurrentLevelData.Icon, false));
                 IsInFloorTransition = false;
             });
-            LevelsManager.Instance.OnCurrentLevelFailed?.Invoke();
         }
 
         private Sequence EnterFloor()

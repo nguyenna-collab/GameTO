@@ -17,4 +17,4 @@ MonoBehaviour:
   IsLocked: 0
   IsHotLevel: 1
   Hint: {fileID: 11400000, guid: fcdae75502139214eabae5068ee78c5e, type: 2}
-  Description: Help the person in the roon disguise themselves to fool the moster
+  Description: 'Help the person in the roon disguise themselves to fool the moster. '

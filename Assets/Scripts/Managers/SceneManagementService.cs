@@ -12,7 +12,7 @@ public class SceneManagementService : Singleton<SceneManagementService>
     {
         LevelsManager.CurrentLevelIndex = index;
         SceneManager.LoadScene($"Level_{index}");
-        if (index >= 0 && index < LevelsManager.LevelDataList.LevelDataList.Count - 1)
+        if (index >= 0 && index <= LevelsManager.LevelDataList.LevelDataList.Count - 1)
         {
             LevelsManager.CurrentLevelData = LevelsManager.LevelDataList.LevelDataList[index];
         }

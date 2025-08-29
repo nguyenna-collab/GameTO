@@ -62,6 +62,7 @@ public class LevelResultScreen : AUIScreenController<LevelResultProperties>
             _doneMark.SetActive(false);
             _failedMark.SetActive(true);
         }
+        _levelImage.sprite = Properties.LevelSprite;
     }
 
     public void PlayResultMarkAnimation()

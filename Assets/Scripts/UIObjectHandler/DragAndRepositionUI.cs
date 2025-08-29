@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ public class DragAndRepositionUI : AUIBehaviour, IDropTarget
     [Header("When Completed")]
     [SerializeField] private AudioClip _clipWhenDroppedOnTarget;
     [SerializeField] private bool _resetLocalRotation = false;
+    public UnityEvent OnSuccess;
 
     private DraggableUI _draggableUI;
     private Image _image;
@@ -55,8 +57,9 @@ public class DragAndRepositionUI : AUIBehaviour, IDropTarget
         if (_resetLocalRotation)
             transform.localEulerAngles = Vector3.zero;
         transform.position = _targetPosition.position;
-        _objective?.CompleteObjective();
         _draggableUI.enabled = false;
+        _objective?.CompleteObjective();
+        OnSuccess?.Invoke();
         this.enabled = false;
     }
 

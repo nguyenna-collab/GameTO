@@ -31,7 +31,9 @@ public static class Extensions
         }
 
         if (!rectBounds.Intersects(targetBounds))
+        {
             return false;
+        }
 
         // Raycast to check if any UI blocks the target at the touch position
         PointerEventData pointerData = new PointerEventData(EventSystem.current)
@@ -46,12 +48,15 @@ public static class Extensions
             var resultRect = result.gameObject.GetComponent<RectTransform>();
             if (resultRect == null) continue;
             if (resultRect == target)
+            {
                 break; // Target is reached, no UI blocks above
+            }
             // If have other UI blocks above the target, return false
             if (resultRect != rect && resultRect != target)
+            {
                 return false;
+            }
         }
-
         return true;
     }
 

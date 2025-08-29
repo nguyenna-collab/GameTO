@@ -1,13 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(DraggableUI))]
-public class DragAndSetActiveUI : AUIBehaviour
+public class DragAndSetActiveUI : AUIBehaviour, IDropTarget
 {
     [SerializeField] private GameObject _disableUI;
     [SerializeField] private GameObject _enableUI;
     [SerializeField] private Objective _objective;
     [SerializeField] private AudioClip _successSound;
+    [SerializeField] private UnityEvent _onSuccess;
 
     private DraggableUI _draggableUI;
 
@@ -15,33 +17,30 @@ public class DragAndSetActiveUI : AUIBehaviour
     {
         base.OnEnable();
         _draggableUI = GetComponent<DraggableUI>();
-        _draggableUI.OnDropped.AddListener(SnapToFace);
+        _draggableUI.OnDropped.AddListener(DropOnTarget);
     }
 
     protected void OnDisable()
     {
-        _draggableUI.OnDropped.RemoveListener(SnapToFace);
+        _draggableUI.OnDropped.RemoveListener(DropOnTarget);
     }
 
-    private void SnapToFace(PointerEventData eventData)
+    private void DropOnTarget(PointerEventData eventData)
     {
         if (IsTouchingTarget(eventData))
-        {
-            CompleteObjective();
-        }
+            OnDropReceived(_draggableUI, eventData);
         else
-        {
             FailObjective();
-        }
     }
 
-    private void CompleteObjective()
+    public void OnDropReceived(DraggableUI draggable, PointerEventData eventData)
     {
+        if (_successSound != null)
+            SoundManager.Instance.PlaySFX(_successSound, default, 0.5f);
+        _objective.CompleteObjective();
+        _onSuccess?.Invoke();
         if (_enableUI) _enableUI.SetActive(true);
         if (_disableUI) _disableUI.SetActive(false);
-        _objective.CompleteObjective();
-        if (_successSound != null)
-           SoundManager.Instance.PlaySFX(_successSound, default, 0.5f);
     }
 
     private void FailObjective()

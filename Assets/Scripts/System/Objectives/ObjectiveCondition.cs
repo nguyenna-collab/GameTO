@@ -35,6 +35,7 @@ public class ObjectiveCondition : MonoBehaviour
 
     private void SetValuesBeforeCompleted()
     {
+        if (_targetObjective.ObjectiveSO.IsCompleted) return;
         foreach (var objective in _objectivesToSetPropertiesBeforeCompleted)
         {
             if (_applyInteractable) objective.GetComponent<CanvasGroup>().interactable = _interactableValue;
