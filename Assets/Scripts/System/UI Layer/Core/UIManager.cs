@@ -194,6 +194,11 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
+    public void ShowDialog(string screenId)
+    {
+        ShowDialog(screenId, null);
+    }
+
     public void HideDialog(string screenId)
     {
         if (dialogLayer != null)
@@ -201,6 +206,7 @@ public class UIManager : Singleton<UIManager>
             // Check if we need to hide the blocking overlay
             if (instantiatedScreens.TryGetValue(screenId, out AUIScreenController screen))
             {
+                Debug.Log(screen.BaseProperties != null);
                 if (screen.BaseProperties != null && screen.BaseProperties.blockInput)
                 {
                     HideBlockingOverlay();
@@ -213,18 +219,30 @@ public class UIManager : Singleton<UIManager>
 
     public void HideAllPanels()
     {
-        if (panelLayer != null) panelLayer.HideAll();
+        if (panelLayer != null)
+        {
+            foreach (var id in panelLayer.Screens.Keys)
+            {
+                HidePanel(id);
+            }
+        }
     }
 
     public void HideAllDialogs()
     {
-        if (dialogLayer != null) dialogLayer.HideAll();
+        if (dialogLayer != null)
+        {
+            foreach (var id in dialogLayer.Screens.Keys)
+            {
+                HideDialog(id);
+            }
+        }
     }
 
     public void HideAllUI()
     {
-        if (panelLayer != null) panelLayer.HideAll();
-        if (dialogLayer != null) dialogLayer.HideAll();
+        HideAllPanels();
+        HideAllDialogs();
         if (overlayLayer != null) overlayLayer.HideAll();
     }
 

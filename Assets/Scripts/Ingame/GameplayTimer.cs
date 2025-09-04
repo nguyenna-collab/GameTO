@@ -38,6 +38,8 @@ public class GameplayTimer : MonoBehaviour
         OnTimeUp -= HandleTimeUp;
         LevelsManager.Instance.OnCurrentLevelCompleted -= Pause;
         LevelsManager.Instance.OnCurrentLevelFailed -= Pause;
+        StopCoroutine(_updateTimerCoroutine);
+        _updateTimerCoroutine = null;
     }
 
     public void Pause()

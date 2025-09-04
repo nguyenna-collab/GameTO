@@ -41,7 +41,7 @@ public class ReturnHomeScreen : AUIScreenController<ReturnHomeProperties>
     {
         var uiManager = UIManager.Instance;
         SceneManagementService.Instance.LoadScene("MainMenu");
-        uiManager.HideDialog("ReturnHome");
+        uiManager.HideDialog(ScreenID);
         uiManager.HidePanel("Gameplay");
         uiManager.ShowPanel("MainMenu");
     }

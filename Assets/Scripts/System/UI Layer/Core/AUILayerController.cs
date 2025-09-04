@@ -6,6 +6,8 @@ public abstract class AUILayerController : MonoBehaviour
 {
     protected Dictionary<string, AUIScreenController> screens = new Dictionary<string, AUIScreenController>();
 
+    public Dictionary<string, AUIScreenController> Screens => screens;
+    
     public virtual void RegisterScreen(AUIScreenController screen)
     {
         if (!screens.ContainsKey(screen.ScreenID))
@@ -55,9 +57,11 @@ public abstract class AUILayerController : MonoBehaviour
     {
         if (screens.ContainsKey(screenId))
         {
-            screens[screenId].Hide();
+            var screen = screens[screenId];
+            screen.Hide();
         }
     }
+    
     public virtual void HideAll()
     {
         foreach (var screen in screens.Values)

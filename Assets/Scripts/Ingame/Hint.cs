@@ -1,3 +1,4 @@
+using Service_Locator;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,23 +11,32 @@ public class Hint : MonoBehaviour
     [SerializeField] private Button _useHintButton;
     [SerializeField] private GameObject _adsImage;
 
-    [Header("Settings")]
-    [SerializeField] private int _hintAmount = 1;
-
-    public int GetHintAmount { get { return _hintAmount; } }
+    private UserDataManager _userDataManager;
+    
+    public int HintAmount
+    {
+        get => _hintAmount;
+        set
+        {
+            if (value < 0) value = 0;
+            _hintAmount = value;
+        }
+    }
 
     private int _currentHintIndex = 0;
+    private int _hintAmount;    
 
     void Awake()
     {
         _hintAmountText ??= GetComponentInChildren<TMP_Text>();
         _useHintButton ??= GetComponentInChildren<Button>();
-        UpdateHintAmountText();
     }
 
     private void Start()
     {
         _useHintButton.onClick.AddListener(UseHint);
+        ServiceLocator.Global.Get<UserDataManager>(out _userDataManager);
+        UpdateHintAmountText();
     }
 
     private void OnDestroy()
@@ -36,27 +46,29 @@ public class Hint : MonoBehaviour
 
     public void AddHint()
     {
-        _hintAmount++;
+        HintAmount++;
         UpdateHintAmountText();
     }
 
     public void SubtractHint()
     {
-        if (_hintAmount > 0)
+        if (HintAmount > 0)
         {
-            _hintAmount--;
+            HintAmount--;
             UpdateHintAmountText();
         }
     }
 
     private void UpdateHintAmountText()
     {
-        _hintAmountText.text = $"{_hintAmount}";
+        _hintAmountText.text = $"{HintAmount}";
+        _userDataManager.UserData.Hints = HintAmount;
+        _userDataManager.Save();
     }
 
     public void UseHint()
     {
-        if (_hintAmount <= 0)
+        if (HintAmount <= 0)
         {
             Debug.LogWarning("No hints available to use.");
             return;
@@ -72,7 +84,7 @@ public class Hint : MonoBehaviour
         }
 
         SubtractHint();
-        if (_currentHintIndex < _hintAmount - 1)
+        if (_currentHintIndex < HintAmount - 1)
         {
             _currentHintIndex++;
         }

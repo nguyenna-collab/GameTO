@@ -72,4 +72,6 @@ public static class Extensions
         transform.SetParent(oldCanvas, true);
         transform.SetSiblingIndex(siblingIndex);
     }
+
+    public static T OrNull<T>(this T o) where T : Object => o ? o : null;
 }

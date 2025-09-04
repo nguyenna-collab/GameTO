@@ -6,6 +6,7 @@ public class LevelSelectionProperties : ScreenProperties
 
     public LevelSelectionProperties(LevelDataListSO levelDataList) : base()
     {
+        blockInput = true;
         this.levelDataList = levelDataList;
     }
 }

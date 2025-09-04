@@ -123,7 +123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1162839763178777886}
         m_TargetAssemblyTypeName: QuickSceneLoader, Assembly-CSharp
-        m_MethodName: LoadNextLevel
+        m_MethodName: LoadNextLevelScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -854,7 +854,6 @@ MonoBehaviour:
   _hintAmountText: {fileID: 1644388854064494585}
   _useHintButton: {fileID: 9022991266202916252}
   _adsImage: {fileID: 7132666380370342275}
-  _hintAmount: 5
 --- !u!1 &4600343553978518992
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +868,7 @@ GameObject:
   - component: {fileID: 6535971732804509341}
   - component: {fileID: 8113336579862756074}
   m_Layer: 5
-  m_Name: MoreTimeButton
+  m_Name: TimeBonusButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -990,10 +989,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c3fde4322fa81498b497c04c5f9c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeBonous
-  _bonousTime: 120
   _gameplayTimer: {fileID: 7610081859140406230}
-  _bonousText: {fileID: 6256057411304194888}
-  _bonousButton: {fileID: 6535971732804509341}
+  _bonusText: {fileID: 6256057411304194888}
+  _bonusButton: {fileID: 6535971732804509341}
   _adsImage: {fileID: 1979776851844634572}
 --- !u!1 &5133107381618862074
 GameObject:
@@ -1050,6 +1048,8 @@ MonoBehaviour:
   transitionOut: {fileID: 0}
   blockInteractionDuringTransition: 0
   _descriptionText: {fileID: 8954407073923191498}
+  _timeBonus: {fileID: 8113336579862756074}
+  _hint: {fileID: 4231108887718103140}
 --- !u!1 &5191563686931882342
 GameObject:
   m_ObjectHideFlags: 0

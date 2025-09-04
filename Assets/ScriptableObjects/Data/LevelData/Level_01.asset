@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelIndex: 1
   Icon: {fileID: -1541269027, guid: 377506825bc856446b6733cfa453bc1e, type: 3}
-  IsLocked: 0
-  IsHotLevel: 1
+  IsLocked: 1
+  IsHotLevel: 0
   Hint: {fileID: 11400000, guid: bc18a83a50ba78148a7e92a161e1e538, type: 2}
   Description: No Description
