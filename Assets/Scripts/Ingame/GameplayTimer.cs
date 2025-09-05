@@ -43,6 +43,12 @@ public class GameplayTimer : MonoBehaviour
         _updateTimerCoroutine = null;
     }
 
+    private void OnDestroy()
+    {
+        StopCoroutine(_updateTimerCoroutine);
+        _updateTimerCoroutine = null;
+    }
+
     public void Pause()
     {
         StopCoroutine(_updateTimerCoroutine);

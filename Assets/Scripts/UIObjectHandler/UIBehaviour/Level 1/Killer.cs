@@ -197,7 +197,7 @@ namespace Level1
             s.Append(_backgroundImage.DOFade(1, 1f));
             s.AppendCallback(() =>
             {
-                UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(LevelsManager.Instance.CurrentLevelData.Icon, false));
+                LevelsManager.Instance.OnCurrentLevelFailed?.Invoke();
                 IsInFloorTransition = false;
             });
         }
