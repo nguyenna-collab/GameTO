@@ -74,4 +74,14 @@ public static class Extensions
     }
 
     public static T OrNull<T>(this T o) where T : Object => o ? o : null;
+
+    /// <summary>
+    /// Make parameter v absolute and return itself
+    /// </summary>
+    /// <returns></returns>
+    public static Vector2 Abs(this Vector2 v)
+    {
+        v =  new Vector2(Mathf.Abs(v.x), Mathf.Abs(v.y));
+        return v;
+    }
 }
