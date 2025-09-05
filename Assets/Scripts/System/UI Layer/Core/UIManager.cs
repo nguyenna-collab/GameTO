@@ -108,7 +108,6 @@ public class UIManager : Singleton<UIManager>
         // Public methods to show/hide screens via layers
         public void ShowPanel(string screenId, object properties = null)
         {
-            Debug.Log($"UIManager: Showing panel with ID '{screenId}'");
             if (panelLayer != null)
             {
                 AUIScreenController screen = GetOrCreateScreenController(screenId, panelLayer);
@@ -155,13 +154,11 @@ public class UIManager : Singleton<UIManager>
         if (panelLayer != null)
         {
             panelLayer.HideScreen(screenId);
-            Debug.Log($"UIManager: Hiding panel with ID '{screenId}'");
         }
     }
 
     public void ShowDialog(string screenId, object properties = null)
     {
-        Debug.Log($"UIManager: Showing dialog with ID '{screenId}'");
         if (properties != null)
         {
             Debug.Log($"UIManager: Properties: {properties}");
