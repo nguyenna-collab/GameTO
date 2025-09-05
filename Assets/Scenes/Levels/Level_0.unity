@@ -798,7 +798,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a48fbf441876a4f479a08e5657adfdcc, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a48fbf441876a4f479a08e5657adfdcc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
@@ -951,7 +951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1219,6 +1219,7 @@ MonoBehaviour:
   _gameObjectsToHide:
   - {fileID: 374458821}
   touchClip: {fileID: 8300000, guid: 8176fa25d35658546803e6030da9e383, type: 3}
+  _objective: {fileID: 0}
   OnTouchClick:
     m_PersistentCalls:
       m_Calls: []
@@ -1375,6 +1376,9 @@ MonoBehaviour:
   _enableUI: {fileID: 1764252654}
   _objective: {fileID: 408583541}
   _successSound: {fileID: 8300000, guid: 596ff578072a72945809972766833561, type: 3}
+  _onSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &408583541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2595,6 +2599,10 @@ MonoBehaviour:
   _targetPosition: {fileID: 205914523}
   _objective: {fileID: 629887150}
   _clipWhenDroppedOnTarget: {fileID: 8300000, guid: 596ff578072a72945809972766833561, type: 3}
+  _resetLocalRotation: 0
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &629887150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3663,11 +3671,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0776935ede6682f41bd1cb35ece67296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDisableUI
-  _targetRect: {fileID: 602367105}
+  _targetRect: {fileID: 819470644}
   _disableUI: {fileID: 993117814}
   _enableUI: {fileID: 342270054}
   _objective: {fileID: 993117821}
   _successSound: {fileID: 8300000, guid: 596ff578072a72945809972766833561, type: 3}
+  _onSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &993117821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3948,6 +3959,9 @@ MonoBehaviour:
   _enableUI: {fileID: 2147348303}
   _objective: {fileID: 1091255969}
   _successSound: {fileID: 8300000, guid: 596ff578072a72945809972766833561, type: 3}
+  _onSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1091255969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4660,7 +4674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5095,6 +5109,7 @@ MonoBehaviour:
   _gameObjectsToHide:
   - {fileID: 1495784704}
   touchClip: {fileID: 8300000, guid: de05c15216e5c75499e32386d0d5bab8, type: 3}
+  _objective: {fileID: 0}
   OnTouchClick:
     m_PersistentCalls:
       m_Calls: []
@@ -5265,7 +5280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6166,6 +6181,10 @@ MonoBehaviour:
   _targetPosition: {fileID: 1226001354}
   _objective: {fileID: 1795283888}
   _clipWhenDroppedOnTarget: {fileID: 8300000, guid: 596ff578072a72945809972766833561, type: 3}
+  _resetLocalRotation: 0
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1795283888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6962,7 +6981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b9ce77bb9c4dbcb60deb79d22030e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scissors
-  _targetRect: {fileID: 1737053096}
+  _targetRect: {fileID: 1594360871}
   _trimPosition: {fileID: 2047785987}
   _trimSound: {fileID: 8300000, guid: fa7111a61475ccb4c90463acad309b0d, type: 3}
   _dog: {fileID: 1737053096}
@@ -7428,6 +7447,7 @@ MonoBehaviour:
   _gameObjectsToHide:
   - {fileID: 2131872106}
   touchClip: {fileID: 8300000, guid: de05c15216e5c75499e32386d0d5bab8, type: 3}
+  _objective: {fileID: 0}
   OnTouchClick:
     m_PersistentCalls:
       m_Calls: []

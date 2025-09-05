@@ -226,8 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7ad1d4d51b43ad8303fa80b4713e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.ToggleButton
-  _offStateColor: {r: 1, g: 1, b: 1, a: 1}
-  _onStateColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  _saveString: 
+  _offStateColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  _onStateColor: {r: 1, g: 1, b: 1, a: 1}
   _button: {fileID: 8343939989031811195}
   _rectTransform: {fileID: 4645379345121812362}
 --- !u!1 &7148012410756706544

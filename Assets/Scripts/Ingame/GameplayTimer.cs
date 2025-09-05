@@ -11,6 +11,7 @@ public class GameplayTimer : MonoBehaviour
     [Header("Initialization")]
     [SerializeField, Range(0, 59)] private int _minutes;
     [SerializeField, Range(0, 59)] private int _seconds;
+    
 
     public Action OnTimerStart;
     public Action OnTimerPause;

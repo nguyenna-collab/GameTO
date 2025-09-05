@@ -57,6 +57,7 @@ public class Scroll : AUIBehaviour
 
         _objective.CompleteObjective();
         _openButtonUI.Click();
+        LevelsManager.Instance.OnCurrentLevelFailed?.Invoke();
         gameObject.SetActive(false);
     }
 

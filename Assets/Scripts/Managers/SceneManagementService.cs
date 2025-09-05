@@ -1,3 +1,4 @@
+using Service_Locator;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +12,6 @@ public class SceneManagementService : Singleton<SceneManagementService>
     public void LoadLevel(int index)
     {
         LevelsManager.CurrentLevelIndex = index;
-        SceneManager.LoadScene($"Level_{index}");
         if (index >= 0 && index <= LevelsManager.LevelDataList.LevelDataList.Count - 1)
         {
             LevelsManager.CurrentLevelData = LevelsManager.LevelDataList.LevelDataList[index];
@@ -20,7 +20,11 @@ public class SceneManagementService : Singleton<SceneManagementService>
         {
             Debug.LogError($"LevelsManager: Level index {index} is out of range!");
             LevelsManager.CurrentLevelData = null;
+            return;
         }
+        SceneManager.LoadScene($"Level_{index}");
+        ServiceLocator.Global.Get<SoundManager>(out var soundManager);
+        soundManager.StopBackgroundMusic();
     }
 
     public void LoadNextLevel()
@@ -28,7 +32,7 @@ public class SceneManagementService : Singleton<SceneManagementService>
         if (LevelsManager.CurrentLevelIndex >= 0 && LevelsManager.CurrentLevelIndex < LevelsManager.LevelDataList.LevelDataList.Count - 1)
         {
             var levelIndex = LevelsManager.CurrentLevelIndex + 1;
-            SceneManager.LoadScene($"Level_{levelIndex}");
+            LoadLevel(levelIndex);
             LevelsManager.CurrentLevelData = LevelsManager.LevelDataList.LevelDataList[LevelsManager.CurrentLevelIndex];
         }
         else

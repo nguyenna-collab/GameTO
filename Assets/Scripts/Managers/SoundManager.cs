@@ -1,19 +1,31 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
+using Service_Locator;
 
 public class SoundManager : Singleton<SoundManager>
 {
     [Header("SFX Pool Settings")]
     [SerializeField] private int initialPoolSize = 5;
     [SerializeField] private GameObject audioSourcePrefab; 
-
-    private Queue<AudioSource> sfxPool = new Queue<AudioSource>();
-    private List<AudioSource> activeSfx = new List<AudioSource>();
+    
+    [Space(20)] 
+    [SerializeField] private AudioSource _backgroundMusic;
+    public AudioSource BackgroundMusic => _backgroundMusic;
+    
+    private Queue<AudioSource> sfxPool = new();
+    private List<AudioSource> activeSfx = new();
 
     public override void Awake()
     {
+        ServiceLocator.Global.Register(this);
         base.Awake();
         InitializePool();
+    }
+
+    private void Start()
+    {
+        if(_backgroundMusic != null && _backgroundMusic.loop == false) _backgroundMusic.loop = true;
     }
 
     private void InitializePool()
@@ -31,6 +43,7 @@ public class SoundManager : Singleton<SoundManager>
         AudioSource newSource = go.AddComponent<AudioSource>();
         newSource.playOnAwake = false;
         sfxPool.Enqueue(newSource);
+        newSource.gameObject.SetActive(false);
         return newSource;
     }
 
@@ -50,6 +63,7 @@ public class SoundManager : Singleton<SoundManager>
         else
         {
             sourceToPlay = CreateNewAudioSource(); // Expand pool if needed
+            sourceToPlay.gameObject.SetActive(true);
         }
 
         sourceToPlay.clip = clip;
@@ -71,9 +85,19 @@ public class SoundManager : Singleton<SoundManager>
         {
             activeSfx.Remove(source);
             source.Stop();
-            source.clip = null; // Clear clip
-            source.gameObject.SetActive(false); // Deactivate
+            source.clip = null;
+            source.gameObject.SetActive(false);
             sfxPool.Enqueue(source);
         }
+    }
+
+    public void PlayBackgroundMusic()
+    {
+        _backgroundMusic.Play();
+    }
+
+    public void StopBackgroundMusic()
+    {
+        _backgroundMusic.Stop();
     }
 }

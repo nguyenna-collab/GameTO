@@ -1,11 +1,8 @@
-using System;
 using Service_Locator;
-using UnityEditor;
-using UnityEngine;
 
 namespace Managers
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : Singleton<GameManager>
     {
         private UserDataManager _userDataManager;
 

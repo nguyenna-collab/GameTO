@@ -15,4 +15,4 @@ MonoBehaviour:
   LevelDataList:
   - {fileID: 11400000, guid: 2975560addcfa8745a94ac37dd6814da, type: 2}
   - {fileID: 11400000, guid: f8c7f6ab02d380741bbd729e81155b0a, type: 2}
-  ResetUnlockedLevelBeforeStart: 1
+  ResetUnlockedLevelBeforeStart: 0

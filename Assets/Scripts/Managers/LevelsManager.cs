@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -7,7 +8,7 @@ using UnityEngine;
 public class LevelsManager : Singleton<LevelsManager>
 {
     [SerializeField] private LevelDataListSO _levelDataList;
-
+    
     public LevelDataSO CurrentLevelData { get; set; } = null;
     public int CurrentLevelIndex { get; set; } = 0;
     public LevelDataListSO LevelDataList => _levelDataList;
@@ -39,11 +40,13 @@ public class LevelsManager : Singleton<LevelsManager>
 
     public void ShowWinResultPanel()
     {
-        UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(LevelsManager.Instance.CurrentLevelData.Icon, true));
+        if (CurrentLevelData.WinSound != null) SoundManager.Instance.PlaySFX(CurrentLevelData.WinSound);
+        UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(CurrentLevelData.Icon, true));
     }
 
     public void ShowLoseResultPanel()
     {
-        UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(LevelsManager.Instance.CurrentLevelData.Icon, false));
+        if (CurrentLevelData.FailSound != null) SoundManager.Instance.PlaySFX(CurrentLevelData.FailSound);
+        UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(CurrentLevelData.Icon, false));
     }
 }

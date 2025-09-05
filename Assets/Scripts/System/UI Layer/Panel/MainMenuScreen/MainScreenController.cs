@@ -16,13 +16,15 @@ public class MainScreenController : AUIScreenController
     
     private void Start()
     {
-        ServiceLocator.Global.Get(out _userDataManager);
         UpdateView();
     }
 
     private void OnEnable()
     {
+        ServiceLocator.Global.Get(out _userDataManager);
         _playButton.onClick.AddListener(OnPlayButtonClicked);
+        if (_userDataManager.UserData.Music && !SoundManager.Instance.BackgroundMusic.isPlaying)
+            SoundManager.Instance.PlayBackgroundMusic();
         UpdateView();
     }
 

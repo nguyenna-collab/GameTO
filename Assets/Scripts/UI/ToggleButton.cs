@@ -32,10 +32,10 @@ namespace UI
 
         public void SetState(bool on)
         {
-            var targetPos = _state
-                ? _button.GetComponent<RectTransform>().rect.width / 2
-                : _rectTransform.rect.width - (_button.GetComponent<RectTransform>().rect.width / 2);
-            _button.GetComponent<Image>().color = _state ? _onStateColor : _offStateColor;
+            var targetPos = on
+                ? _rectTransform.rect.width - (_button.GetComponent<RectTransform>().rect.width / 2)
+                : _button.GetComponent<RectTransform>().rect.width / 2;
+            _button.GetComponent<Image>().color = on ? _onStateColor : _offStateColor;
             _button.GetComponent<RectTransform>().anchoredPosition = new Vector2(targetPos, _rectTransform.localPosition.y);
             _state = on;
             OnToggle?.Invoke();

@@ -8,6 +8,9 @@ public class LevelDataSO : ScriptableObject
     [PreviewField] public Sprite Icon;
     public bool IsLocked = true;
     public bool IsHotLevel = false;
+    public AudioClip WinSound;
+    public AudioClip FailSound;
+    
     public bool IsCompleted { get; set; } = false;
     public HintDataSO Hint;
     public string Description = "No Description";
