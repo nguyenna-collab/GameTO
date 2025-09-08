@@ -4,16 +4,16 @@ namespace Managers
 {
     public class GameManager : Singleton<GameManager>
     {
-        private UserDataManager _userDataManager;
+        private SaveManager _saveManager;
 
         private void Start()
         {
-            ServiceLocator.Global.Get<UserDataManager>(out _userDataManager);
+            ServiceLocator.Global.Get<SaveManager>(out _saveManager);
         }
 
         private void OnApplicationQuit()
         {
-            _userDataManager.Save();
+            _saveManager.SaveAll();
         }
     }
 }

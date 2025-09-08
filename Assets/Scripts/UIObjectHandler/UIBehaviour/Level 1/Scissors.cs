@@ -1,73 +1,68 @@
-using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(DraggableUI))]
-public class Scissors : AUIBehaviour
+namespace Level2
 {
-    [Header("Scissors")]
-    [SerializeField] private Transform _trimPosition;
-    [SerializeField] private AudioClip _trimSound;
+    public class Scissors : AUIBehaviour, IDropTarget {
+        [SerializeField] private List<Image> _disabledImages;
+        [SerializeField] private List<Image> _enabledImages;
+        [SerializeField] private AudioClip _cutSound;
 
-    [Header("Dog")]
-    [SerializeField] private Transform _dog;
-    [SerializeField] private GameObject _trimmedFur;
+        [SerializeField] private Objective _objective;
+        [SerializeField] private TungTungBoy _tungTungBoy;
 
-    private DraggableUI _draggableUI;
-    private Animator _anim;
+        private DraggableUI _draggableUI;
+        private Animator _animator;
 
-
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-        _draggableUI = GetComponent<DraggableUI>();
-        _draggableUI.OnDropped.AddListener(HandleDrop);
-        _anim = GetComponent<Animator>();
-    }
-
-    protected void OnDisable()
-    {
-        _draggableUI.OnDropped.RemoveListener(HandleDrop);
-    }
-
-    private void HandleDrop(PointerEventData eventData)
-    {
-        if (IsTouchingTarget(eventData))
-            CompleteObjective();
-        else
-            FailObjective();
-    }
-
-    private void CompleteObjective()
-    {
-        TrimFur();
-    }
-
-    private void FailObjective()
-    {
-        _draggableUI.RestoreToInitial();
-    }
-
-    private Sequence TrimFur()
-    {
-        Sequence sequence = DOTween.Sequence();
-        sequence.AppendCallback(() =>
+        protected override void OnEnable()
         {
-            transform.position = _trimPosition.position;
-            _anim.enabled = true;
-            _anim.SetTrigger("Trim");
-            _dog.GetComponent<Animator>().SetTrigger("Trim");
-        }).AppendInterval(_anim.GetCurrentAnimatorStateInfo(0).length);
-        sequence.AppendCallback(() =>
+            base.OnEnable();
+            _animator = GetComponent<Animator>();
+            _animator.enabled = false;
+            _draggableUI = GetComponent<DraggableUI>();
+            _draggableUI.OnDropped.AddListener(CutPicture);
+        }
+
+        protected void OnDisable()
         {
-            gameObject.SetActive(false);
-            _trimmedFur.SetActive(true);
-        });
+            _draggableUI.OnDropped.RemoveListener(CutPicture);
+        }
 
-        return sequence;
+        private void CutPicture(PointerEventData eventData)
+        {
+            if (IsTouchingTarget(eventData))
+                OnDropReceived(_draggableUI, eventData);
+            else
+                FailObjective();
+        }
+
+        private void FailObjective()
+        {
+            _draggableUI.RestoreToInitial();
+            _objective?.FailObjective();
+        }
+
+        public void OnDropReceived(DraggableUI draggable, PointerEventData eventData)
+        {
+            Sequence s = DOTween.Sequence();
+            s.AppendCallback(() =>
+            {
+                _animator.enabled = true;
+                _animator.SetTrigger("Cut");
+                SoundManager.Instance.PlaySFX(_cutSound, default, 0.5f);
+                Debug.Log(_animator.GetCurrentAnimatorStateInfo(0).length);
+            }).AppendInterval(_animator.GetCurrentAnimatorStateInfo(0).length);
+            s.AppendCallback(() =>
+            {
+                foreach (var img in _enabledImages)
+                    img.gameObject.SetActive(true);
+                foreach (var img in _disabledImages)
+                    img.gameObject.SetActive(false);
+            });
+            _objective?.CompleteObjective();
+        }
     }
-
-    public void PlayTrimSound() => SoundManager.Instance.PlaySFX(_trimSound, default, 0.5f);
 }

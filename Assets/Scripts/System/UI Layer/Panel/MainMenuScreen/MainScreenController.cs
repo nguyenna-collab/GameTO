@@ -12,7 +12,7 @@ public class MainScreenController : AUIScreenController
 
     public override ScreenProperties BaseProperties => null;
 
-    private UserDataManager _userDataManager;
+    private SaveManager _saveManager;
     
     private void Start()
     {
@@ -21,9 +21,9 @@ public class MainScreenController : AUIScreenController
 
     private void OnEnable()
     {
-        ServiceLocator.Global.Get(out _userDataManager);
+        ServiceLocator.Global.Get(out _saveManager);
         _playButton.onClick.AddListener(OnPlayButtonClicked);
-        if (_userDataManager.UserData.Music && !SoundManager.Instance.BackgroundMusic.isPlaying)
+        if (_saveManager.SettingsData.Music && !SoundManager.Instance.BackgroundMusic.isPlaying)
             SoundManager.Instance.PlayBackgroundMusic();
         UpdateView();
     }
@@ -40,6 +40,6 @@ public class MainScreenController : AUIScreenController
 
     private void UpdateView()
     {
-        _hintsText.SetText(_userDataManager.UserData.Hints.ToString());
+        _hintsText.SetText(_saveManager.UserData.Hints.ToString());
     }
 }

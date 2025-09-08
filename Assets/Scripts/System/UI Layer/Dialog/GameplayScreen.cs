@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class GameplayProperties : ScreenProperties
 {
-    public string DescriptionText { get; private set; }
+    public string DescriptionString { get; private set; }
     public int TimeBonus { get; private set; }
     public int Hints { get; private set; }
     
-    public GameplayProperties(string descriptionText, int timeBonus, int hints)
+    public GameplayProperties(string descriptionString, int timeBonus, int hints)
     {
-        DescriptionText = descriptionText;
+        DescriptionString = descriptionString;
         TimeBonus = timeBonus;
         Hints = hints;
     }
@@ -23,7 +23,7 @@ public class GameplayScreen : AUIScreenController<GameplayProperties>
 
     protected override void OnPropertiesSet()
     {
-        _descriptionText.text = Properties.DescriptionText;
+        _descriptionText.text = Properties.DescriptionString;
         _timeBonus.BonusAmount = Properties.TimeBonus;
         _hint.HintAmount = Properties.Hints;
     }

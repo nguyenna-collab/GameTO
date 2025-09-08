@@ -105,39 +105,39 @@ public class UIManager : Singleton<UIManager>
         return screenController;
     }
 
-        // Public methods to show/hide screens via layers
-        public void ShowPanel(string screenId, object properties = null)
+    // Public methods to show/hide screens via layers
+    public void ShowPanel(string screenId, object properties = null)
+    {
+        if (panelLayer != null)
         {
-            if (panelLayer != null)
+            AUIScreenController screen = GetOrCreateScreenController(screenId, panelLayer);
+            if (screen != null)
             {
-                AUIScreenController screen = GetOrCreateScreenController(screenId, panelLayer);
-                if (screen != null)
+                // Handle properties validation
+                if (properties is ScreenProperties screenProps)
                 {
-                    // Handle properties validation
-                    if (properties is ScreenProperties screenProps)
+                    if (!screenProps.Validate())
                     {
-                        if (!screenProps.Validate())
-                        {
-                            Debug.LogError($"UIManager: Invalid properties for screen '{screenId}': {screenProps.GetSummary()}");
-                            return;
-                        }
-
-                        // Handle special properties
-                        if (screenProps.blockInput)
-                        {
-                            ShowBlockingOverlay();
-                        }
-
-                        if (screenProps.showLoadingOverlay)
-                        {
-                            ShowOverlay("LoadingOverlay");
-                        }
+                        Debug.LogError($"UIManager: Invalid properties for screen '{screenId}': {screenProps.GetSummary()}");
+                        return;
                     }
 
-                    panelLayer.ShowScreen(screen, properties);
+                    // Handle special properties
+                    if (screenProps.blockInput)
+                    {
+                        ShowBlockingOverlay();
+                    }
+
+                    if (screenProps.showLoadingOverlay)
+                    {
+                        ShowOverlay("LoadingOverlay");
+                    }
                 }
+
+                panelLayer.ShowScreen(screen, properties);
             }
         }
+    }
 
     //For Button Event
     public void ShowPanel(string screenId)

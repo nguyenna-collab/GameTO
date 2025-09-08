@@ -21,14 +21,16 @@ public class SettingsScreen : AUIScreenController<SettingsProperties>
     
     protected override void OnPropertiesSet(){}
 
-    private UserDataManager _userDataManager;
+    private SaveManager _saveManager;
     private UserData _userData;
+    private SettingsData _settingsData;
     private SoundManager _soundManager;
 
     protected override void Awake()
     {
-        ServiceLocator.Global.Get(out _userDataManager);
-        _userData = _userDataManager.UserData;
+        ServiceLocator.Global.Get(out _saveManager);
+        _userData = _saveManager.UserData;
+        _settingsData = _saveManager.SettingsData;
         base.Awake();
     }
 
@@ -59,12 +61,12 @@ public class SettingsScreen : AUIScreenController<SettingsProperties>
 
     private void MusicToggle()
     {
-        _userData.Music = _musicTogle.State;
+        _settingsData.Music = _musicTogle.State;
         SetBackgroundMusic();
     }
 
-    private void SoundToggle() => _userData.Sound = _soundToggle.State;
-    private void VibrationToggle() => _userData.Vibration = _vibrationToggle.State;
+    private void SoundToggle() => _settingsData.Sound = _soundToggle.State;
+    private void VibrationToggle() => _settingsData.Vibration = _vibrationToggle.State;
     private void OnClose()
     {
 
@@ -74,17 +76,17 @@ public class SettingsScreen : AUIScreenController<SettingsProperties>
 
     private void SaveData()
     {
-        _userData.Music = _musicTogle.State;
-        _userData.Sound = _soundToggle.State;
-        _userData.Vibration = _vibrationToggle.State;
-        _userDataManager.Save();
+        _settingsData.Music = _musicTogle.State;
+        _settingsData.Sound = _soundToggle.State;
+        _settingsData.Vibration = _vibrationToggle.State;
+        _saveManager.SaveSettingsData();
     }
 
     private void UpdateView()
     {
-        bool music = _userData.Music;
-        bool sound = _userData.Sound;
-        bool vibration = _userData.Vibration;
+        bool music = _settingsData.Music;
+        bool sound = _settingsData.Sound;
+        bool vibration = _settingsData.Vibration;
         _musicTogle.SetState(music);
         _soundToggle.SetState(sound);
         _vibrationToggle.SetState(vibration);
@@ -98,9 +100,9 @@ public class SettingsScreen : AUIScreenController<SettingsProperties>
             ServiceLocator.Global.Get(out _soundManager);
             Debug.Log("2" + _soundManager);
         }
-        if (_userData.Music && !_soundManager.BackgroundMusic.isPlaying)
+        if (_settingsData.Music && !_soundManager.BackgroundMusic.isPlaying)
             _soundManager.PlayBackgroundMusic();
-        else if(!_userData.Music)
+        else if(!_settingsData.Music)
             _soundManager.StopBackgroundMusic();
     }
 }

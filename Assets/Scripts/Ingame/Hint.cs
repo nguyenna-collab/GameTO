@@ -11,7 +11,7 @@ public class Hint : MonoBehaviour
     [SerializeField] private Button _useHintButton;
     [SerializeField] private GameObject _adsImage;
 
-    private UserDataManager _userDataManager;
+    private SaveManager _saveManager;
     
     public int HintAmount
     {
@@ -35,7 +35,7 @@ public class Hint : MonoBehaviour
     private void Start()
     {
         _useHintButton.onClick.AddListener(UseHint);
-        ServiceLocator.Global.Get<UserDataManager>(out _userDataManager);
+        ServiceLocator.Global.Get(out _saveManager);
         UpdateHintAmountText();
     }
 
@@ -62,8 +62,8 @@ public class Hint : MonoBehaviour
     private void UpdateHintAmountText()
     {
         _hintAmountText.text = $"{HintAmount}";
-        _userDataManager.UserData.Hints = HintAmount;
-        _userDataManager.Save();
+        _saveManager.UserData.Hints = HintAmount;
+        _saveManager.SaveUserData();
     }
 
     public void UseHint()
@@ -76,11 +76,11 @@ public class Hint : MonoBehaviour
 
         if (_currentHintIndex < _hintData.Hints.Length)
         {
-            UIManager.Instance.ShowDialog("Hint", new HintProperties(_hintData.Hints[_currentHintIndex]));
+            UIManager.Instance.ShowDialog("Hint", ScreenPropertiesFactory.CreateHintProperties(_hintData.Hints[_currentHintIndex]));
         }
         else
         {
-            UIManager.Instance.ShowDialog("Hint", new HintProperties(_hintData.DefaultHint));
+            UIManager.Instance.ShowDialog("Hint", ScreenPropertiesFactory.CreateHintProperties(_hintData.DefaultHint));
         }
 
         SubtractHint();

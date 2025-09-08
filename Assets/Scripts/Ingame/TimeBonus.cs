@@ -11,13 +11,13 @@ public class TimeBonus : MonoBehaviour
     [SerializeField] private Button _bonusButton;
     [SerializeField] private GameObject _adsImage;
 
-    private UserDataManager _userDataManager;
+    private SaveManager _saveManager;
     
     public int BonusAmount { get; set; }
 
     void Start()
     {
-        ServiceLocator.Global.Get<UserDataManager>(out _userDataManager);
+        ServiceLocator.Global.Get(out _saveManager);
         UpdateUI();
     }
 
@@ -62,7 +62,7 @@ public class TimeBonus : MonoBehaviour
 
     private void UpdateData()
     {
-        _userDataManager.UserData.TimeBonus = BonusAmount;
-        _userDataManager.Save();
+        _saveManager.UserData.TimeBonus = BonusAmount;
+        _saveManager.SaveUserData();
     }
 }

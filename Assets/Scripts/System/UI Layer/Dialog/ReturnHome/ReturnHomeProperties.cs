@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ReturnHomeProperties : ScreenProperties
 {
-    public ReturnHomeProperties(string contentText, string labelText = "ATTENTION", string cancelText = "Continue", string confirmText = "Quit")
+    public ReturnHomeProperties(string contentText, string labelText, string cancelText, string confirmText)
     {
         LabelText = labelText;
         ContentText = contentText;

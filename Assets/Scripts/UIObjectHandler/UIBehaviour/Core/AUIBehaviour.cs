@@ -18,7 +18,7 @@ public abstract class AUIBehaviour : MonoBehaviour
         OriginalPosition = transform.position;
     }
 
-    protected virtual bool IsTouchingTarget(PointerEventData eventData)
+    protected bool IsTouchingTarget(PointerEventData eventData)
     {
         if (!CanDetectTarget) return false;
         return GetComponent<RectTransform>().IsOverlapUI(_targetRect, eventData.position);

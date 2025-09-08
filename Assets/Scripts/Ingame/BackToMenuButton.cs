@@ -23,7 +23,7 @@ public class BackToMenuButton : MonoBehaviour
 
     private void HandleBackToMenu()
     {
-        UIManager.Instance.ShowDialog("ReturnHome", new ReturnHomeProperties(
+        UIManager.Instance.ShowDialog("ReturnHome", ScreenPropertiesFactory.CreateReturnHomeProperties(
             "Do you really want to quit?\nYour progress will be lost."
         ));
     }

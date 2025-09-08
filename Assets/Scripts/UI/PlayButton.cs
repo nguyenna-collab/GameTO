@@ -25,6 +25,6 @@ public class PlayButton : MonoBehaviour
 
     private void HandleButtonClick()
     {
-        UIManager.Instance.ShowPanel("LevelSelection", new LevelSelectionProperties(_levelIconListSO));
+        UIManager.Instance.ShowPanel("LevelSelection", ScreenPropertiesFactory.CreateLevelSelectionProperties(_levelIconListSO));
     }
 }

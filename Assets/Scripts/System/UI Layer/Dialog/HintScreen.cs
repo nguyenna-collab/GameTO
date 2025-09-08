@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class HintProperties : ScreenProperties
 {
-    public string HintText { get; set; }
-    public HintProperties(string hintText)
+    public string HintString { get; set; }
+    public HintProperties(string hintString)
     {
-        HintText = hintText;
+        HintString = hintString;
     }
 }
 
@@ -34,6 +34,6 @@ public class HintScreen : AUIScreenController<HintProperties>
 
     protected override void OnPropertiesSet()
     {
-        _hintText.text = Properties.HintText;
+        _hintText.text = Properties.HintString;
     }
 }

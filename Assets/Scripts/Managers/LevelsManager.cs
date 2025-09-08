@@ -41,12 +41,12 @@ public class LevelsManager : Singleton<LevelsManager>
     public void ShowWinResultPanel()
     {
         if (CurrentLevelData.WinSound != null) SoundManager.Instance.PlaySFX(CurrentLevelData.WinSound);
-        UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(CurrentLevelData.Icon, true));
+        UIManager.Instance.ShowDialog("LevelResult", ScreenPropertiesFactory.CreateLevelResultProperties(CurrentLevelData.Icon, true));
     }
 
     public void ShowLoseResultPanel()
     {
         if (CurrentLevelData.FailSound != null) SoundManager.Instance.PlaySFX(CurrentLevelData.FailSound);
-        UIManager.Instance.ShowDialog("LevelResult", new LevelResultProperties(CurrentLevelData.Icon, false));
+        UIManager.Instance.ShowDialog("LevelResult", ScreenPropertiesFactory.CreateLevelResultProperties(CurrentLevelData.Icon, false));
     }
 }
