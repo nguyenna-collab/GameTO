@@ -33,8 +33,6 @@ public class LevelSelectionScreenController : AUIScreenController<LevelSelection
         var levelDataListSO = Properties.levelDataList;
         var levelDataList = levelDataListSO.LevelDataList;
 
-        Debug.Log(Properties != null);
-
         if (Properties != null && _isInitialized)
         {
             for (var i = 0; i < _levelIconControllers.Count; i++)

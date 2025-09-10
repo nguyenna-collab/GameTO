@@ -689,6 +689,59 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &589335406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589335407}
+  - component: {fileID: 589335408}
+  m_Layer: 0
+  m_Name: ----- GAME FACADE -----
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &589335407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589335406}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 722.8384, y: 1004.40027, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &589335408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589335406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4584a6416042462eb4194962f89764c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Managers.GameFacade
+  Persist: 1
+  _gameManager: {fileID: 2031507671}
+  _uiManager: {fileID: 1487686895}
+  _levelsManager: {fileID: 1109217523}
+  _particleSystemManager: {fileID: 1703580627}
+  _sceneManagementService: {fileID: 387011658}
+  _soundManager: {fileID: 2008083582}
+  _touchManager: {fileID: 1725931136}
+  _saveManager: {fileID: 13633094}
 --- !u!1 &725621721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,6 +1426,51 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 3605975114273785393, guid: 7061d2431ba0b0349b7434fd3e6271a3, type: 3}
   m_PrefabInstance: {fileID: 525952912}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1703580625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703580626}
+  - component: {fileID: 1703580627}
+  m_Layer: 0
+  m_Name: ParticleSystemManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1703580626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703580625}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 722.8384, y: 1004.40027, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1703580627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703580625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd8023bd657d404eb3b304a1e3963ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ParticleSystemManager
+  Persist: 1
 --- !u!1 &1725931134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,8 +1881,10 @@ SceneRoots:
   - {fileID: 1109217524}
   - {fileID: 387011659}
   - {fileID: 2008083581}
+  - {fileID: 1703580626}
   - {fileID: 13633092}
   - {fileID: 2031507672}
   - {fileID: 1725931135}
+  - {fileID: 589335407}
   - {fileID: 725621722}
   - {fileID: 499628930}

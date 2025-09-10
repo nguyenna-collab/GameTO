@@ -54,7 +54,6 @@ public class ObjectiveManager : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log($"{gameObject.name}: ObjectiveManager Awake");
         foreach (ObjectiveSO objective in _successObjectives)
         {
             if (objective != null)

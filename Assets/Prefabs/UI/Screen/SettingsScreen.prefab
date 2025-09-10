@@ -1036,7 +1036,6 @@ GameObject:
   - component: {fileID: 3037144994072974527}
   - component: {fileID: 7596769297332261371}
   - component: {fileID: 3058938783690426304}
-  - component: {fileID: 7480074435908509594}
   - component: {fileID: 5462804633227034592}
   m_Layer: 5
   m_Name: SettingsScreen
@@ -1134,23 +1133,6 @@ MonoBehaviour:
       m_Calls: []
   duration: 0.3
   isFadeIn: 1
---- !u!114 &7480074435908509594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5783590829594070183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 165d5ea1b6c530c458242ad3998e4e15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FadeTransition
-  OnTransitionComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  duration: 0.3
-  isFadeIn: 0
 --- !u!114 &5462804633227034592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,7 +1147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SettingsScreen
   ScreenID: Settings
   transitionIn: {fileID: 3058938783690426304}
-  transitionOut: {fileID: 7480074435908509594}
+  transitionOut: {fileID: 0}
   blockInteractionDuringTransition: 1
   _musicTogle: {fileID: 2354539229303163978}
   _soundToggle: {fileID: 3078092295442351560}

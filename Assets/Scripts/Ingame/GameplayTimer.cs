@@ -39,24 +39,33 @@ public class GameplayTimer : MonoBehaviour
         OnTimeUp -= HandleTimeUp;
         LevelsManager.Instance.OnCurrentLevelCompleted -= Pause;
         LevelsManager.Instance.OnCurrentLevelFailed -= Pause;
-        StopCoroutine(_updateTimerCoroutine);
+        if (_updateTimerCoroutine != null){
+            StopCoroutine(_updateTimerCoroutine);
+        }
         _updateTimerCoroutine = null;
     }
 
     private void OnDestroy()
     {
-        StopCoroutine(_updateTimerCoroutine);
-        _updateTimerCoroutine = null;
+        if (_updateTimerCoroutine != null)
+        {
+            StopCoroutine(_updateTimerCoroutine);
+            _updateTimerCoroutine = null;
+        }
     }
 
     public void Pause()
     {
+        if (_updateTimerCoroutine == null) return;
         StopCoroutine(_updateTimerCoroutine);
+        _updateTimerCoroutine = null;
         OnTimerPause?.Invoke();
     }
 
     public void Resume()
     {
+        Debug.Log(_updateTimerCoroutine);
+        if (_updateTimerCoroutine != null) return;
         _updateTimerCoroutine = StartCoroutine(UpdateTimerCoroutine());
     }
 

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,13 +38,20 @@ public class ReturnHomeScreen : AUIScreenController<ReturnHomeProperties>
         _cancelButton.onClick.RemoveListener(OnCancel);
     }
 
-    private void OnConfirm()
+    private async void OnConfirm()
     {
-        var uiManager = UIManager.Instance;
-        SceneManagementService.Instance.LoadScene("MainMenu");
-        uiManager.HideDialog(ScreenID);
-        uiManager.HidePanel("Gameplay");
-        uiManager.ShowPanel("MainMenu");
+        try
+        {
+            var uiManager = UIManager.Instance;
+            await SceneManagementService.Instance.LoadScene("MainMenu");
+            uiManager.HidePanel("Gameplay");
+            uiManager.ShowPanel("MainMenu");
+            uiManager.HideDialog(ScreenID);
+        }
+        catch (Exception e)
+        {
+            throw; // TODO handle exception
+        }
     }
 
     private void OnCancel()

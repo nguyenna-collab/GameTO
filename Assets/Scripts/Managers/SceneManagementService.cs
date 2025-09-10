@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using Service_Locator;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,7 +11,10 @@ public class SceneManagementService : Singleton<SceneManagementService>
 {
     private LevelsManager LevelsManager => LevelsManager.Instance;
 
-    public void LoadLevel(int index)
+    public Action<string> OnLevelLoaded;
+    public Action<string> OnLevelUnLoaded;
+
+    public async Task<Task> LoadLevel(int index)
     {
         LevelsManager.CurrentLevelIndex = index;
         if (index >= 0 && index <= LevelsManager.LevelDataList.LevelDataList.Count - 1)
@@ -20,19 +25,20 @@ public class SceneManagementService : Singleton<SceneManagementService>
         {
             Debug.LogError($"LevelsManager: Level index {index} is out of range!");
             LevelsManager.CurrentLevelData = null;
-            return;
+            return Task.CompletedTask;
         }
-        SceneManager.LoadScene($"Level_{index}");
+        await LoadScene($"Level_{index}");
         ServiceLocator.Global.Get<SoundManager>(out var soundManager);
         soundManager.StopBackgroundMusic();
+        return Task.CompletedTask;
     }
 
-    public void LoadNextLevel()
+    public async Task LoadNextLevel()
     {
         if (LevelsManager.CurrentLevelIndex >= 0 && LevelsManager.CurrentLevelIndex < LevelsManager.LevelDataList.LevelDataList.Count - 1)
         {
             var levelIndex = LevelsManager.CurrentLevelIndex + 1;
-            LoadLevel(levelIndex);
+            await LoadLevel(levelIndex);
             LevelsManager.CurrentLevelData = LevelsManager.LevelDataList.LevelDataList[LevelsManager.CurrentLevelIndex];
         }
         else
@@ -41,18 +47,32 @@ public class SceneManagementService : Singleton<SceneManagementService>
         }
     }
 
-    public void RestartLevel()
+    public async Task RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        var op = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        while (op != null && !op.isDone)
+        {
+            await Task.Yield();
+        }
     }
 
-    public void LoadScene(string sceneName)
+    public async Task LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        var op = SceneManager.LoadSceneAsync(sceneName);
+        while (op != null && !op.isDone)
+        {
+            await Task.Yield();
+        }
+        OnLevelLoaded?.Invoke(sceneName);
     }
 
-    public void UnloadScene(string sceneName)
+    public async Task UnloadScene(string sceneName)
     {
-        SceneManager.UnloadSceneAsync(sceneName);
+        var op = SceneManager.UnloadSceneAsync(sceneName);
+        while (op != null && !op.isDone)
+        {
+            await Task.Yield();
+        }
+        OnLevelUnLoaded?.Invoke(sceneName);
     }
 }

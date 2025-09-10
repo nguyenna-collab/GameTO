@@ -159,11 +159,6 @@ public class UIManager : Singleton<UIManager>
 
     public void ShowDialog(string screenId, object properties = null)
     {
-        if (properties != null)
-        {
-            Debug.Log($"UIManager: Properties: {properties}");
-        }
-
         if (dialogLayer != null)
         {
             AUIScreenController screen = GetOrCreateScreenController(screenId, dialogLayer);
@@ -181,7 +176,6 @@ public class UIManager : Singleton<UIManager>
                     // Handle special properties
                     if (screenProps.blockInput)
                     {
-                        Debug.Log("UIManager: Showing blocking overlay for dialog");
                         ShowBlockingOverlay();
                     }
                 }
@@ -203,7 +197,6 @@ public class UIManager : Singleton<UIManager>
             // Check if we need to hide the blocking overlay
             if (instantiatedScreens.TryGetValue(screenId, out AUIScreenController screen))
             {
-                Debug.Log(screen.BaseProperties != null);
                 if (screen.BaseProperties != null && screen.BaseProperties.blockInput)
                 {
                     HideBlockingOverlay();

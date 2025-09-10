@@ -96,9 +96,7 @@ public class SettingsScreen : AUIScreenController<SettingsProperties>
     {
         if (_soundManager == null)
         {
-            Debug.Log("1" + _soundManager);
             ServiceLocator.Global.Get(out _soundManager);
-            Debug.Log("2" + _soundManager);
         }
         if (_settingsData.Music && !_soundManager.BackgroundMusic.isPlaying)
             _soundManager.PlayBackgroundMusic();
